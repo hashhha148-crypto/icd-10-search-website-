@@ -258,7 +258,7 @@
           .join("");
 
         const tags = [
-          `<span class="tag">Section ${escapeHtml(item.section || "-")}</span>`,
+        `<span class="tag">Chapter: ${escapeHtml(item.section || "-")}</span>`,
           item.page ? `<span class="tag">หน้า ${escapeHtml(item.page)}</span>` : "",
           item.nec ? `<span class="tag warn">NEC</span>` : "",
           item.dagger_star ? `<span class="tag warn">รหัสคู่ (†/*)</span>` : "",
