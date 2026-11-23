@@ -1,7 +1,7 @@
 [
   {
     "id": "ex-001",
-    "section": "I",
+    "section": "Ch1",
     "lead_term": "Abscess",
     "modifiers": ["liver", "amebic"],
     "full_text": "Abscess liver amebic",
@@ -14,7 +14,7 @@
   },
   {
     "id": "ex-002",
-    "section": "I",
+    "section": "Ch4",
     "lead_term": "Diabetes, diabetic",
     "modifiers": ["type 2", "without complications"],
     "full_text": "Diabetes diabetic type 2 without complications",
@@ -27,7 +27,7 @@
   },
   {
     "id": "ex-003",
-    "section": "I",
+    "section": "Ch1",
     "lead_term": "Meningitis",
     "modifiers": ["in", "tuberculosis"],
     "full_text": "Meningitis in tuberculosis",
@@ -40,7 +40,7 @@
   },
   {
     "id": "ex-004",
-    "section": "I",
+    "section": "Ch10",
     "lead_term": "Pneumonia",
     "modifiers": ["lobar", "specified organism NEC"],
     "full_text": "Pneumonia lobar specified organism NEC",
@@ -53,7 +53,7 @@
   },
   {
     "id": "ex-005",
-    "section": "II",
+    "section": "Ch20",
     "lead_term": "Fall",
     "modifiers": ["on same level", "slipping, tripping or stumbling"],
     "full_text": "Fall on same level slipping tripping or stumbling",
@@ -66,7 +66,7 @@
   },
   {
     "id": "ex-006",
-    "section": "III",
+    "section": "Ch19",
     "lead_term": "Acetaminophen",
     "modifiers": ["Table of drugs and chemicals"],
     "full_text": "Acetaminophen paracetamol poisoning adverse effect",
