@@ -334,4 +334,30 @@
     "cross_reference": null,
     "page": 725,
     "tabular_note": "Fever, unspecified — ใช้เมื่อยังไม่ทราบสาเหตุที่แน่ชัดของไข้"
+  },
+  {
+    "id": "ex-022",
+    "section": "Ch21",
+    "lead_term": "Examination",
+    "modifiers": ["general", "administrative purposes"],
+    "full_text": "Examination general administrative purposes",
+    "codes": ["Z02.9"],
+    "nec": false,
+    "dagger_star": null,
+    "cross_reference": null,
+    "page": 812,
+    "tabular_note": "Examination for administrative purposes, unspecified — ใช้กรณีตรวจเพื่อวัตถุประสงค์ด้านเอกสาร/บริหาร"
+  },
+  {
+    "id": "ex-023",
+    "section": "Ch22",
+    "lead_term": "COVID-19",
+    "modifiers": ["virus identified"],
+    "full_text": "COVID-19 virus identified",
+    "codes": ["U07.1"],
+    "nec": false,
+    "dagger_star": null,
+    "cross_reference": null,
+    "page": 845,
+    "tabular_note": "COVID-19, virus identified — รหัสวัตถุประสงค์พิเศษ ตรวจสอบแนวทางการลงรหัสตามประกาศทางการ"
   }
