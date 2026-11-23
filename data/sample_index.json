@@ -270,4 +270,68 @@
     "cross_reference": null,
     "page": 624,
     "tabular_note": "Gonarthrosis, unspecified"
+  },{
+    "id": "ex-017",
+    "section": "Ch14",
+    "lead_term": "Calculus, calculi",
+    "modifiers": ["kidney", "unspecified"],
+    "full_text": "Calculus calculi kidney unspecified",
+    "codes": ["N20.0"],
+    "nec": false,
+    "dagger_star": null,
+    "cross_reference": null,
+    "page": 648,
+    "tabular_note": "Calculus of kidney — ตรวจสอบความแตกต่างระหว่างนิ่วในไตและนิ่วในท่อไต"
+  },
+  {
+    "id": "ex-018",
+    "section": "Ch15",
+    "lead_term": "Pre-eclampsia",
+    "modifiers": ["moderate"],
+    "full_text": "Pre-eclampsia moderate",
+    "codes": ["O14.0"],
+    "nec": false,
+    "dagger_star": null,
+    "cross_reference": null,
+    "page": 662,
+    "tabular_note": "Moderate pre-eclampsia — ตรวจสอบอายุครรภ์และระดับความรุนแรงตามตารางหมวด O14"
+  },
+  {
+    "id": "ex-019",
+    "section": "Ch16",
+    "lead_term": "Jaundice",
+    "modifiers": ["neonatal", "unspecified"],
+    "full_text": "Jaundice neonatal unspecified",
+    "codes": ["P59.9"],
+    "nec": false,
+    "dagger_star": null,
+    "cross_reference": null,
+    "page": 679,
+    "tabular_note": "Neonatal jaundice, unspecified"
+  },
+  {
+    "id": "ex-020",
+    "section": "Ch17",
+    "lead_term": "Septal defect",
+    "modifiers": ["atrial", "secundum"],
+    "full_text": "Septal defect atrial secundum",
+    "codes": ["Q21.1"],
+    "nec": false,
+    "dagger_star": null,
+    "cross_reference": null,
+    "page": 698,
+    "tabular_note": "Atrial septal defect — ความผิดปกติแต่กำเนิดของผนังกั้นห้องหัวใจ"
+  },
+  {
+    "id": "ex-021",
+    "section": "Ch18",
+    "lead_term": "Fever",
+    "modifiers": ["unknown origin"],
+    "full_text": "Fever unknown origin",
+    "codes": ["R50.9"],
+    "nec": false,
+    "dagger_star": null,
+    "cross_reference": null,
+    "page": 725,
+    "tabular_note": "Fever, unspecified — ใช้เมื่อยังไม่ทราบสาเหตุที่แน่ชัดของไข้"
   }
