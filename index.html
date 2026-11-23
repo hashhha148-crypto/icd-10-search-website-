@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ICD-10 Search Web (Prototype)</title>
+  <title>ICD-10 Volume 3 Search Web</title>
   <style>
     :root {
       --bg: #f6f8fa;
@@ -28,7 +28,7 @@
     }
 
     .container {
-      max-width: 920px;
+      max-width: 960px;
       margin: 0 auto;
       padding: 24px 16px 64px;
     }
@@ -67,12 +67,17 @@
       border-radius: 8px;
     }
 
-    select {
+    select, button.btn {
       padding: 10px 12px;
       font-size: 0.95rem;
       border: 1px solid var(--border);
       border-radius: 8px;
       background: #fff;
+      cursor: pointer;
+    }
+
+    button.btn:hover {
+      background: #f3f4f6;
     }
 
     .meta-bar {
@@ -158,6 +163,11 @@
       color: var(--muted);
     }
 
+    .load-more-wrap {
+      text-align: center;
+      margin-top: 16px;
+    }
+
     .disclaimer {
       margin-top: 24px;
       padding: 12px 14px;
@@ -171,8 +181,8 @@
 </head>
 <body>
   <div class="container">
-    <h1>ระบบค้นหารหัส ICD-10 (ต้นแบบบน GitHub Pages)</h1>
-    <p class="subtitle">ค้นหาจากชื่อโรค คำขยาย หรือรหัส พร้อมตัวกรองตามหมวดส่วนของเล่ม</p>
+    <h1>ระบบค้นหารหัส ICD-10 (Volume 3: Alphabetical Index)</h1>
+    <p class="subtitle">ค้นหาจากชื่อโรค คำขยาย คำพ้อง หรือรหัส พร้อมตัวกรองตาม Chapter</p>
 
     <div class="search-box">
       <div class="search-row">
@@ -183,52 +193,59 @@
           autocomplete="off"
         />
         <select id="sectionFilter">
-      <option value="ALL">ทุกหมวด / ทุกบท (All Chapters)</option>
-      <option value="Ch1">Chapter I: Certain infectious and parasitic diseases (A00-B99)</option>
-      <option value="Ch2">Chapter II: Neoplasms (C00-D48)</option>
-      <option value="Ch3">Chapter III: Diseases of the blood and blood-forming organs... (D50-D89)</option>
-      <option value="Ch4">Chapter IV: Endocrine, nutritional and metabolic diseases (E00-E90)</option>
-      <option value="Ch5">Chapter V: Mental and behavioural disorders (F00-F99)</option>
-      <option value="Ch6">Chapter VI: Diseases of the nervous system (G00-G99)</option>
-      <option value="Ch7">Chapter VII: Diseases of the eye and adnexa (H00-H59)</option>
-      <option value="Ch8">Chapter VIII: Diseases of the ear and mastoid process (H60-H95)</option>
-      <option value="Ch9">Chapter IX: Diseases of the circulatory system (I00-I99)</option>
-      <option value="Ch10">Chapter X: Diseases of the respiratory system (J00-J99)</option>
-      <option value="Ch11">Chapter XI: Diseases of the digestive system (K00-K93)</option>
-      <option value="Ch12">Chapter XII: Diseases of the skin and subcutaneous tissue (L00-L99)</option>
-      <option value="Ch13">Chapter XIII: Diseases of the musculoskeletal system... (M00-M99)</option>
-      <option value="Ch14">Chapter XIV: Diseases of the genitourinary system (N00-N99)</option>
-      <option value="Ch15">Chapter XV: Pregnancy, childbirth and the puerperium (O00-O99)</option>
-      <option value="Ch16">Chapter XVI: Certain conditions originating in the perinatal period (P00-P96)</option>
-      <option value="Ch17">Chapter XVII: Congenital malformations... (Q00-Q99)</option>
-      <option value="Ch18">Chapter XVIII: Symptoms, signs... (R00-R99)</option>
-      <option value="Ch19">Chapter XIX: Injury, poisoning... (S00-T98)</option>
-      <option value="Ch20">Chapter XX: External causes of morbidity and mortality (V01-Y98)</option>
-      <option value="Ch21">Chapter XXI: Factors influencing health status... (Z00-Z99)</option>
-      <option value="Ch22">Chapter XXII: Codes for special purposes (U00-U85)</option>
-    </select>
+          <option value="ALL">ทุกหมวด / ทุกบท (All Chapters)</option>
+          <option value="Ch1">Chapter I: Certain infectious and parasitic diseases (A00-B99)</option>
+          <option value="Ch2">Chapter II: Neoplasms (C00-D48)</option>
+          <option value="Ch3">Chapter III: Diseases of the blood and blood-forming organs... (D50-D89)</option>
+          <option value="Ch4">Chapter IV: Endocrine, nutritional and metabolic diseases (E00-E90)</option>
+          <option value="Ch5">Chapter V: Mental and behavioural disorders (F00-F99)</option>
+          <option value="Ch6">Chapter VI: Diseases of the nervous system (G00-G99)</option>
+          <option value="Ch7">Chapter VII: Diseases of the eye and adnexa (H00-H59)</option>
+          <option value="Ch8">Chapter VIII: Diseases of the ear and mastoid process (H60-H95)</option>
+          <option value="Ch9">Chapter IX: Diseases of the circulatory system (I00-I99)</option>
+          <option value="Ch10">Chapter X: Diseases of the respiratory system (J00-J99)</option>
+          <option value="Ch11">Chapter XI: Diseases of the digestive system (K00-K93)</option>
+          <option value="Ch12">Chapter XII: Diseases of the skin and subcutaneous tissue (L00-L99)</option>
+          <option value="Ch13">Chapter XIII: Diseases of the musculoskeletal system... (M00-M99)</option>
+          <option value="Ch14">Chapter XIV: Diseases of the genitourinary system (N00-N99)</option>
+          <option value="Ch15">Chapter XV: Pregnancy, childbirth and the puerperium (O00-O99)</option>
+          <option value="Ch16">Chapter XVI: Certain conditions originating in the perinatal period (P00-P96)</option>
+          <option value="Ch17">Chapter XVII: Congenital malformations... (Q00-Q99)</option>
+          <option value="Ch18">Chapter XVIII: Symptoms, signs... (R00-R99)</option>
+          <option value="Ch19">Chapter XIX: Injury, poisoning... (S00-T98)</option>
+          <option value="Ch20">Chapter XX: External causes of morbidity and mortality (V01-Y98)</option>
+          <option value="Ch21">Chapter XXI: Factors influencing health status... (Z00-Z99)</option>
+          <option value="Ch22">Chapter XXII: Codes for special purposes (U00-U85)</option>
+        </select>
+        <button id="resetBtn" class="btn" type="button">ล้างค่า</button>
       </div>
     </div>
 
     <div class="meta-bar">
-      <span id="statusText">กำลังโหลดข้อมูล...</span>
-      <span>เคล็ดลับ: พิมพ์หลายคำสลับลำดับกันได้</span>
+      <span id="statusText">กำลังโหลดข้อมูลทั้งหมด...</span>
+      <span>พิมพ์หลายคำสลับลำดับกันได้</span>
     </div>
 
     <div id="results"></div>
+    <div id="loadMoreWrap" class="load-more-wrap"></div>
 
     <div class="disclaimer">
-      <strong>ข้อควรระวัง:</strong> หน้านี้เป็นต้นแบบข้อมูลตัวอย่างเพื่อทดสอบระบบค้นหาบน GitHub
-      การลงรหัสทางคลินิกจริงควรตรวจสอบเงื่อนไขรวม/ยกเว้นและหลักที่ 4 ในตารางรหัสและคู่มืออ้างอิงทุกครั้ง
+      <strong>ข้อควรระวัง:</strong> ข้อมูลอ้างอิงจาก ICD-10 Alphabetical Index (Volume 3)
+      การลงรหัสทางคลินิกจริงควรตรวจสอบเงื่อนไขรวม/ยกเว้นและหลักที่ 4 ใน Volume 1 (Tabular List) และคู่มืออ้างอิงทุกครั้ง
     </div>
   </div>
 
   <script>
+    const PAGE_SIZE = 100;
     let allItems = [];
+    let currentFiltered = [];
+    let visibleCount = PAGE_SIZE;
 
     const searchInput = document.getElementById("searchInput");
     const sectionFilter = document.getElementById("sectionFilter");
+    const resetBtn = document.getElementById("resetBtn");
     const resultsEl = document.getElementById("results");
+    const loadMoreWrap = document.getElementById("loadMoreWrap");
     const statusText = document.getElementById("statusText");
 
     function escapeHtml(str = "") {
@@ -239,15 +256,81 @@
         .replace(/"/g, "&quot;");
     }
 
-    function renderItems(items) {
-      statusText.textContent = `พบ ${items.length} รายการ (จากทั้งหมด ${allItems.length} รายการตัวอย่าง)`;
+    // เดา Chapter จากรหัส ICD-10 หาก item.section ยังไม่ได้ระบุมา
+    function inferSectionFromCodes(codes = []) {
+      for (const raw of codes) {
+        const m = String(raw).toUpperCase().match(/\b([A-Z])(\d{2})/);
+        if (!m) continue;
+        const letter = m[1];
+        const num = parseInt(m[2], 10);
 
-      if (items.length === 0) {
+        if (letter === "A" || letter === "B") return "Ch1";
+        if (letter === "C" || (letter === "D" && num <= 48)) return "Ch2";
+        if (letter === "D" && num >= 50 && num <= 89) return "Ch3";
+        if (letter === "E") return "Ch4";
+        if (letter === "F") return "Ch5";
+        if (letter === "G") return "Ch6";
+        if (letter === "H" && num <= 59) return "Ch7";
+        if (letter === "H" && num >= 60) return "Ch8";
+        if (letter === "I") return "Ch9";
+        if (letter === "J") return "Ch10";
+        if (letter === "K") return "Ch11";
+        if (letter === "L") return "Ch12";
+        if (letter === "M") return "Ch13";
+        if (letter === "N") return "Ch14";
+        if (letter === "O") return "Ch15";
+        if (letter === "P") return "Ch16";
+        if (letter === "Q") return "Ch17";
+        if (letter === "R") return "Ch18";
+        if (letter === "S" || letter === "T") return "Ch19";
+        if (["V", "W", "X", "Y"].includes(letter)) return "Ch20";
+        if (letter === "Z") return "Ch21";
+        if (letter === "U") return "Ch22";
+      }
+      return "";
+    }
+
+    function normalizeItem(raw) {
+      const codes = Array.isArray(raw.codes)
+        ? raw.codes
+        : (raw.code ? [raw.code] : []);
+      const section = raw.section || inferSectionFromCodes(codes);
+
+      const searchable = [
+        raw.lead_term,
+        ...(Array.isArray(raw.modifiers) ? raw.modifiers : []),
+        raw.full_text,
+        ...codes,
+        raw.cross_reference,
+        raw.tabular_note
+      ]
+        .filter(Boolean)
+        .join(" ")
+        .toLowerCase();
+
+      return {
+        ...raw,
+        codes,
+        section,
+        _searchable: searchable
+      };
+    }
+
+    function renderList() {
+      const slice = currentFiltered.slice(0, visibleCount);
+      const totalMatched = currentFiltered.length;
+
+      statusText.textContent =
+        `แสดง ${slice.length} จากที่พบ ${totalMatched.toLocaleString()} รายการ ` +
+        `(คลังข้อมูลทั้งหมด ${allItems.length.toLocaleString()} รายการ)`;
+
+      if (totalMatched === 0) {
         resultsEl.innerHTML = `<div class="card">ไม่พบรายการที่ตรงกับคำค้นหา ลองเปลี่ยนคำหรือเลือก "ทุกหมวด"</div>`;
+        loadMoreWrap.innerHTML = "";
         return;
       }
 
-      resultsEl.innerHTML = items.map((item) => {
+      resultsEl.innerHTML = slice.map((item) => {
         const pathParts = [item.lead_term, ...(item.modifiers || [])].filter(Boolean);
         const pathHtml = pathParts
           .map((p, idx) => `${idx > 0 ? '<span class="sep">&gt;</span>' : ''}${escapeHtml(p)}`)
@@ -258,7 +341,7 @@
           .join("");
 
         const tags = [
-        `<span class="tag">Chapter: ${escapeHtml(item.section || "-")}</span>`,
+          item.section ? `<span class="tag">Chapter: ${escapeHtml(item.section)}</span>` : "",
           item.page ? `<span class="tag">หน้า ${escapeHtml(item.page)}</span>` : "",
           item.nec ? `<span class="tag warn">NEC</span>` : "",
           item.dagger_star ? `<span class="tag warn">รหัสคู่ (†/*)</span>` : "",
@@ -268,7 +351,7 @@
         return `
           <article class="card">
             <div class="card-top">
-              <div class="path">${pathHtml}</div>
+              <div class="path">${pathHtml || escapeHtml(item.full_text || "")}</div>
               <div class="codes">${codesHtml}</div>
             </div>
             <div class="tags">${tags}</div>
@@ -276,6 +359,21 @@
           </article>
         `;
       }).join("");
+
+      if (visibleCount < totalMatched) {
+        const remaining = totalMatched - visibleCount;
+        loadMoreWrap.innerHTML = `
+          <button id="loadMoreBtn" class="btn" type="button">
+            แสดงเพิ่มเติมอีก ${Math.min(PAGE_SIZE, remaining)} รายการ (เหลืออีก ${remaining.toLocaleString()} รายการ)
+          </button>
+        `;
+        document.getElementById("loadMoreBtn").addEventListener("click", () => {
+          visibleCount += PAGE_SIZE;
+          renderList();
+        });
+      } else {
+        loadMoreWrap.innerHTML = "";
+      }
     }
 
     function filterData() {
@@ -283,42 +381,63 @@
       const sec = sectionFilter.value;
       const tokens = q ? q.split(/\s+/) : [];
 
-      const filtered = allItems.filter((item) => {
+      visibleCount = PAGE_SIZE;
+
+      currentFiltered = allItems.filter((item) => {
         if (sec !== "ALL" && item.section !== sec) return false;
         if (tokens.length === 0) return true;
-
-        const searchable = [
-          item.lead_term,
-          ...(item.modifiers || []),
-          item.full_text,
-          ...(item.codes || []),
-          item.cross_reference,
-          item.tabular_note
-        ]
-          .filter(Boolean)
-          .join(" ")
-          .toLowerCase();
-
-        return tokens.every((t) => searchable.includes(t));
+        return tokens.every((t) => item._searchable.includes(t));
       });
 
-      renderItems(filtered);
+      renderList();
+    }
+
+    async function loadDataset() {
+      // รองรับได้ทั้งไฟล์ก้อนเดียว ./data/volume3_index.json หรือไฟล์แยกตามตัวอักษร ./data/index_a.json ... index_z.json
+      const singleUrl = "./data/volume3_index.json";
+      const singleRes = await fetch(singleUrl);
+
+      if (singleRes.ok) {
+        const data = await singleRes.json();
+        return Array.isArray(data) ? data : (data.items || []);
+      }
+
+      const letters = "abcdefghijklmnopqrstuvwxyz".split("");
+      const fetches = await Promise.all(
+        letters.map(async (ch) => {
+          const r = await fetch(`./data/index_${ch}.json`);
+          if (!r.ok) return [];
+          const d = await r.json();
+          return Array.isArray(d) ? d : (d.items || []);
+        })
+      );
+      const merged = fetches.flat();
+      if (merged.length > 0) return merged;
+
+      // สำรองกลับไปใช้ sample_index.json หากยังไม่ได้อัปโหลดไฟล์เต็ม
+      const fallbackRes = await fetch("./data/sample_index.json");
+      if (!fallbackRes.ok) throw new Error("ไม่พบไฟล์ข้อมูลในโฟลเดอร์ ./data/");
+      return await fallbackRes.json();
     }
 
     async function init() {
       try {
-        const res = await fetch("./data/sample_index.json");
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        allItems = await res.json();
+        const rawList = await loadDataset();
+        allItems = rawList.map(normalizeItem);
         filterData();
       } catch (err) {
         statusText.textContent = "โหลดข้อมูลไม่สำเร็จ";
-        resultsEl.innerHTML = `<div class="card">เกิดข้อผิดพลาดในการโหลด <code>data/sample_index.json</code>: ${escapeHtml(err.message)}</div>`;
+        resultsEl.innerHTML = `<div class="card">เกิดข้อผิดพลาดในการโหลดข้อมูล: ${escapeHtml(err.message)}</div>`;
       }
     }
 
     searchInput.addEventListener("input", filterData);
     sectionFilter.addEventListener("change", filterData);
+    resetBtn.addEventListener("click", () => {
+      searchInput.value = "";
+      sectionFilter.value = "ALL";
+      filterData();
+    });
 
     init();
   </script>
