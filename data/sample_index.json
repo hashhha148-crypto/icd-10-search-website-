@@ -141,70 +141,6 @@
     "cross_reference": null,
     "page": 402,
     "tabular_note": "Senile cataract, unspecified"
-  }{
-    "id": "ex-007",
-    "section": "Ch2",
-    "lead_term": "Carcinoma",
-    "modifiers": ["breast", "unspecified"],
-    "full_text": "Carcinoma breast unspecified",
-    "codes": ["C50.9"],
-    "nec": false,
-    "dagger_star": null,
-    "cross_reference": null,
-    "page": 145,
-    "tabular_note": "Malignant neoplasm of breast, unspecified — ตรวจสอบความแตกต่างระหว่างรหัสหลักและบริบททางคลินิก"
-  },
-  {
-    "id": "ex-008",
-    "section": "Ch3",
-    "lead_term": "Anaemia",
-    "modifiers": ["iron deficiency", "secondary to blood loss (chronic)"],
-    "full_text": "Anaemia iron deficiency secondary to blood loss chronic",
-    "codes": ["D50.0"],
-    "nec": false,
-    "dagger_star": null,
-    "cross_reference": null,
-    "page": 195,
-    "tabular_note": "Iron deficiency anaemia secondary to blood loss (chronic)"
-  },
-  {
-    "id": "ex-009",
-    "section": "Ch5",
-    "lead_term": "Depressive episode",
-    "modifiers": ["mild"],
-    "full_text": "Depressive episode mild",
-    "codes": ["F32.0"],
-    "nec": false,
-    "dagger_star": null,
-    "cross_reference": null,
-    "page": 325,
-    "tabular_note": "Mild depressive episode — ตรวจสอบเกณฑ์ความรุนแรงตามตารางหมวด F32"
-  },
-  {
-    "id": "ex-010",
-    "section": "Ch6",
-    "lead_term": "Epilepsy",
-    "modifiers": ["localization-related (focal) (partial) idiopathic"],
-    "full_text": "Epilepsy localization-related focal partial idiopathic",
-    "codes": ["G40.0"],
-    "nec": false,
-    "dagger_star": null,
-    "cross_reference": null,
-    "page": 368,
-    "tabular_note": "Localization-related (focal)(partial) idiopathic epilepsy and epileptic syndromes with seizures of localized onset"
-  },
-  {
-    "id": "ex-011",
-    "section": "Ch7",
-    "lead_term": "Cataract",
-    "modifiers": ["senile", "unspecified"],
-    "full_text": "Cataract senile unspecified",
-    "codes": ["H25.9"],
-    "nec": false,
-    "dagger_star": null,
-    "cross_reference": null,
-    "page": 402,
-    "tabular_note": "Senile cataract, unspecified"
   },
   {
     "id": "ex-012",
@@ -361,3 +297,4 @@
     "page": 845,
     "tabular_note": "COVID-19, virus identified — รหัสวัตถุประสงค์พิเศษ ตรวจสอบแนวทางการลงรหัสตามประกาศทางการ"
   }
+]
