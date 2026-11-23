@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICD-10 Search Web (Prototype)</title>
+  <style>
+    :root {
+      --bg: #f6f8fa;
+      --card: #ffffff;
+      --text: #1f2328;
+      --muted: #59636e;
+      --border: #d0d7de;
+      --accent: #0969da;
+      --accent-bg: #ddf4ff;
+      --warn-bg: #fff8c5;
+      --warn-border: #d4a72c;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 24px 16px 64px;
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: 1.6rem;
+    }
+
+    .subtitle {
+      margin: 0 0 20px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .search-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    }
+
+    .search-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    input[type="search"] {
+      flex: 1 1 280px;
+      padding: 10px 14px;
+      font-size: 1rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    select {
+      padding: 10px 12px;
+      font-size: 0.95rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .meta-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 12px;
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .path {
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+
+    .path span.sep {
+      color: var(--muted);
+      margin: 0 6px;
+    }
+
+    .codes {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .code-badge {
+      background: var(--accent-bg);
+      color: var(--accent);
+      border: 1px solid #9bd1ff;
+      padding: 3px 9px;
+      border-radius: 999px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-weight: 700;
+      font-size: 0.88rem;
+    }
+
+    .tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .tag {
+      font-size: 0.78rem;
+      padding: 2px 8px;
+      border-radius: 6px;
+      background: #eff2f5;
+      color: var(--muted);
+    }
+
+    .tag.warn {
+      background: var(--warn-bg);
+      border: 1px solid var(--warn-border);
+      color: #634400;
+    }
+
+    .note {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px dashed var(--border);
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .disclaimer {
+      margin-top: 24px;
+      padding: 12px 14px;
+      border-radius: 8px;
+      background: var(--warn-bg);
+      border: 1px solid var(--warn-border);
+      font-size: 0.85rem;
+      color: #4d3500;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>ระบบค้นหารหัส ICD-10 (ต้นแบบบน GitHub Pages)</h1>
+    <p class="subtitle">ค้นหาจากชื่อโรค คำขยาย หรือรหัส พร้อมตัวกรองตามหมวดส่วนของเล่ม</p>
+
+    <div class="search-box">
+      <div class="search-row">
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="เช่น liver abscess, E11.9, meningitis, fall, acetaminophen..."
+          autocomplete="off"
+        />
+        <select id="sectionFilter">
+          <option value="ALL">ทุกหมวด (All Sections)</option>
+          <option value="I">Section I: โรค/ภาวะ/การบาดเจ็บ</option>
+          <option value="II">Section II: สาเหตุภายนอก</option>
+          <option value="III">Section III: ยาและสารเคมี</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="meta-bar">
+      <span id="statusText">กำลังโหลดข้อมูล...</span>
+      <span>เคล็ดลับ: พิมพ์หลายคำสลับลำดับกันได้</span>
+    </div>
+
+    <div id="results"></div>
+
+    <div class="disclaimer">
+      <strong>ข้อควรระวัง:</strong> หน้านี้เป็นต้นแบบข้อมูลตัวอย่างเพื่อทดสอบระบบค้นหาบน GitHub
+      การลงรหัสทางคลินิกจริงควรตรวจสอบเงื่อนไขรวม/ยกเว้นและหลักที่ 4 ในตารางรหัสและคู่มืออ้างอิงทุกครั้ง
+    </div>
+  </div>
+
+  <script>
+    let allItems = [];
+
+    const searchInput = document.getElementById("searchInput");
+    const sectionFilter = document.getElementById("sectionFilter");
+    const resultsEl = document.getElementById("results");
+    const statusText = document.getElementById("statusText");
+
+    function escapeHtml(str = "") {
+      return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    function renderItems(items) {
+      statusText.textContent = `พบ ${items.length} รายการ (จากทั้งหมด ${allItems.length} รายการตัวอย่าง)`;
+
+      if (items.length === 0) {
+        resultsEl.innerHTML = `<div class="card">ไม่พบรายการที่ตรงกับคำค้นหา ลองเปลี่ยนคำหรือเลือก "ทุกหมวด"</div>`;
+        return;
+      }
+
+      resultsEl.innerHTML = items.map((item) => {
+        const pathParts = [item.lead_term, ...(item.modifiers || [])].filter(Boolean);
+        const pathHtml = pathParts
+          .map((p, idx) => `${idx > 0 ? '<span class="sep">&gt;</span>' : ''}${escapeHtml(p)}`)
+          .join("");
+
+        const codesHtml = (item.codes || [])
+          .map((c) => `<span class="code-badge">${escapeHtml(c)}</span>`)
+          .join("");
+
+        const tags = [
+          `<span class="tag">Section ${escapeHtml(item.section || "-")}</span>`,
+          item.page ? `<span class="tag">หน้า ${escapeHtml(item.page)}</span>` : "",
+          item.nec ? `<span class="tag warn">NEC</span>` : "",
+          item.dagger_star ? `<span class="tag warn">รหัสคู่ (†/*)</span>` : "",
+          item.cross_reference ? `<span class="tag warn">${escapeHtml(item.cross_reference)}</span>` : ""
+        ].filter(Boolean).join("");
+
+        return `
+          <article class="card">
+            <div class="card-top">
+              <div class="path">${pathHtml}</div>
+              <div class="codes">${codesHtml}</div>
+            </div>
+            <div class="tags">${tags}</div>
+            ${item.tabular_note ? `<div class="note">${escapeHtml(item.tabular_note)}</div>` : ""}
+          </article>
+        `;
+      }).join("");
+    }
+
+    function filterData() {
+      const q = searchInput.value.trim().toLowerCase();
+      const sec = sectionFilter.value;
+      const tokens = q ? q.split(/\s+/) : [];
+
+      const filtered = allItems.filter((item) => {
+        if (sec !== "ALL" && item.section !== sec) return false;
+        if (tokens.length === 0) return true;
+
+        const searchable = [
+          item.lead_term,
+          ...(item.modifiers || []),
+          item.full_text,
+          ...(item.codes || []),
+          item.cross_reference,
+          item.tabular_note
+        ]
+          .filter(Boolean)
+          .join(" ")
+          .toLowerCase();
+
+        return tokens.every((t) => searchable.includes(t));
+      });
+
+      renderItems(filtered);
+    }
+
+    async function init() {
+      try {
+        const res = await fetch("./data/sample_index.json");
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        allItems = await res.json();
+        filterData();
+      } catch (err) {
+        statusText.textContent = "โหลดข้อมูลไม่สำเร็จ";
+        resultsEl.innerHTML = `<div class="card">เกิดข้อผิดพลาดในการโหลด <code>data/sample_index.json</code>: ${escapeHtml(err.message)}</div>`;
+      }
+    }
+
+    searchInput.addEventListener("input", filterData);
+    sectionFilter.addEventListener("change", filterData);
+
+    init();
+  </script>
+</body>
+</html>
