@@ -120,126 +120,6 @@
     "tabular_note": ""
   },
   {
-    "lead_term": "28",
-    "modifiers": ["cerebral I64"],
-    "full_text": "28 cerebral I64",
-    "codes": ["I64"],
-    "section": "Ch9",
-    "page": "4",
-    "nec": false,
-    "dagger_star": false,
-    "cross_reference": "",
-    "tabular_note": ""
-  },
-  {
-    "lead_term": "28",
-    "modifiers": ["cerebrovascular I64"],
-    "full_text": "28 cerebrovascular I64",
-    "codes": ["I64"],
-    "section": "Ch9",
-    "page": "4",
-    "nec": false,
-    "dagger_star": false,
-    "cross_reference": "",
-    "tabular_note": ""
-  },
-  {
-    "lead_term": "28",
-    "modifiers": ["cerebrovascular I64", "hemorrhagic I61.9"],
-    "full_text": "28 cerebrovascular I64 hemorrhagic I61.9",
-    "codes": ["I61.9"],
-    "section": "Ch9",
-    "page": "4",
-    "nec": false,
-    "dagger_star": false,
-    "cross_reference": "",
-    "tabular_note": ""
-  },
-  {
-    "lead_term": "28",
-    "modifiers": ["cerebrovascular I64", "ischemic (see also Infarct, cerebral)"],
-    "full_text": "28 cerebrovascular I64 ischemic (see also Infarct, cerebral)",
-    "codes": [],
-    "section": "",
-    "page": "4",
-    "nec": false,
-    "dagger_star": false,
-    "cross_reference": "see also Infarct, cerebral",
-    "tabular_note": ""
-  },
-  {
-    "lead_term": ".1",
-    "modifiers": ["fetal – see Distress, fetal"],
-    "full_text": ".1 fetal – see Distress, fetal",
-    "codes": [],
-    "section": "",
-    "page": "4",
-    "nec": false,
-    "dagger_star": false,
-    "cross_reference": "see Distress, fetal",
-    "tabular_note": ""
-  },
-  {
-    "lead_term": ".1",
-    "modifiers": ["intrauterine – see Distress, fetal"],
-    "full_text": ".1 intrauterine – see Distress, fetal",
-    "codes": [],
-    "section": "",
-    "page": "4",
-    "nec": false,
-    "dagger_star": false,
-    "cross_reference": "see Distress, fetal",
-    "tabular_note": ""
-  },
-  {
-    "lead_term": ".1",
-    "modifiers": ["kidney, tubular N25.8"],
-    "full_text": ".1 kidney, tubular N25.8",
-    "codes": ["N25.8"],
-    "section": "Ch14",
-    "page": "4",
-    "nec": false,
-    "dagger_star": false,
-    "cross_reference": "",
-    "tabular_note": ""
-  },
-  {
-    "lead_term": ".1",
-    "modifiers": ["metabolic NEC E87.2"],
-    "full_text": ".1 metabolic NEC E87.2",
-    "codes": ["E87.2"],
-    "section": "Ch4",
-    "page": "4",
-    "nec": true,
-    "dagger_star": false,
-    "cross_reference": "",
-    "tabular_note": ""
-  },
-  {
-    "lead_term": ".1",
-    "modifiers": ["metabolic NEC E87.2", "late, of newborn P74.0"],
-    "full_text": ".1 metabolic NEC E87.2 late, of newborn P74.0",
-    "codes": ["P74.0"],
-    "section": "Ch16",
-    "page": "4",
-    "nec": false,
-    "dagger_star": false,
-    "cross_reference": "",
-    "tabular_note": ""
-  },
-  {
-    "lead_term": ".1",
-    "modifiers": ["renal (hyperchloremic) (tubular) N25.8"],
-    "full_text": ".1 renal (hyperchloremic) (tubular) N25.8",
-    "codes": ["N25.8"],
-    "section": "Ch14",
-    "page": "4",
-    "nec": false,
-    "dagger_star": false,
-    "cross_reference": "",
-    "tabular_note": ""
-  },
-  {
     "lead_term": "20",
     "modifiers": ["kidney", "with calculus", "with hydronephrosis N13.6"],
     "full_text": "20 kidney with calculus with hydronephrosis N13.6",
@@ -392,4 +272,7 @@
     "page": "4",
     "nec": false,
     "dagger_star": false,
-    "cros
+    "cross_reference": "",
+    "tabular_note": ""
+  }
+]
