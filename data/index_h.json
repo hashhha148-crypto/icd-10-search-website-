@@ -12,18 +12,6 @@
     "tabular_note": ""
   },
   {
-    "lead_term": "H33.2",
-    "modifiers": ["uterus Z90.7"],
-    "full_text": "H33.2 uterus Z90.7",
-    "codes": ["Z90.7"],
-    "section": "Ch21",
-    "page": "27",
-    "nec": false,
-    "dagger_star": false,
-    "cross_reference": "",
-    "tabular_note": ""
-  },
-  {
     "lead_term": "hemoglobin) D58.2",
     "modifiers": ["trait – see Trait, hemoglobin, abnormal"],
     "full_text": "hemoglobin) D58.2 trait – see Trait, hemoglobin, abnormal",
