@@ -84,66 +84,6 @@
     "tabular_note": ""
   },
   {
-    "lead_term": "mouth, congenital Q38.6",
-    "modifiers": ["spleen Q89.0"],
-    "full_text": "mouth, congenital Q38.6 spleen Q89.0",
-    "codes": ["Q89.0"],
-    "section": "Ch17",
-    "page": "27",
-    "nec": false,
-    "dagger_star": false,
-    "cross_reference": "",
-    "tabular_note": ""
-  },
-  {
-    "lead_term": "mouth, congenital Q38.6",
-    "modifiers": ["subclavian artery Q27.8"],
-    "full_text": "mouth, congenital Q38.6 subclavian artery Q27.8",
-    "codes": ["Q27.8"],
-    "section": "Ch17",
-    "page": "27",
-    "nec": false,
-    "dagger_star": false,
-    "cross_reference": "",
-    "tabular_note": ""
-  },
-  {
-    "lead_term": "mouth, congenital Q38.6",
-    "modifiers": ["thymus (gland) Q89.2"],
-    "full_text": "mouth, congenital Q38.6 thymus (gland) Q89.2",
-    "codes": ["Q89.2"],
-    "section": "Ch17",
-    "page": "27",
-    "nec": false,
-    "dagger_star": false,
-    "cross_reference": "",
-    "tabular_note": ""
-  },
-  {
-    "lead_term": "mouth, congenital Q38.6",
-    "modifiers": ["thyroid gland Q89.2"],
-    "full_text": "mouth, congenital Q38.6 thyroid gland Q89.2",
-    "codes": ["Q89.2"],
-    "section": "Ch17",
-    "page": "27",
-    "nec": false,
-    "dagger_star": false,
-    "cross_reference": "",
-    "tabular_note": ""
-  },
-  {
-    "lead_term": "mouth, congenital Q38.6",
-    "modifiers": ["vein (peripheral) NEC Q27.8"],
-    "full_text": "mouth, congenital Q38.6 vein (peripheral) NEC Q27.8",
-    "codes": ["Q27.8"],
-    "section": "Ch17",
-    "page": "27",
-    "nec": true,
-    "dagger_star": false,
-    "cross_reference": "",
-    "tabular_note": ""
-  },
-  {
     "lead_term": "movement) G25.9",
     "modifiers": ["head R25.0"],
     "full_text": "movement) G25.9 head R25.0",
@@ -334,10 +274,5 @@
     "dagger_star": false,
     "cross_reference": "see also Menstruation",
     "tabular_note": ""
-  },
-  {
-    "lead_term": "myocardium) I21.9",
-    "modifiers": ["craniovascular I64"],
-    "full_text": "myocardium) I21.9 craniovascular I64",
-    "codes": ["I64"],
-    "section": "C
+  }
+]
