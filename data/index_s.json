@@ -346,15 +346,5 @@
     "dagger_star": false,
     "cross_reference": "",
     "tabular_note": ""
-  },
-  {
-    "lead_term": "Sinusitis) J32.9",
-    "modifiers": ["brain (any part) G06.0"],
-    "full_text": "Sinusitis) J32.9 brain (any part) G06.0",
-    "codes": ["G06.0"],
-    "section": "Ch6",
-    "page": "18",
-    "nec": false,
-    "dagger_star": false,
-    "cross_reference": "",
-    
+  }
+]
