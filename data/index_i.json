@@ -36,42 +36,6 @@
     "tabular_note": ""
   },
   {
-    "lead_term": "in parentheses are reported or not. For example: Abscess (embolic) (infective) (metastatic) (multiple) (pyogenic) (septic)",
-    "modifiers": ["brain (any part) G06.0"],
-    "full_text": "in parentheses are reported or not. For example: Abscess (embolic) (infective) (metastatic) (multiple) (pyogenic) (septic) brain (any part) G06.0",
-    "codes": ["G06.0"],
-    "section": "Ch6",
-    "page": "15",
-    "nec": false,
-    "dagger_star": false,
-    "cross_reference": "",
-    "tabular_note": ""
-  },
-  {
-    "lead_term": "I63.9",
-    "modifiers": ["old I69.4"],
-    "full_text": "I63.9 old I69.4",
-    "codes": ["I69.4"],
-    "section": "Ch9",
-    "page": "4",
-    "nec": false,
-    "dagger_star": false,
-    "cross_reference": "",
-    "tabular_note": ""
-  },
-  {
-    "lead_term": "I63.9",
-    "modifiers": ["coronary (see also Infarct,"],
-    "full_text": "I63.9 coronary (see also Infarct,",
-    "codes": [],
-    "section": "",
-    "page": "4",
-    "nec": false,
-    "dagger_star": false,
-    "cross_reference": "see also Infarct,",
-    "tabular_note": ""
-  },
-  {
     "lead_term": "inflammatory) N73.2",
     "modifiers": ["paravaginal N76.0"],
     "full_text": "inflammatory) N73.2 paravaginal N76.0",
@@ -358,6 +322,5 @@
     "dagger_star": false,
     "cross_reference": "",
     "tabular_note": ""
-  },
-  {
-    "lead_term": "inflammatory) N73.2"
+  }
+]
