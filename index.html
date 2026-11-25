@@ -17,7 +17,7 @@
       --warn-border: #d4a72c;
     }
 
-    * { box-sizing: border-box; }
+    *, *::before, *::after { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -256,7 +256,6 @@
         .replace(/"/g, "&quot;");
     }
 
-    // เดา Chapter จากรหัส ICD-10 หาก item.section ยังไม่ได้ระบุมา
     function inferSectionFromCodes(codes = []) {
       for (const raw of codes) {
         const m = String(raw).toUpperCase().match(/\b([A-Z])(\d{2})/);
@@ -392,32 +391,39 @@
       renderList();
     }
 
-    async function loadDataset() {
-      // รองรับได้ทั้งไฟล์ก้อนเดียว ./data/volume3_index.json หรือไฟล์แยกตามตัวอักษร ./data/index_a.json ... index_z.json
-      const singleUrl = "./data/volume3_index.json";
-      const singleRes = await fetch(singleUrl);
-
-      if (singleRes.ok) {
-        const data = await singleRes.json();
+    async function fetchJsonSafe(url) {
+      try {
+        const res = await fetch(url);
+        if (!res.ok) return [];
+        const data = await res.json();
         return Array.isArray(data) ? data : (data.items || []);
+      } catch (err) {
+        console.warn("ข้ามไฟล์ที่โหลดหรือแปลง JSON ไม่ได้:", url, err);
+        return [];
       }
+    }
 
+    async function loadDataset() {
+      // 1. รองรับไฟล์ก้อนเดียว ./data/volume3_index.json
+      const singleItems = await fetchJsonSafe("./data/volume3_index.json");
+      if (singleItems.length > 0) return singleItems;
+
+      // 2. โหลดไฟล์แยกตามตัวอักษร a-z และ index_other.json (ไฟล์ที่เสียจะถูกข้ามโดยไม่ทำให้ไฟล์อื่นล้ม)
       const letters = "abcdefghijklmnopqrstuvwxyz".split("");
-      const fetches = await Promise.all(
-        letters.map(async (ch) => {
-          const r = await fetch(`./data/index_${ch}.json`);
-          if (!r.ok) return [];
-          const d = await r.json();
-          return Array.isArray(d) ? d : (d.items || []);
-        })
-      );
-      const merged = fetches.flat();
+      const urls = [
+        ...letters.map((ch) => `./data/index_${ch}.json`),
+        "./data/index_other.json"
+      ];
+
+      const fetchedLists = await Promise.all(urls.map(fetchJsonSafe));
+      const merged = fetchedLists.flat();
       if (merged.length > 0) return merged;
 
-      // สำรองกลับไปใช้ sample_index.json หากยังไม่ได้อัปโหลดไฟล์เต็ม
-      const fallbackRes = await fetch("./data/sample_index.json");
-      if (!fallbackRes.ok) throw new Error("ไม่พบไฟล์ข้อมูลในโฟลเดอร์ ./data/");
-      return await fallbackRes.json();
+      // 3. สำรองกลับไปใช้ sample_index.json
+      const fallbackItems = await fetchJsonSafe("./data/sample_index.json");
+      if (fallbackItems.length > 0) return fallbackItems;
+
+      throw new Error("ไม่พบไฟล์ข้อมูลที่ใช้งานได้ในโฟลเดอร์ ./data/");
     }
 
     async function init() {
