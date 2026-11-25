@@ -322,14 +322,5 @@
     "dagger_star": false,
     "cross_reference": "see also Reaction, drug",
     "tabular_note": ""
-  },
-  {
-    "lead_term": "pregnancy or childbirth O34.6",
-    "modifiers": ["causing obstructed labor O65.5"],
-    "full_text": "pregnancy or childbirth O34.6 causing obstructed labor O65.5",
-    "codes": ["O65.5"],
-    "section": "Ch15",
-    "page": "27",
-    "nec": false,
-    "dagger_star": false,
-    "
+  }
+]
