@@ -1138,17 +1138,5 @@
     "dagger_star": false,
     "cross_reference": "",
     "tabular_note": ""
-  },
-  {
-    "lead_term": "fluids) R84.-",
-    "modifiers": ["urine (constituents) NEC R82.9", "histological examination R82.8"],
-    "full_text": "fluids) R84.- urine (constituents) NEC R82.9 histological examination R82.8",
-    "codes": ["R82.8"],
-    "section": "Ch18",
-    "page": "27",
-    "nec": false,
-    "dagger_star": false,
-    "cross_reference": "",
-    "tabular_note": ""
   }
 ]
