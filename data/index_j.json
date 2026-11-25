@@ -72,42 +72,6 @@
     "tabular_note": ""
   },
   {
-    "lead_term": "J99.8",
-    "modifiers": ["with", "brain abscess A06.6† G07"],
-    "full_text": "J99.8 with brain abscess A06.6† G07",
-    "codes": ["A06.6", "G07"],
-    "section": "Ch1",
-    "page": "13",
-    "nec": false,
-    "dagger_star": false,
-    "cross_reference": "",
-    "tabular_note": ""
-  },
-  {
-    "lead_term": "J99.8",
-    "modifiers": ["with", "brain abscess A06.6† G07", "pneumonia A06.5† J17.0"],
-    "full_text": "J99.8 with brain abscess A06.6† G07 pneumonia A06.5† J17.0",
-    "codes": ["A06.5", "J17.0"],
-    "section": "Ch1",
-    "page": "13",
-    "nec": false,
-    "dagger_star": false,
-    "cross_reference": "",
-    "tabular_note": ""
-  },
-  {
-    "lead_term": "J99.8",
-    "modifiers": ["lymph, lymphatic, gland or node (acute) (see also Lymphadenitis, acute)"],
-    "full_text": "J99.8 lymph, lymphatic, gland or node (acute) (see also Lymphadenitis, acute)",
-    "codes": [],
-    "section": "",
-    "page": "13",
-    "nec": false,
-    "dagger_star": false,
-    "cross_reference": "see also Lymphadenitis, acute",
-    "tabular_note": ""
-  },
-  {
     "lead_term": "J84.1",
     "modifiers": ["jaw K10.3"],
     "full_text": "J84.1 jaw K10.3",
@@ -274,79 +238,5 @@
     "dagger_star": false,
     "cross_reference": "",
     "tabular_note": ""
-  },
-  {
-    "lead_term": "J21.9",
-    "modifiers": ["with", "bronchospasm or obstruction J21.9"],
-    "full_text": "J21.9 with bronchospasm or obstruction J21.9",
-    "codes": ["J21.9"],
-    "section": "Ch10",
-    "page": "77",
-    "nec": false,
-    "dagger_star": false,
-    "cross_reference": "",
-    "tabular_note": ""
-  },
-  {
-    "lead_term": "J21.9",
-    "modifiers": ["with", "influenza, flu or grippe (see also Influenza, with, respiratory"],
-    "full_text": "J21.9 with influenza, flu or grippe (see also Influenza, with, respiratory",
-    "codes": [],
-    "section": "",
-    "page": "77",
-    "nec": false,
-    "dagger_star": false,
-    "cross_reference": "see also Influenza, with, respiratory",
-    "tabular_note": ""
-  },
-  {
-    "lead_term": "J21.9",
-    "modifiers": ["caseous (tuberculous) A16.4"],
-    "full_text": "J21.9 caseous (tuberculous) A16.4",
-    "codes": ["A16.4"],
-    "section": "Ch1",
-    "page": "77",
-    "nec": false,
-    "dagger_star": false,
-    "cross_reference": "",
-    "tabular_note": ""
-  },
-  {
-    "lead_term": "J21.9",
-    "modifiers": ["catarrhal (15 years of age and above) J40"],
-    "full_text": "J21.9 catarrhal (15 years of age and above) J40",
-    "codes": ["J40"],
-    "section": "Ch10",
-    "page": "77",
-    "nec": false,
-    "dagger_star": false,
-    "cross_reference": "",
-    "tabular_note": ""
-  },
-  {
-    "lead_term": "J21.9",
-    "modifiers": ["catarrhal (15 years of age and above) J40", "acute – see Bronchitis, acute or subacute"],
-    "full_text": "J21.9 catarrhal (15 years of age and above) J40 acute – see Bronchitis, acute or subacute",
-    "codes": [],
-    "section": "",
-    "page": "77",
-    "nec": false,
-    "dagger_star": false,
-    "cross_reference": "see Bronchitis, acute or subacute",
-    "tabular_note": ""
-  },
-  {
-    "lead_term": "J21.9",
-    "modifiers": ["catarrhal (15 years of age and above) J40", "chronic J41.0"],
-    "full_text": "J21.9 catarrhal (15 years of age and above) J40 chronic J41.0",
-    "codes": ["J41.0"],
-    "section": "Ch10",
-    "page": "77",
-    "nec": false,
-    "dagger_star": false,
-    "cross_reference": "",
-    "tabular_note": ""
-  },
-  {
-    "lead_term": "J21.9",
-  
+  }
+]
