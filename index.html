@@ -3,632 +3,374 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ICD-10 Volume 3 Quick Index</title>
+  <title>ICD-10 Grand Reference Atlas</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #f1f5f9;
-      --surface: #ffffff;
-      --surface-alt: #f8fafc;
+      --bg-main: #0f172a;
+      --paper: #ffffff;
+      --paper-sub: #f8fafc;
       --ink: #0f172a;
-      --muted: #475569;
-      --line: #cbd5e1;
-      --teal: #0f766e;
-      --teal-dark: #115e59;
-      --teal-soft: #ccfbf1;
-      --amber-soft: #fef3c7;
-      --amber-ink: #92400e;
-      --radius: 10px;
+      --ink-sub: #475569;
+      --gold: #b45309;
+      --gold-light: #fef3c7;
+      --rule: #e2e8f0;
+      --rule-dark: #1e293b;
+      --code-bg: #1e293b;
+      --code-fg: #ffffff;
+      --accent-blue: #1e3a8a;
     }
 
     *, *::before, *::after { box-sizing: border-box; }
 
     body {
       margin: 0;
-      font-family: 'IBM Plex Sans Thai', sans-serif;
-      background: var(--bg);
+      background: var(--bg-main);
       color: var(--ink);
+      font-family: 'IBM Plex Sans Thai', -apple-system, sans-serif;
       line-height: 1.5;
     }
 
-    .topbar {
-      background: var(--surface);
-      border-bottom: 1px solid var(--line);
-      padding: 18px 20px;
-      position: sticky;
-      top: 0;
-      z-index: 20;
+    .app-wrap {
+      max-width: 1000px;
+      margin: 20px auto 48px;
+      padding: 0 12px;
     }
 
-    .topbar-inner {
-      max-width: 1040px;
-      margin: 0 auto;
+    .atlas-frame {
+      background: var(--paper);
+      border: 3px double #94a3b8;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      padding: 24px 20px;
+    }
+
+    .atlas-header {
+      border-bottom: 2px solid var(--rule-dark);
+      padding-bottom: 16px;
+      margin-bottom: 16px;
       display: flex;
-      flex-wrap: wrap;
-      align-items: center;
       justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
       gap: 12px;
     }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .brand-dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: var(--teal);
-    }
-
-    .brand h1 {
+    .atlas-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.6rem;
       margin: 0;
-      font-size: 1.25rem;
-      font-weight: 700;
+      color: var(--accent-blue);
+      letter-spacing: 0.05em;
     }
 
-    .brand span {
-      font-size: 0.85rem;
-      color: var(--muted);
+    .atlas-sub {
+      margin: 4px 0 0;
+      font-size: 0.88rem;
+      color: var(--ink-sub);
     }
 
-    .wrap {
-      max-width: 1040px;
-      margin: 20px auto 64px;
-      padding: 0 16px;
-    }
-
-    .panel {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 16px;
-      margin-bottom: 14px;
-    }
-
-    .controls {
-      display: grid;
-      grid-template-columns: 1fr;
+    .mode-switch-bar {
+      display: flex;
       gap: 10px;
+      margin-bottom: 16px;
+      background: #e2e8f0;
+      padding: 4px;
+      border-radius: 6px;
     }
 
-    @media (min-width: 760px) {
-      .controls {
-        grid-template-columns: 1.6fr 1fr auto;
-      }
+    .btn-mode {
+      flex: 1;
+      padding: 10px;
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border: none;
+      background: transparent;
+      color: var(--ink-sub);
+      cursor: pointer;
+      border-radius: 4px;
+      transition: all 0.2s;
+    }
+
+    .btn-mode.active {
+      background: var(--paper);
+      color: var(--accent-blue);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .control-panel {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      background: var(--paper-sub);
+      border: 1px solid var(--rule);
+      padding: 12px;
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: 640px) {
+      .control-panel { grid-template-columns: 1fr; }
     }
 
     input[type="search"], select {
       width: 100%;
-      padding: 10px 13px;
-      font-size: 0.95rem;
+      padding: 8px 12px;
       font-family: inherit;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: var(--surface-alt);
-      color: var(--ink);
-      outline: none;
-    }
-
-    input[type="search"]:focus, select:focus {
-      background: var(--surface);
-      border-color: var(--teal);
-      box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.14);
-    }
-
-    .btn {
-      padding: 10px 14px;
       font-size: 0.9rem;
-      font-family: inherit;
-      font-weight: 600;
-      border-radius: 8px;
-      border: 1px solid var(--line);
-      background: var(--surface);
-      color: var(--ink);
-      cursor: pointer;
-      transition: all 0.15s ease;
-    }
-
-    .btn:hover {
-      background: var(--surface-alt);
-    }
-
-    .btn-primary {
-      background: var(--teal);
-      border-color: var(--teal);
-      color: #fff;
-    }
-
-    .btn-primary:hover {
-      background: var(--teal-dark);
-    }
-
-    .quick-filters {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 10px;
-      margin-top: 12px;
-      padding-top: 12px;
-      border-top: 1px dashed var(--line);
-      font-size: 0.88rem;
-      color: var(--muted);
-    }
-
-    .chip-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .chip {
-      padding: 5px 11px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: var(--surface-alt);
-      color: var(--muted);
-      font-size: 0.82rem;
-      font-weight: 500;
-      cursor: pointer;
-    }
-
-    .chip.active {
-      background: var(--teal-soft);
-      border-color: var(--teal);
-      color: var(--teal-dark);
-      font-weight: 600;
-    }
-
-    .list-box {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      overflow: hidden;
+      border: 1px solid #cbd5e1;
+      border-radius: 4px;
+      background: #ffffff;
     }
 
     .row-item {
-      padding: 14px 18px;
-      border-bottom: 1px solid #e2e8f0;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .row-item:last-child {
-      border-bottom: none;
-    }
-
-    .row-item:hover {
-      background: #f8fafc;
-    }
-
-    .row-main {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
+      display: grid;
+      grid-template-columns: 108px 1fr;
       gap: 12px;
-      flex-wrap: wrap;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--rule);
+      align-items: start;
     }
 
-    .term-path {
-      font-weight: 600;
-      font-size: 1rem;
-      color: var(--ink);
-      flex: 1 1 320px;
-    }
-
-    .arrow {
-      color: #94a3b8;
-      margin: 0 5px;
-    }
-
-    .code-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-
-    .code-pill {
-      background: var(--teal-soft);
-      color: var(--teal-dark);
-      border: 1px solid #99f6e4;
-      padding: 3px 9px;
-      border-radius: 6px;
+    .code-btn {
+      display: inline-block;
+      background: var(--code-bg);
+      color: var(--code-fg);
       font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
       font-weight: 700;
-      font-size: 0.88rem;
+      padding: 3px 7px;
+      border: none;
+      border-radius: 3px;
       cursor: pointer;
+      text-align: center;
     }
 
-    .code-pill:hover {
-      filter: brightness(0.96);
-    }
+    .code-btn:hover { background: #334155; }
+    .code-btn.sub { background: #475569; }
 
-    .row-sub {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      align-items: center;
-    }
-
-    .mini-tag {
-      font-size: 0.78rem;
-      padding: 2px 7px;
-      border-radius: 4px;
+    .term-title { font-weight: 700; font-size: 0.95rem; }
+    .term-sub { font-size: 0.88rem; color: #334155; margin-top: 2px; }
+    .note-box {
+      font-size: 0.83rem;
+      color: #475569;
       background: #f1f5f9;
-      color: var(--muted);
+      padding: 5px 8px;
+      margin-top: 5px;
+      border-left: 3px solid #94a3b8;
     }
-
-    .mini-tag.flag {
-      background: var(--amber-soft);
-      color: var(--amber-ink);
+    .flag-tag {
+      display: inline-block;
+      font-size: 0.74rem;
+      background: var(--gold-light);
+      color: var(--gold);
       font-weight: 600;
-    }
-
-    .row-note {
-      font-size: 0.86rem;
-      color: var(--muted);
-      background: var(--surface-alt);
-      padding: 8px 10px;
-      border-radius: 6px;
-    }
-
-    .footer-action {
-      margin-top: 16px;
-      text-align: center;
-    }
-
-    .notice {
-      margin-top: 24px;
-      padding: 12px 14px;
-      border-radius: var(--radius);
-      background: var(--amber-soft);
-      color: var(--amber-ink);
-      font-size: 0.84rem;
-      text-align: center;
+      padding: 1px 6px;
+      border-radius: 3px;
+      margin-top: 4px;
     }
 
     .toast {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background: var(--ink);
+      background: #0f172a;
       color: #fff;
-      padding: 10px 16px;
-      border-radius: 8px;
-      font-size: 0.88rem;
-      opacity: 0;
-      transform: translateY(8px);
-      transition: all 0.2s ease;
-      pointer-events: none;
+      padding: 8px 16px;
+      font-size: 0.85rem;
+      border-radius: 4px;
+      display: none;
       z-index: 50;
-    }
-
-    .toast.show {
-      opacity: 1;
-      transform: translateY(0);
     }
   </style>
 </head>
 <body>
-  <header class="topbar">
-    <div class="topbar-inner">
-      <div class="brand">
-        <span class="brand-dot"></span>
-        <h1>ICD-10 Volume 3 Index</h1>
-        <span>Alphabetical Lookup</span>
-      </div>
-      <div id="statusText">กำลังโหลดข้อมูล...</div>
-    </div>
-  </header>
-
-  <main class="wrap">
-    <section class="panel">
-      <div class="controls">
-        <input
-          id="searchInput"
-          type="search"
-          placeholder="ค้นหาคำศัพท์ รหัสโรค หรือคำพ้อง (พิมพ์หลายคำสลับลำดับได้)..."
-          autocomplete="off"
-        />
-        <select id="sectionFilter">
-          <option value="ALL">ทุกหมวด / ทุกบท (All Chapters)</option>
-          <option value="Ch1">Chapter I (A00-B99)</option>
-          <option value="Ch2">Chapter II (C00-D48)</option>
-          <option value="Ch3">Chapter III (D50-D89)</option>
-          <option value="Ch4">Chapter IV (E00-E90)</option>
-          <option value="Ch5">Chapter V (F00-F99)</option>
-          <option value="Ch6">Chapter VI (G00-G99)</option>
-          <option value="Ch7">Chapter VII (H00-H59)</option>
-          <option value="Ch8">Chapter VIII (H60-H95)</option>
-          <option value="Ch9">Chapter IX (I00-I99)</option>
-          <option value="Ch10">Chapter X (J00-J99)</option>
-          <option value="Ch11">Chapter XI (K00-K93)</option>
-          <option value="Ch12">Chapter XII (L00-L99)</option>
-          <option value="Ch13">Chapter XIII (M00-M99)</option>
-          <option value="Ch14">Chapter XIV (N00-N99)</option>
-          <option value="Ch15">Chapter XV (O00-O99)</option>
-          <option value="Ch16">Chapter XVI (P00-P96)</option>
-          <option value="Ch17">Chapter XVII (Q00-Q99)</option>
-          <option value="Ch18">Chapter XVIII (R00-R99)</option>
-          <option value="Ch19">Chapter XIX (S00-T98)</option>
-          <option value="Ch20">Chapter XX (V01-Y98)</option>
-          <option value="Ch21">Chapter XXI (Z00-Z99)</option>
-          <option value="Ch22">Chapter XXII (U00-U85)</option>
-        </select>
-        <button id="resetBtn" class="btn" type="button">ล้างค่า</button>
-      </div>
-
-      <div class="quick-filters">
-        <div class="chip-group">
-          <button class="chip active" data-flag="ALL" type="button">ทั้งหมด</button>
-          <button class="chip" data-flag="NEC" type="button">เฉพาะ NEC</button>
-          <button class="chip" data-flag="PAIR" type="button">รหัสคู่ (†/*)</button>
+  <div class="app-wrap">
+    <div class="atlas-frame">
+      <header class="atlas-header">
+        <div>
+          <h1 class="atlas-title">ICD-10 Clinical Reference Atlas</h1>
+          <p class="atlas-sub">ระบบค้นหาดัชนี Volume 3 และคู่มือ Tabular List (A00–Z99)</p>
         </div>
-        <span>แตะที่รหัสเพื่อคัดลอก</span>
+        <div id="statusText" style="font-size: 0.85rem; color: #64748b;">พร้อมใช้งาน</div>
+      </header>
+
+      <div class="mode-switch-bar">
+        <button id="btnVol3" class="btn-mode active" onclick="switchMode('VOL3')">Volume 3 Index (ค้นหา JSON)</button>
+        <button id="btnTabular" class="btn-mode" onclick="switchMode('TABULAR')">Tabular List (คู่มือตามเล่ม)</button>
       </div>
-    </section>
 
-    <section id="results" class="list-box"></section>
-    <div id="loadMoreWrap" class="footer-action"></div>
+      <div class="control-panel">
+        <input type="search" id="searchInput" placeholder="พิมพ์คำค้นหา หรือ รหัสโรค เช่น A04.7, Shigella, Amoebic..." oninput="filterData()">
+        <select id="chapterFilter" onchange="filterData()">
+          <option value="ALL">ทุกบท (All Chapters)</option>
+          <option value="Ch1">Chapter I (A00–B99)</option>
+        </select>
+      </div>
 
-    <div class="notice">
-      <strong>หมายเหตุ:</strong> ข้อมูลอ้างอิงจาก ICD-10 Volume 3 (Alphabetical Index) ควรตรวจสอบเงื่อนไขรวม/ยกเว้นใน Volume 1 ก่อนลงรหัสจริง
+      <div id="results"></div>
     </div>
-  </main>
+  </div>
 
   <div id="toast" class="toast">คัดลอกรหัสแล้ว</div>
 
   <script>
-    const PAGE_SIZE = 60;
-    let allItems = [];
-    let currentFiltered = [];
-    let visibleCount = PAGE_SIZE;
-    let activeFlag = "ALL";
+    let currentMode = 'VOL3';
+    let vol3Data = [];
 
-    const searchInput = document.getElementById("searchInput");
-    const sectionFilter = document.getElementById("sectionFilter");
-    const resetBtn = document.getElementById("resetBtn");
-    const resultsEl = document.getElementById("results");
-    const loadMoreWrap = document.getElementById("loadMoreWrap");
-    const statusText = document.getElementById("statusText");
-    const toastEl = document.getElementById("toast");
+    const sampleTabular = [
+      { code: "A03", title: "Shigellosis", category: "Ch1", isHeader: true },
+      { code: "A03.0", title: "Shigellosis due to Shigella dysenteriae", sub: "Group A shigellosis [Shiga-Kruse dysentery]", category: "Ch1" },
+      { code: "A03.1", title: "Shigellosis due to Shigella flexneri", sub: "Group B shigellosis", category: "Ch1" },
+      { code: "A03.2", title: "Shigellosis due to Shigella boydii", sub: "Group C shigellosis", category: "Ch1" },
+      { code: "A03.3", title: "Shigellosis due to Shigella sonnei", sub: "Group D shigellosis", category: "Ch1" },
+      { code: "A03.8", title: "Other shigellosis", category: "Ch1" },
+      { code: "A03.9", title: "Shigellosis, unspecified", sub: "Bacillary dysentery NOS", category: "Ch1" },
 
-    function showToast(msg) {
-      toastEl.textContent = msg;
-      toastEl.classList.add("show");
-      clearTimeout(showToast._timer);
-      showToast._timer = setTimeout(() => toastEl.classList.remove("show"), 1600);
+      { code: "A04", title: "Other bacterial intestinal infections", note: "Excl.: foodborne intoxications elsewhere classified; tuberculous enteritis (A18.3)", category: "Ch1", isHeader: true },
+      { code: "A04.0", title: "Enteropathogenic Escherichia coli infection", category: "Ch1" },
+      { code: "A04.1", title: "Enterotoxigenic Escherichia coli infection", category: "Ch1" },
+      { code: "A04.2", title: "Enteroinvasive Escherichia coli infection", category: "Ch1" },
+      { code: "A04.3", title: "Enterohaemorrhagic Escherichia coli infection", category: "Ch1" },
+      { code: "A04.4", title: "Other intestinal Escherichia coli infections", sub: "Escherichia coli enteritis NOS", category: "Ch1" },
+      { code: "A04.5", title: "Campylobacter enteritis", category: "Ch1" },
+      { code: "A04.6", title: "Enteritis due to Yersinia enterocolitica", note: "Excl.: extraintestinal yersiniosis (A28.2)", category: "Ch1" },
+      { code: "A04.7", title: "Enterocolitis due to Clostridium difficile", sub: "Foodborne intoxication by Clostridium difficile; Pseudomembranous colitis", category: "Ch1" },
+      { code: "A04.8", title: "Other specified bacterial intestinal infections", category: "Ch1" },
+      { code: "A04.9", title: "Bacterial intestinal infection, unspecified", sub: "Bacterial enteritis NOS", category: "Ch1" },
+
+      { code: "A05", title: "Other bacterial foodborne intoxications, not elsewhere classified", note: "Excl.: Clostridium difficile foodborne intoxication and infection (A04.7); Escherichia coli infection (A04.0–A04.4); listeriosis (A32.-); Salmonella foodborne intoxication and infection (A02.-); toxic effect of noxious foodstuffs (T61–T62)", category: "Ch1", isHeader: true },
+      { code: "A05.0", title: "Foodborne staphylococcal intoxication", category: "Ch1" },
+      { code: "A05.1", title: "Botulism", sub: "Classical foodborne intoxication due to Clostridium botulinum", category: "Ch1" },
+      { code: "A05.2", title: "Foodborne Clostridium perfringens [Clostridium welchii] intoxication", sub: "Enteritis necroticans; Pig-bel", category: "Ch1" },
+      { code: "A05.3", title: "Foodborne Vibrio parahaemolyticus intoxication", category: "Ch1" },
+      { code: "A05.4", title: "Foodborne Bacillus cereus intoxication", category: "Ch1" },
+      { code: "A05.8", title: "Other specified bacterial foodborne intoxications", category: "Ch1" },
+      { code: "A05.9", title: "Bacterial foodborne intoxication, unspecified", category: "Ch1" },
+
+      { code: "A06", title: "Amoebiasis", note: "Incl.: infection due to Entamoeba histolytica | Excl.: other protozoal intestinal diseases (A07.-)", category: "Ch1", isHeader: true },
+      { code: "A06.0", title: "Acute amoebic dysentery", sub: "Acute amoebiasis; Intestinal amoebiasis NOS", category: "Ch1" },
+      { code: "A06.1", title: "Chronic intestinal amoebiasis", category: "Ch1" },
+      { code: "A06.2", title: "Amoebic nondysenteric colitis", category: "Ch1" },
+      { code: "A06.3", title: "Amoeboma of intestine", sub: "Amoeboma NOS", category: "Ch1" },
+      { code: "A06.4†", title: "Amoebic liver abscess (K77.0*)", sub: "Hepatic amoebiasis", tag: "Dagger / Asterisk †/*", category: "Ch1" },
+      { code: "A06.5†", title: "Amoebic lung abscess (J99.8*)", sub: "Amoebic abscess of lung (and liver)", tag: "Dagger / Asterisk †/*", category: "Ch1" },
+      { code: "A06.6†", title: "Amoebic brain abscess (G07*)", sub: "Amoebic abscess of brain (and liver)(and lung)", tag: "Dagger / Asterisk †/*", category: "Ch1" },
+      { code: "A06.7", title: "Cutaneous amoebiasis", category: "Ch1" },
+      { code: "A06.8", title: "Amoebic infection of other sites", sub: "Amoebic: appendicitis; balanitis† (N51.2*)", category: "Ch1" },
+      { code: "A06.9", title: "Amoebiasis, unspecified", category: "Ch1" },
+
+      { code: "A07", title: "Other protozoal intestinal diseases", category: "Ch1", isHeader: true },
+      { code: "A07.0", title: "Balantidiasis", sub: "Balantidial dysentery", category: "Ch1" },
+      { code: "A07.1", title: "Giardiasis [lambliasis]", category: "Ch1" },
+      { code: "A07.2", title: "Cryptosporidiosis", category: "Ch1" },
+      { code: "A07.3", title: "Isosporiasis", sub: "Infection due to Isospora belli and Isospora hominis; Intestinal coccidiosis; Isosporosis", category: "Ch1" },
+      { code: "A07.8", title: "Other specified protozoal intestinal diseases", sub: "Intestinal trichomoniasis; Sarcocystosis; Sarcosporidiosis", category: "Ch1" },
+      { code: "A07.9", title: "Protozoal intestinal disease, unspecified", sub: "Flagellate diarrhoea; Protozoal: colitis, diarrhoea, dysentery", category: "Ch1" },
+
+      { code: "A08", title: "Viral and other specified intestinal infections", note: "Excl.: influenza with involvement of gastrointestinal tract (J09, J10.8, J11.8)", category: "Ch1", isHeader: true },
+      { code: "A08.0", title: "Rotaviral enteritis", category: "Ch1" },
+      { code: "A08.1", title: "Acute gastroenteropathy due to Norwalk agent", sub: "Small round structured virus enteritis", category: "Ch1" },
+      { code: "A08.2", title: "Adenoviral enteritis", category: "Ch1" },
+      { code: "A08.3", title: "Other viral enteritis", category: "Ch1" },
+      { code: "A08.4", title: "Viral intestinal infection, unspecified", sub: "Viral: enteritis NOS, gastroenteritis NOS, gastroenteropathy NOS", category: "Ch1" },
+      { code: "A08.5", title: "Other specified intestinal infections", category: "Ch1" },
+
+      { code: "A09", title: "Other gastroenteritis and colitis of infectious and unspecified origin", note: "Excl.: due to bacterial, protozoal, viral and other specified infectious agents (A00–A08); noninfective (see noninfectious) diarrhoea (K52.9); neonatal (P78.3)", category: "Ch1", isHeader: true },
+      { code: "A09.0", title: "Other and unspecified gastroenteritis and colitis of infectious origin", sub: "Catarrh, enteric or intestinal; Diarrhoea (acute bloody, acute haemorrhagic, acute watery, dysenteric, epidemic); Infectious or septic: colitis, enteritis, gastroenteritis (NOS, haemorrhagic); Infectious diarrhoea NOS", category: "Ch1" },
+      { code: "A09.9", title: "Gastroenteritis and colitis of unspecified origin", note: "Incl.: Neonatal diarrhoea NOS", category: "Ch1" },
+
+      { code: "A15", title: "Respiratory tuberculosis, bacteriologically and histologically confirmed", note: "Tuberculosis (A15–A19) — Incl.: infections due to Mycobacterium tuberculosis and Mycobacterium bovis | Excl.: congenital tuberculosis (P37.0); HIV disease resulting in tuberculosis (B20.0); pneumoconiosis associated with tuberculosis (J65); sequelae of tuberculosis (B90.-); silicotuberculosis (J65)", category: "Ch1", isHeader: true },
+      { code: "A15.0", title: "Tuberculosis of lung, confirmed by sputum microscopy with or without culture", sub: "Tuberculous: bronchiectasis, fibrosis of lung, pneumonia, pneumothorax (confirmed by sputum microscopy with or without culture)", category: "Ch1" },
+      { code: "A15.1", title: "Tuberculosis of lung, confirmed by culture only", sub: "Conditions listed in A15.0, confirmed by culture only", category: "Ch1" },
+      { code: "A15.2", title: "Tuberculosis of lung, confirmed histologically", sub: "Conditions listed in A15.0, confirmed histologically", category: "Ch1" },
+      { code: "A15.3", title: "Tuberculosis of lung, confirmed by unspecified means", sub: "Conditions listed in A15.0, confirmed but unspecified whether bacteriologically or histologically", category: "Ch1" },
+      { code: "A15.4", title: "Tuberculosis of intrathoracic lymph nodes, confirmed bacteriologically and histologically", sub: "Tuberculosis of lymph nodes: hilar, mediastinal, tracheobronchial | Excl.: specified as primary (A15.7)", category: "Ch1" },
+      { code: "A15.5", title: "Tuberculosis of larynx, trachea and bronchus, confirmed bacteriologically and histologically", sub: "Tuberculosis of: bronchus, glottis, larynx, trachea", category: "Ch1" },
+      { code: "A15.6", title: "Tuberculous pleurisy, confirmed bacteriologically and histologically", sub: "Tuberculosis of pleura; Tuberculous empyema | Excl.: in primary respiratory tuberculosis (A15.7)", category: "Ch1" },
+      { code: "A15.7", title: "Primary respiratory tuberculosis, confirmed bacteriologically and histologically", category: "Ch1" },
+      { code: "A15.8", title: "Other respiratory tuberculosis, confirmed bacteriologically and histologically", sub: "Mediastinal tuberculosis; Nasopharyngeal tuberculosis; Tuberculosis of: nose, sinus [any nasal]", category: "Ch1" },
+      { code: "A15.9", title: "Respiratory tuberculosis unspecified, confirmed bacteriologically and histologically", category: "Ch1" },
+
+      { code: "A16", title: "Respiratory tuberculosis, not confirmed bacteriologically or histologically", category: "Ch1", isHeader: true },
+      { code: "A16.0", title: "Tuberculosis of lung, bacteriologically and histologically negative", sub: "Tuberculous: bronchiectasis, fibrosis of lung, pneumonia, pneumothorax (bacteriologically and histologically)", category: "Ch1" },
+      { code: "A16.1", title: "Tuberculosis of lung, bacteriologically and histological examination not done", sub: "Conditions listed in A16.0, bacteriological and histological examination not done", category: "Ch1" },
+      { code: "A16.2", title: "Tuberculosis of lung, without mention of bacteriological or histological confirmation", sub: "Tuberculosis of lung NOS; Tuberculous: bronchiectasis, fibrosis of lung, pneumonia, pneumothorax (NOS)", category: "Ch1" }
+    ];
+
+    function switchMode(mode) {
+      currentMode = mode;
+      document.getElementById('btnVol3').classList.toggle('active', mode === 'VOL3');
+      document.getElementById('btnTabular').classList.toggle('active', mode === 'TABULAR');
+      filterData();
     }
 
-    function escapeHtml(str = "") {
-      return String(str)
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;");
-    }
-
-    function inferSectionFromCodes(codes = []) {
-      for (const raw of codes) {
-        const m = String(raw).toUpperCase().match(/\b([A-Z])(\d{2})/);
-        if (!m) continue;
-        const letter = m[1];
-        const num = parseInt(m[2], 10);
-
-        if (letter === "A" || letter === "B") return "Ch1";
-        if (letter === "C" || (letter === "D" && num <= 48)) return "Ch2";
-        if (letter === "D" && num >= 50 && num <= 89) return "Ch3";
-        if (letter === "E") return "Ch4";
-        if (letter === "F") return "Ch5";
-        if (letter === "G") return "Ch6";
-        if (letter === "H" && num <= 59) return "Ch7";
-        if (letter === "H" && num >= 60) return "Ch8";
-        if (letter === "I") return "Ch9";
-        if (letter === "J") return "Ch10";
-        if (letter === "K") return "Ch11";
-        if (letter === "L") return "Ch12";
-        if (letter === "M") return "Ch13";
-        if (letter === "N") return "Ch14";
-        if (letter === "O") return "Ch15";
-        if (letter === "P") return "Ch16";
-        if (letter === "Q") return "Ch17";
-        if (letter === "R") return "Ch18";
-        if (letter === "S" || letter === "T") return "Ch19";
-        if (["V", "W", "X", "Y"].includes(letter)) return "Ch20";
-        if (letter === "Z") return "Ch21";
-        if (letter === "U") return "Ch22";
-      }
-      return "";
-    }
-
-    function normalizeItem(raw) {
-      const codes = Array.isArray(raw.codes)
-        ? raw.codes
-        : (raw.code ? [raw.code] : []);
-      const section = raw.section || inferSectionFromCodes(codes);
-
-      const searchable = [
-        raw.lead_term,
-        ...(Array.isArray(raw.modifiers) ? raw.modifiers : []),
-        raw.full_text,
-        ...codes,
-        raw.cross_reference,
-        raw.tabular_note
-      ]
-        .filter(Boolean)
-        .join(" ")
-        .toLowerCase();
-
-      return {
-        ...raw,
-        codes,
-        section,
-        _searchable: searchable
-      };
-    }
-
-    function renderList() {
-      const slice = currentFiltered.slice(0, visibleCount);
-      const totalMatched = currentFiltered.length;
-
-      statusText.textContent =
-        `แสดง ${slice.length} / ${totalMatched.toLocaleString()} รายการ (รวม ${allItems.length.toLocaleString()})`;
-
-      if (totalMatched === 0) {
-        resultsEl.innerHTML = `<div class="row-item">ไม่พบรายการที่ตรงกับเงื่อนไขการค้นหา</div>`;
-        loadMoreWrap.innerHTML = "";
-        return;
-      }
-
-      resultsEl.innerHTML = slice.map((item) => {
-        const parts = [item.lead_term, ...(item.modifiers || [])].filter(Boolean);
-        const titleHtml = parts
-          .map((p, i) => `${i > 0 ? '<span class="arrow">/</span>' : ''}${escapeHtml(p)}`)
-          .join("");
-
-        const codesHtml = (item.codes || [])
-          .map((c) => `<button type="button" class="code-pill" data-copy="${escapeHtml(c)}">${escapeHtml(c)}</button>`)
-          .join("");
-
-        const tags = [
-          item.section ? `<span class="mini-tag">${escapeHtml(item.section)}</span>` : "",
-          item.page ? `<span class="mini-tag">หน้า ${escapeHtml(item.page)}</span>` : "",
-          item.nec ? `<span class="mini-tag flag">NEC</span>` : "",
-          item.dagger_star ? `<span class="mini-tag flag">†/*</span>` : "",
-          item.cross_reference ? `<span class="mini-tag flag">${escapeHtml(item.cross_reference)}</span>` : ""
-        ].filter(Boolean).join("");
-
-        return `
-          <div class="row-item">
-            <div class="row-main">
-              <div class="term-path">${titleHtml || escapeHtml(item.full_text || "")}</div>
-              <div class="code-group">${codesHtml}</div>
-            </div>
-            ${tags ? `<div class="row-sub">${tags}</div>` : ""}
-            ${item.tabular_note ? `<div class="row-note">${escapeHtml(item.tabular_note)}</div>` : ""}
-          </div>
-        `;
-      }).join("");
-
-      resultsEl.querySelectorAll(".code-pill").forEach((btn) => {
-        btn.addEventListener("click", async () => {
-          const code = btn.getAttribute("data-copy");
-          try {
-            await navigator.clipboard.writeText(code);
-            showToast(`คัดลอกรหัส ${code} แล้ว`);
-          } catch {
-            showToast(`รหัส: ${code}`);
-          }
-        });
-      });
-
-      if (visibleCount < totalMatched) {
-        const remaining = totalMatched - visibleCount;
-        loadMoreWrap.innerHTML = `
-          <button id="loadMoreBtn" class="btn btn-primary" type="button">
-            โหลดเพิ่มอีก ${Math.min(PAGE_SIZE, remaining)} รายการ (เหลือ ${remaining.toLocaleString()} รายการ)
-          </button>
-        `;
-        document.getElementById("loadMoreBtn").addEventListener("click", () => {
-          visibleCount += PAGE_SIZE;
-          renderList();
-        });
-      } else {
-        loadMoreWrap.innerHTML = "";
-      }
+    function copyCode(code) {
+      navigator.clipboard.writeText(code);
+      const toast = document.getElementById('toast');
+      toast.textContent = `คัดลอกรหัส ${code} แล้ว`;
+      toast.style.display = 'block';
+      clearTimeout(copyCode._timer);
+      copyCode._timer = setTimeout(() => { toast.style.display = 'none'; }, 1500);
     }
 
     function filterData() {
-      const q = searchInput.value.trim().toLowerCase();
-      const sec = sectionFilter.value;
-      const tokens = q ? q.split(/\s+/) : [];
+      const q = document.getElementById('searchInput').value.trim().toLowerCase();
+      const ch = document.getElementById('chapterFilter').value;
+      const resultsEl = document.getElementById('results');
+      const list = currentMode === 'TABULAR' ? sampleTabular : vol3Data;
 
-      visibleCount = PAGE_SIZE;
-
-      currentFiltered = allItems.filter((item) => {
-        if (sec !== "ALL" && item.section !== sec) return false;
-        if (activeFlag === "NEC" && !item.nec) return false;
-        if (activeFlag === "PAIR" && !item.dagger_star) return false;
-        if (tokens.length === 0) return true;
-        return tokens.every((t) => item._searchable.includes(t));
+      const filtered = list.filter(item => {
+        if (ch !== 'ALL' && item.category && item.category !== ch) return false;
+        if (!q) return true;
+        const text = [
+          item.title || item.lead_term || '',
+          item.code || (Array.isArray(item.codes) ? item.codes.join(' ') : ''),
+          item.sub || '',
+          item.note || ''
+        ].join(' ').toLowerCase();
+        return text.includes(q);
       });
 
-      renderList();
-    }
+      document.getElementById('statusText').textContent = `แสดง ${filtered.length} รายการ`;
 
-    async function fetchJsonSafe(url) {
-      try {
-        const res = await fetch(url);
-        if (!res.ok) return [];
-        const data = await res.json();
-        return Array.isArray(data) ? data : (data.items || []);
-      } catch {
-        return [];
+      if (filtered.length === 0) {
+        resultsEl.innerHTML = `<div style="padding: 24px 0; text-align: center; color: #64748b;">ไม่พบรายการที่ค้นหา</div>`;
+        return;
       }
-    }
 
-    async function loadDataset() {
-      const cleanedItems = await fetchJsonSafe("./data/icd10_vol3_cleaned.json");
-      if (cleanedItems.length > 0) return cleanedItems;
-
-      const directItems = await fetchJsonSafe("https://hashhha148-crypto.github.io/ICD-10-/icd10_vol3_cleaned.json");
-      if (directItems.length > 0) return directItems;
-
-      const singleItems = await fetchJsonSafe("./data/volume3_index.json");
-      if (singleItems.length > 0) return singleItems;
-
-      const letters = "abcdefghijklmnopqrstuvwxyz".split("");
-      const urls = [
-        ...letters.map((ch) => `./data/index_${ch}.json`),
-        "./data/index_other.json"
-      ];
-      const fetchedLists = await Promise.all(urls.map(fetchJsonSafe));
-      const merged = fetchedLists.flat();
-      if (merged.length > 0) return merged;
-
-      const fallbackItems = await fetchJsonSafe("./data/sample_index.json");
-      if (fallbackItems.length > 0) return fallbackItems;
-
-      throw new Error("ไม่พบไฟล์ข้อมูลที่ใช้งานได้");
+      resultsEl.innerHTML = filtered.map(item => {
+        const displayCode = item.code || (Array.isArray(item.codes) && item.codes[0]) || '—';
+        const displayTitle = item.title || item.lead_term || '(ไม่มีชื่อรายการ)';
+        return `
+          <div class="row-item">
+            <div>
+              <button type="button" class="code-btn ${item.isHeader ? '' : 'sub'}" onclick="copyCode('${displayCode.replace(/'/g, "\\'")}')">
+                ${displayCode}
+              </button>
+            </div>
+            <div>
+              <div class="term-title">${displayTitle}</div>
+              ${item.sub ? `<div class="term-sub">${item.sub}</div>` : ''}
+              ${item.tag ? `<div class="flag-tag">${item.tag}</div>` : ''}
+              ${item.note ? `<div class="note-box">${item.note}</div>` : ''}
+            </div>
+          </div>
+        `;
+      }).join('');
     }
 
     async function init() {
       try {
-        const rawList = await loadDataset();
-        allItems = rawList.map(normalizeItem);
-        filterData();
-      } catch (err) {
-        statusText.textContent = "โหลดข้อมูลไม่สำเร็จ";
-        resultsEl.innerHTML = `<div class="row-item">เกิดข้อผิดพลาด: ${escapeHtml(err.message)}</div>`;
-      }
-    }
-
-    document.querySelectorAll(".chip").forEach((chip) => {
-      chip.addEventListener("click", () => {
-        document.querySelectorAll(".chip").forEach((c) => c.classList.remove("active"));
-        chip.classList.add("active");
-        activeFlag = chip.getAttribute("data-flag");
-        filterData();
-      });
-    });
-
-    searchInput.addEventListener("input", filterData);
-    sectionFilter.addEventListener("change", filterData);
-    resetBtn.addEventListener("click", () => {
-      searchInput.value = "";
-      sectionFilter.value = "ALL";
-      activeFlag = "ALL";
-      document.querySelectorAll(".chip").forEach((c) => {
-        c.classList.toggle("active", c.getAttribute("data-flag") === "ALL");
-      });
+        const res = await fetch('./data/icd10_vol3_cleaned.json');
+        if (res.ok) {
+          const data = await res.json();
+          vol3Data = Array.isArray(data) ? data : (data.items || []);
+        }
+      } catch (e) { }
       filterData();
-    });
+    }
 
     init();
   </script>
