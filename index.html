@@ -324,7 +324,7 @@
         <input
           type="search"
           id="searchInput"
-          placeholder="พิมพ์คำค้นหา ชื่อโรค หรือรหัส เช่น A04.7, A18.0, Leptospirosis..."
+          placeholder="พิมพ์คำค้นหา ชื่อโรค หรือรหัส เช่น A04.7, A18.0, D46, Leptospirosis..."
           oninput="filterData()"
         />
         <select id="chapterFilter" onchange="filterData()">
@@ -334,23 +334,23 @@
           <option value="Ch3">Chapter III (D50–D89)</option>
           <option value="Ch4">Chapter IV (E00–E90)</option>
           <option value="Ch5">Chapter V (F00–F99)</option>
-<option value="Ch6">Chapter VI (G00–G99)</option>
-<option value="Ch7">Chapter VII (H00–H59)</option>
-<option value="Ch8">Chapter VIII (H60–H95)</option>
-<option value="Ch9">Chapter IX (I00–I99)</option>
-<option value="Ch10">Chapter X (J00–J99)</option>
-<option value="Ch11">Chapter XI (K00–K93)</option>
-<option value="Ch12">Chapter XII (L00–L99)</option>
-<option value="Ch13">Chapter XIII (M00–M99)</option>
-<option value="Ch14">Chapter XIV (N00–N99)</option>
-<option value="Ch15">Chapter XV (O00–O99)</option>
-<option value="Ch16">Chapter XVI (P00–P96)</option>
-<option value="Ch17">Chapter XVII (Q00–Q99)</option>
-<option value="Ch18">Chapter XVIII (R00–R99)</option>
-<option value="Ch19">Chapter XIX (S00–T98)</option>
-<option value="Ch20">Chapter XX (V01–Y98)</option>
-<option value="Ch21">Chapter XXI (Z00–Z99)</option>
-<option value="Ch22">Chapter XXII (U00–U99)</option>
+          <option value="Ch6">Chapter VI (G00–G99)</option>
+          <option value="Ch7">Chapter VII (H00–H59)</option>
+          <option value="Ch8">Chapter VIII (H60–H95)</option>
+          <option value="Ch9">Chapter IX (I00–I99)</option>
+          <option value="Ch10">Chapter X (J00–J99)</option>
+          <option value="Ch11">Chapter XI (K00–K93)</option>
+          <option value="Ch12">Chapter XII (L00–L99)</option>
+          <option value="Ch13">Chapter XIII (M00–M99)</option>
+          <option value="Ch14">Chapter XIV (N00–N99)</option>
+          <option value="Ch15">Chapter XV (O00–O99)</option>
+          <option value="Ch16">Chapter XVI (P00–P96)</option>
+          <option value="Ch17">Chapter XVII (Q00–Q99)</option>
+          <option value="Ch18">Chapter XVIII (R00–R99)</option>
+          <option value="Ch19">Chapter XIX (S00–T98)</option>
+          <option value="Ch20">Chapter XX (V01–Y98)</option>
+          <option value="Ch21">Chapter XXI (Z00–Z99)</option>
+          <option value="Ch22">Chapter XXII (U00–U99)</option>
         </select>
         <button type="button" class="btn-reset" onclick="resetFilters()">ล้างค่า</button>
       </div>
@@ -364,6 +364,7 @@
   <script>
     let currentMode = 'TABULAR';
     let vol3Data = [];
+    let vol3Loaded = false;
 
     const sampleTabular = [
       { code: "A03", title: "Shigellosis", category: "Ch1", isHeader: true },
@@ -563,7 +564,6 @@
 
       { code: "A33", title: "Tetanus neonatorum", category: "Ch1", isHeader: true },
       { code: "A34", title: "Obstetrical tetanus", category: "Ch1", isHeader: true },
-
       { code: "A35", title: "Other tetanus", note: "Incl.: tetanus NOS | Excl.: tetanus: neonatorum (A33), obstetrical (A34)", category: "Ch1", isHeader: true },
 
       { code: "A36", title: "Diphtheria", category: "Ch1", isHeader: true },
@@ -573,6 +573,7 @@
       { code: "A36.3", title: "Cutaneous diphtheria", note: "Excl.: erythrasma (L08.1)", category: "Ch1" },
       { code: "A36.8", title: "Other diphtheria", sub: "Diphtheritic: conjunctivitis† (H13.1*), myocarditis† (I41.0*), polyneuritis† (G63.0*)", tag: "Dagger / Asterisk †/*", category: "Ch1" },
       { code: "A36.9", title: "Diphtheria, unspecified", category: "Ch1" },
+
       { code: "A37", title: "Whooping cough", category: "Ch1", isHeader: true },
       { code: "A37.0", title: "Whooping cough due to Bordetella pertussis", category: "Ch1" },
       { code: "A37.1", title: "Whooping cough due to Bordetella parapertussis", category: "Ch1" },
@@ -653,6 +654,7 @@
       { code: "A50.2", title: "Early congenital syphilis, unspecified", sub: "Congenital syphilis NOS less than two years after birth", category: "Ch1" },
       { code: "A50.3", title: "Late congenital syphilitic oculopathy", sub: "Late congenital syphilitic interstitial keratitis† (H19.2*); Late congenital syphilitic oculopathy NEC† (H58.8*)", note: "Excl.: Hutchinson triad (A50.5)", tag: "Dagger / Asterisk †/*", category: "Ch1" },
       { code: "A50.4", title: "Late congenital neurosyphilis [juvenile neurosyphilis]", sub: "Dementia paralytica juvenilis; Juvenile: general paresis, tabes dorsalis, taboparetic neurosyphilis; Late congenital syphilitic: encephalitis† (G05.0*), meningitis† (G01*), polyneuropathy† (G63.0*). Use additional code, if desired, to identify any associated mental disorder.", note: "Excl.: Hutchinson triad (A50.5)", tag: "Dagger / Asterisk †/*", category: "Ch1" },
+
       { code: "A52", title: "Late syphilis", category: "Ch1", isHeader: true },
       { code: "A52.0†", title: "Cardiovascular syphilis", sub: "Cardiovascular syphilis NOS (I98.0*); Syphilitic: aneurysm of aorta (I79.0*), aortic incompetence (I39.1*), aortitis (I79.1*), arteritis, cerebral (I68.1*), endocarditis NOS (I39.8*), myocarditis (I41.0*), pericarditis (I32.0*), pulmonary regurgitation (I39.3*)", tag: "Dagger / Asterisk †/*", category: "Ch1" },
       { code: "A52.1", title: "Symptomatic neurosyphilis", sub: "Charcot arthropathy† (M14.6*); Late syphilitic: acoustic neuritis† (H94.0*), encephalitis† (G05.0*), meningitis† (G01*), optic atrophy† (H48.0*), polyneuropathy† (G63.0*), retrobulbar neuritis† (H48.1*); Syphilitic parkinsonism† (G22*); Tabes dorsalis", tag: "Dagger / Asterisk †/*", category: "Ch1" },
@@ -983,6 +985,7 @@
       { code: "B21.7", title: "HIV disease resulting in multiple malignant neoplasms", category: "Ch1" },
       { code: "B21.8", title: "HIV disease resulting in other malignant neoplasms", category: "Ch1" },
       { code: "B21.9", title: "HIV disease resulting in unspecified malignant neoplasm", category: "Ch1" },
+
       { code: "B22", title: "Human immunodeficiency virus [HIV] disease resulting in other specified diseases", category: "Ch1", isHeader: true },
       { code: "B22.0", title: "HIV disease resulting in encephalopathy", sub: "HIV dementia", category: "Ch1" },
       { code: "B22.1", title: "HIV disease resulting in lymphoid interstitial pneumonitis", category: "Ch1" },
@@ -1092,6 +1095,7 @@
       { code: "B39.4", title: "Histoplasmosis capsulati, unspecified", sub: "American histoplasmosis", category: "Ch1" },
       { code: "B39.5", title: "Histoplasmosis duboisii", sub: "African histoplasmosis", category: "Ch1" },
       { code: "B39.9", title: "Histoplasmosis, unspecified", category: "Ch1" },
+
       { code: "B40", title: "Blastomycosis", note: "Excl.: Brazilian blastomycosis (B41.-); keloidal blastomycosis (B48.0)", category: "Ch1", isHeader: true },
       { code: "B40.0", title: "Acute pulmonary blastomycosis", category: "Ch1" },
       { code: "B40.1", title: "Chronic pulmonary blastomycosis", category: "Ch1" },
@@ -1222,6 +1226,7 @@
       { code: "B60.8", title: "Other specified protozoal diseases", sub: "Microsporidiosis", category: "Ch1" },
 
       { code: "B64", title: "Unspecified protozoal disease", category: "Ch1", isHeader: true },
+
       { code: "B65", title: "Schistosomiasis [bilharziasis]", sub: "Snail fever", note: "Helminthiases (B65–B83)", category: "Ch1", isHeader: true },
       { code: "B65.0", title: "Schistosomiasis due to Schistosoma haematobium [urinary schistosomiasis]", category: "Ch1" },
       { code: "B65.1", title: "Schistosomiasis due to Schistosoma mansoni [intestinal schistosomiasis]", category: "Ch1" },
@@ -1414,6 +1419,7 @@
       { code: "B98.1", title: "Vibrio vulnificus as the cause of diseases classified to other chapters", category: "Ch1" },
 
       { code: "B99", title: "Other and unspecified infectious diseases", note: "Other infectious diseases (B99) — End of Chapter I", category: "Ch1", isHeader: true },
+
       { code: "C00", title: "Malignant neoplasm of lip", note: "Malignant neoplasms (C00–C97) — Use additional code (U85), if desired, to identify resistance, non-responsiveness and refractive properties of the neoplasm to antineoplastic drugs. Malignant neoplasms, stated or presumed to be primary, of specified sites, except of lymphoid, haematopoietic and related tissue (C00–C75). Malignant neoplasms of lip, oral cavity and pharynx (C00–C14). | Excl.: skin of lip (C43.0, C44.0)", category: "Ch2", isHeader: true },
       { code: "C00.0", title: "External upper lip", sub: "Upper lip: NOS, lipstick area, vermilion border", category: "Ch2" },
       { code: "C00.1", title: "External lower lip", sub: "Lower lip: NOS, lipstick area, vermilion border", category: "Ch2" },
@@ -1587,7 +1593,7 @@
       { code: "C26", title: "Malignant neoplasm of other and ill-defined digestive organs", note: "Excl.: peritoneum and retroperitoneum (C48.-)", category: "Ch2", isHeader: true },
       { code: "C26.0", title: "Intestinal tract, part unspecified", sub: "Intestine NOS", category: "Ch2" },
       { code: "C26.1", title: "Spleen", note: "Excl.: follicular lymphoma (C82.-); Hodgkin lymphoma (C81.-); mature T/NK-cell lymphomas (C84.-); non-follicular lymphoma (C83.-); non-Hodgkin lymphoma, other and unspecified types (C85.-)", category: "Ch2" },
-      { code: "C26.8", title: "Overlapping lesion of digestive system", sub: "[See note 5 at the beginning of this chapter]; Malignant neoplasm of digestive organs whose point of origin cannot be classified to any one of the categories C15–C26.1", note: "Excl.: cardio-oesophageal junction (C16.0)", category: "Ch2" },
+      { code: "C26.8", title: "Overlapping lesion of digestive system", sub: "[See note 5 at the beginning of this chapter]; Malignant neoplasm of digestive organs whose point of origin cannot be classified to any one of the categories C15–C26.1 | Excl.: cardio-oesophageal junction (C16.0)", category: "Ch2" },
       { code: "C26.9", title: "Ill-defined sites within the digestive system", sub: "Alimentary canal or tract NOS; Gastrointestinal tract NOS", category: "Ch2" },
 
       { code: "C30", title: "Malignant neoplasm of nasal cavity and middle ear", note: "Malignant neoplasms of respiratory and intrathoracic organs (C30–C39) — Incl.: middle ear | Excl.: mesothelioma (C45.-)", category: "Ch2", isHeader: true },
@@ -1663,6 +1669,7 @@
       { code: "C43.7", title: "Malignant melanoma of lower limb, including hip", category: "Ch2" },
       { code: "C43.8", title: "Overlapping malignant melanoma of skin", sub: "[See note 5 at the beginning of this chapter]", category: "Ch2" },
       { code: "C43.9", title: "Malignant melanoma of skin, unspecified", sub: "Melanoma (malignant) NOS", category: "Ch2" },
+
       { code: "C44", title: "Other malignant neoplasms of skin", sub: "Malignant neoplasm of: sebaceous glands, sweat glands", note: "Excl.: Kaposi sarcoma (C46.-); malignant melanoma of skin (C43.-); skin of genital organs (C51–C52, C60.-, C63.-)", category: "Ch2", isHeader: true },
       { code: "C44.0", title: "Skin of lip", sub: "Basal cell carcinoma of lip", note: "Excl.: malignant neoplasm of lip (C00.-)", category: "Ch2" },
       { code: "C44.1", title: "Skin of eyelid, including canthus", note: "Excl.: connective tissue of eyelid (C49.0)", category: "Ch2" },
@@ -1924,6 +1931,7 @@
       { code: "C81.4", title: "Lymphocyte-rich (classical) Hodgkin lymphoma", note: "Excl.: nodular lymphocyte predominant Hodgkin lymphoma (C81.0)", category: "Ch2" },
       { code: "C81.7", title: "Other (classical) Hodgkin lymphoma", sub: "Classic Hodgkin lymphoma, type not specified", category: "Ch2" },
       { code: "C81.9", title: "Hodgkin lymphoma, unspecified", category: "Ch2" },
+
       { code: "C82", title: "Follicular lymphoma", sub: "Follicular lymphoma with or without diffuse areas", note: "Excl.: mature T/NK-cell lymphoma (C84.-)", category: "Ch2", isHeader: true },
       { code: "C82.0", title: "Follicular lymphoma grade I", category: "Ch2" },
       { code: "C82.1", title: "Follicular lymphoma grade II", category: "Ch2" },
@@ -1948,7 +1956,7 @@
       { code: "C84.0", title: "Mycosis fungoides", category: "Ch2" },
       { code: "C84.1", title: "Sézary disease", category: "Ch2" },
       { code: "C84.4", title: "Peripheral T-cell lymphoma, not elsewhere classified", sub: "Lennert lymphoma; Lymphoepithelioid lymphoma", category: "Ch2" },
-      { code: "C84.5", title: "Other mature T/NK-cell lymphomas", sub: "Note: If T-cell lineage or involvement is mentioned in conjunction with a specific lymphoma, code to the more specific description.", note: "Excl.: angioimmunoblastic T-cell lymphoma (C86.5); blastic NK-cell lymphoma (C86.4); enteropathy-type T-cell lymphoma (C86.2); extranodal NK-cell lymphoma, nasal type (C86.0); hepatosplenic T-cell lymphoma (C86.1); primary cutaneous CD30-positive T-cell proliferations (C86.6); subcutaneous panniculitis-like T-cell lymphoma (C86.3); T-cell leukaemia (C91.-)", category: "Ch2" },
+      { code: "C84.5", title: "Other mature T/NK-cell lymphomas", sub: "Note: If T-cell lineage or involvement is mentioned in conjunction with a specific lymphoma, code to the more specific description. | Excl.: angioimmunoblastic T-cell lymphoma (C86.5); blastic NK-cell lymphoma (C86.4); enteropathy-type T-cell lymphoma (C86.2); extranodal NK-cell lymphoma, nasal type (C86.0); hepatosplenic T-cell lymphoma (C86.1); primary cutaneous CD30-positive T-cell proliferations (C86.6); subcutaneous panniculitis-like T-cell lymphoma (C86.3); T-cell leukaemia (C91.-)", category: "Ch2" },
       { code: "C84.6", title: "Anaplastic large cell lymphoma, ALK-positive", sub: "Anaplastic large cell lymphoma, CD30-positive", category: "Ch2" },
       { code: "C84.7", title: "Anaplastic large cell lymphoma, ALK-negative", note: "Excl.: primary cutaneous CD30-positive T-cell proliferations (C86.6)", category: "Ch2" },
       { code: "C84.8", title: "Cutaneous T-cell lymphoma, unspecified", category: "Ch2" },
@@ -2033,350 +2041,22 @@
       { code: "C96.4", title: "Sarcoma of dendritic cells (accessory cells)", sub: "Interdigitating dendritic cell sarcoma; Langerhans-cell sarcoma; Sarcoma of follicular dendritic cells", category: "Ch2" },
       { code: "C96.5", title: "Multifocal and unisystemic Langerhans-cell histiocytosis", sub: "Hand–Schüller–Christian disease; Histiocytosis X, multifocal", category: "Ch2" },
       { code: "C96.6", title: "Unifocal Langerhans-cell histiocytosis", sub: "Eosinophilic granuloma; Histiocytosis X, unifocal; Histiocytosis X NOS; Langerhans-cell histiocytosis NOS", category: "Ch2" },
-      { code: "C96.7", title: "Other specified malignant neoplasms of lymphoid, haematopoietic and related tissue", category: "Ch2" },
-      { code: "C96.8", title: "Histiocytic sarcoma", sub: "Malignant histiocytosis", category: "Ch2" },
+      { code: "C96.7", title: "Other specified malignant neoplasms of lymphoid, haematopoietic and related tissue", sub: "Bone marrow NOS", category: "Ch2" },
+      { code: "C96.8", title: "Histiocytic sarcoma", sub: "True histiocytic lymphoma", category: "Ch2" },
       { code: "C96.9", title: "Malignant neoplasm of lymphoid, haematopoietic and related tissue, unspecified", category: "Ch2" },
 
-      { code: "C97", title: "Malignant neoplasms of independent (primary) multiple sites", sub: "Note: For use of this category, reference should be made to the mortality coding rules and guidelines in Volume 2.", note: "Malignant neoplasms of independent (primary) multiple sites (C97)", category: "Ch2", isHeader: true },
+      { code: "C97", title: "Malignant neoplasms of independent (primary) multiple sites", sub: "Note: For use of this category, reference should be made to the morbidity or mortality coding rules and guidelines in Volume 2.", note: "Independent (primary) multiple sites (C97) — End of Malignant neoplasms (C00–C97)", category: "Ch2", isHeader: true },
 
-      { code: "D00", title: "Carcinoma in situ of oral cavity, oesophagus and stomach", sub: "Incl.: Bowen disease; erythroplasia; Queyrat erythroplasia", note: "In situ neoplasms (D00–D09) — Excl.: melanoma in situ (D03.-)", category: "Ch2", isHeader: true },
-      { code: "D00.0", title: "Lip, oral cavity and pharynx", sub: "Aryepiglottic fold: NOS, hypopharyngeal aspect, marginal zone; Vermilion border of lip", note: "Excl.: aryepiglottic fold, laryngeal aspect (D02.0); epiglottis: NOS (D02.0), suprahyoid portion (D02.0); skin of lip (D03.0, D04.0)", category: "Ch2" },
-      { code: "D00.1", title: "Oesophagus", category: "Ch2" },
-      { code: "D00.2", title: "Stomach", category: "Ch2" },
-
-      { code: "D01", title: "Carcinoma in situ of other and unspecified digestive organs", note: "Excl.: melanoma in situ (D03.-)", category: "Ch2", isHeader: true },
-      { code: "D01.0", title: "Colon", note: "Excl.: rectosigmoid junction (D01.1)", category: "Ch2" },
-      { code: "D01.1", title: "Rectosigmoid junction", category: "Ch2" },
-      { code: "D01.2", title: "Rectum", category: "Ch2" },
-      { code: "D01.3", title: "Anus and anal canal", note: "Excl.: anal: margin (D03.5, D04.5), skin (D03.5, D04.5); perianal skin (D03.5, D04.5)", category: "Ch2" },
-      { code: "D01.4", title: "Other and unspecified parts of intestine", note: "Excl.: ampulla of Vater (D01.5)", category: "Ch2" },
-      { code: "D01.5", title: "Liver, gallbladder and bile ducts", sub: "Ampulla of Vater", category: "Ch2" },
-      { code: "D01.7", title: "Other specified digestive organs", sub: "Pancreas", category: "Ch2" },
-      { code: "D01.9", title: "Digestive organ, unspecified", category: "Ch2" },
-
-      { code: "D02", title: "Carcinoma in situ of middle ear and respiratory system", note: "Excl.: melanoma in situ (D03.-)", category: "Ch2", isHeader: true },
-      { code: "D02.0", title: "Larynx", sub: "Aryepiglottic fold, laryngeal aspect; Epiglottis (suprahyoid portion)", note: "Excl.: aryepiglottic fold: NOS (D00.0), hypopharyngeal aspect (D00.0), marginal zone (D00.0)", category: "Ch2" },
-      { code: "D02.1", title: "Trachea", category: "Ch2" },
-      { code: "D02.2", title: "Bronchus and lung", category: "Ch2" },
-      { code: "D02.3", title: "Other parts of respiratory system", sub: "Accessory sinuses; Middle ear; Nasal cavities", note: "Excl.: ear (external)(skin) (D03.2, D04.2); nose: NOS (D09.7), skin (D03.3, D04.3)", category: "Ch2" },
-      { code: "D02.4", title: "Respiratory system, unspecified", category: "Ch2" },
-
-      { code: "D03", title: "Melanoma in situ", category: "Ch2", isHeader: true },
-      { code: "D03.0", title: "Melanoma in situ of lip", category: "Ch2" },
-      { code: "D03.1", title: "Melanoma in situ of eyelid, including canthus", category: "Ch2" },
-      { code: "D03.2", title: "Melanoma in situ of ear and external auricular canal", category: "Ch2" },
-      { code: "D03.3", title: "Melanoma in situ of other and unspecified parts of face", category: "Ch2" },
-      { code: "D03.4", title: "Melanoma in situ of scalp and neck", category: "Ch2" },
-      { code: "D03.5", title: "Melanoma in situ of trunk", sub: "Anal: margin, skin; Breast (skin)(soft tissue); Perianal skin", category: "Ch2" },
-      { code: "D03.6", title: "Melanoma in situ of upper limb, including shoulder", category: "Ch2" },
-      { code: "D03.7", title: "Melanoma in situ of lower limb, including hip", category: "Ch2" },
-      { code: "D03.8", title: "Melanoma in situ of other sites", category: "Ch2" },
-      { code: "D03.9", title: "Melanoma in situ, unspecified", category: "Ch2" },
-
-      { code: "D04", title: "Carcinoma in situ of skin", note: "Excl.: erythroplasia of Queyrat (penis) NOS (D07.4); melanoma in situ (D03.-)", category: "Ch2", isHeader: true },
-      { code: "D04.0", title: "Skin of lip", note: "Excl.: vermilion border of lip (D00.0)", category: "Ch2" },
-      { code: "D04.1", title: "Skin of eyelid, including canthus", category: "Ch2" },
-      { code: "D04.2", title: "Skin of ear and external auricular canal", category: "Ch2" },
-      { code: "D04.3", title: "Skin of other and unspecified parts of face", category: "Ch2" },
-      { code: "D04.4", title: "Skin of scalp and neck", category: "Ch2" },
-      { code: "D04.5", title: "Skin of trunk", sub: "Anal: margin, skin; Perianal skin; Skin of breast", note: "Excl.: anus NOS (D01.3); skin of genital organs (D07.-)", category: "Ch2" },
-      { code: "D04.6", title: "Skin of upper limb, including shoulder", category: "Ch2" },
-      { code: "D04.7", title: "Skin of lower limb, including hip", category: "Ch2" },
-      { code: "D04.8", title: "Skin of other sites", category: "Ch2" },
-      { code: "D04.9", title: "Skin, unspecified", category: "Ch2" },
-
-      { code: "D05", title: "Carcinoma in situ of breast", note: "Excl.: carcinoma in situ of skin of breast (D04.5); melanoma in situ of breast (skin) (D03.5)", category: "Ch2", isHeader: true },
-      { code: "D05.0", title: "Lobular carcinoma in situ", category: "Ch2" },
-      { code: "D05.1", title: "Intraductal carcinoma in situ", category: "Ch2" },
-      { code: "D05.7", title: "Other carcinoma in situ of breast", category: "Ch2" },
-      { code: "D05.9", title: "Carcinoma in situ of breast, unspecified", category: "Ch2" },
-
-      { code: "D06", title: "Carcinoma in situ of cervix uteri", sub: "Cervical intraepithelial neoplasia [CIN], grade III, with or without mention of severe dysplasia", note: "Excl.: melanoma in situ of cervix (D03.5); severe dysplasia of cervix NOS (N87.2)", category: "Ch2", isHeader: true },
-      { code: "D06.0", title: "Endocervix", category: "Ch2" },
-      { code: "D06.1", title: "Exocervix", category: "Ch2" },
-      { code: "D06.7", title: "Other parts of cervix", category: "Ch2" },
-      { code: "D06.9", title: "Cervix, unspecified", category: "Ch2" },
-
-      { code: "D07", title: "Carcinoma in situ of other and unspecified genital organs", note: "Excl.: melanoma in situ (D03.5)", category: "Ch2", isHeader: true },
-      { code: "D07.0", title: "Endometrium", category: "Ch2" },
-      { code: "D07.1", title: "Vulva", sub: "Vulvar intraepithelial neoplasia [VIN], grade III, with or without mention of severe dysplasia", note: "Excl.: severe dysplasia of vulva NOS (N90.2)", category: "Ch2" },
-      { code: "D07.2", title: "Vagina", sub: "Vaginal intraepithelial neoplasia [VAIN], grade III, with or without mention of severe dysplasia", note: "Excl.: severe dysplasia of vagina NOS (N89.2)", category: "Ch2" },
-      { code: "D07.3", title: "Other and unspecified female genital organs", category: "Ch2" },
-      { code: "D07.4", title: "Penis", sub: "Erythroplasia of Queyrat NOS", category: "Ch2" },
-      { code: "D07.5", title: "Prostate", note: "Excl.: low-grade dysplasia of prostate (N42.3)", category: "Ch2" },
-      { code: "D07.6", title: "Other and unspecified male genital organs", category: "Ch2" },
-
-      { code: "D09", title: "Carcinoma in situ of other and unspecified sites", note: "Excl.: melanoma in situ (D03.-)", category: "Ch2", isHeader: true },
-      { code: "D09.0", title: "Bladder", category: "Ch2" },
-      { code: "D09.1", title: "Other and unspecified urinary organs", category: "Ch2" },
-      { code: "D09.2", title: "Eye", note: "Excl.: skin of eyelid (D04.1)", category: "Ch2" },
-      { code: "D09.3", title: "Thyroid and other endocrine glands", note: "Excl.: endocrine pancreas (D01.7); ovary (D07.3); testis (D07.6)", category: "Ch2" },
-      { code: "D09.7", title: "Carcinoma in situ of other specified sites", category: "Ch2" },
-      { code: "D09.9", title: "Carcinoma in situ, unspecified", category: "Ch2" },
-
-      { code: "D10", title: "Benign neoplasm of mouth and pharynx", note: "Benign neoplasms (D10–D36)", category: "Ch2", isHeader: true },
-      { code: "D10.0", title: "Lip", sub: "Lip (frenulum)(inner aspect)(mucosa)(vermilion border)", note: "Excl.: skin of lip (D22.0, D23.0)", category: "Ch2" },
-      { code: "D10.1", title: "Tongue", sub: "Lingual tonsil", category: "Ch2" },
-      { code: "D10.2", title: "Floor of mouth", category: "Ch2" },
-      { code: "D10.3", title: "Other and unspecified parts of mouth", sub: "Minor salivary gland NOS", note: "Excl.: benign odontogenic neoplasms (D16.4–D16.5); mucosa of lip (D10.0); nasopharyngeal surface of soft palate (D10.6)", category: "Ch2" },
-      { code: "D10.4", title: "Tonsil", sub: "Tonsil (faucial)(palatine)", note: "Excl.: lingual tonsil (D10.1); pharyngeal tonsil (D10.6); tonsillar: fossa (D10.5), pillars (D10.5)", category: "Ch2" },
-      { code: "D10.5", title: "Other parts of oropharynx", sub: "Epiglottis, anterior aspect; Tonsillar: fossa, pillars; Vallecula", note: "Excl.: epiglottis: NOS (D14.1), suprahyoid portion (D14.1)", category: "Ch2" },
-      { code: "D10.6", title: "Nasopharynx", sub: "Pharyngeal tonsil; Posterior margin of septum and choanae", category: "Ch2" },
-      { code: "D10.7", title: "Hypopharynx", category: "Ch2" },
-      { code: "D10.9", title: "Pharynx, unspecified", category: "Ch2" },
-
-      { code: "D11", title: "Benign neoplasm of major salivary glands", note: "Excl.: benign neoplasms of specified minor salivary glands which are classified according to their anatomical location; benign neoplasms of minor salivary glands NOS (D10.3)", category: "Ch2", isHeader: true },
-      { code: "D11.0", title: "Parotid gland", category: "Ch2" },
-      { code: "D11.7", title: "Other major salivary glands", sub: "Gland: sublingual, submandibular", category: "Ch2" },
-      { code: "D11.9", title: "Major salivary gland, unspecified", category: "Ch2" },
-
-      { code: "D12", title: "Benign neoplasm of colon, rectum, anus and anal canal", category: "Ch2", isHeader: true },
-      { code: "D12.0", title: "Caecum", sub: "Ileocaecal valve", category: "Ch2" },
-      { code: "D12.1", title: "Appendix", category: "Ch2" },
-      { code: "D12.2", title: "Ascending colon", category: "Ch2" },
-      { code: "D12.3", title: "Transverse colon", sub: "Hepatic flexure; Splenic flexure", category: "Ch2" },
-      { code: "D12.4", title: "Descending colon", category: "Ch2" },
-      { code: "D12.5", title: "Sigmoid colon", category: "Ch2" },
-      { code: "D12.6", title: "Colon, unspecified", sub: "Adenomatosis of colon; Large intestine NOS; Polyposis (hereditary) of colon", category: "Ch2" },
-      { code: "D12.7", title: "Rectosigmoid junction", category: "Ch2" },
-      { code: "D12.8", title: "Rectum", category: "Ch2" },
-      { code: "D12.9", title: "Anus and anal canal", note: "Excl.: anal: margin (D22.5, D23.5), skin (D22.5, D23.5); perianal skin (D22.5, D23.5)", category: "Ch2" },
-
-      { code: "D13", title: "Benign neoplasm of other and ill-defined parts of digestive system", category: "Ch2", isHeader: true },
-      { code: "D13.0", title: "Oesophagus", category: "Ch2" },
-      { code: "D13.1", title: "Stomach", category: "Ch2" },
-      { code: "D13.2", title: "Duodenum", category: "Ch2" },
-      { code: "D13.3", title: "Other and unspecified parts of small intestine", category: "Ch2" },
-      { code: "D13.4", title: "Liver", sub: "Intrahepatic bile ducts", category: "Ch2" },
-      { code: "D13.5", title: "Extrahepatic bile ducts", category: "Ch2" },
-      { code: "D13.6", title: "Pancreas", note: "Excl.: endocrine pancreas (D13.7)", category: "Ch2" },
-      { code: "D13.7", title: "Endocrine pancreas", sub: "Islet cell tumour; Islets of Langerhans", category: "Ch2" },
-      { code: "D13.9", title: "Ill-defined sites within the digestive system", sub: "Digestive system NOS; Intestine NOS; Spleen", category: "Ch2" },
-
-      { code: "D14", title: "Benign neoplasm of middle ear and respiratory system", category: "Ch2", isHeader: true },
-      { code: "D14.0", title: "Middle ear, nasal cavity and accessory sinuses", sub: "Cartilage of nose", note: "Excl.: auricular canal (external) (D22.2, D23.2); bone of: ear (D16.4), nose (D16.4); cartilage of ear (D21.0); ear (external)(skin) (D22.2, D23.2); nose: NOS (D36.7), skin (D22.3, D23.3); olfactory bulb (D33.3); polyp (of): accessory sinus (J33.8), ear (middle) (H74.4), nasal (cavity) (J33.-); posterior margin of septum and choanae (D10.6)", category: "Ch2" },
-      { code: "D14.1", title: "Larynx", sub: "Epiglottis (suprahyoid portion)", note: "Excl.: epiglottis, anterior aspect (D10.5); polyp of vocal cord and larynx (J38.1)", category: "Ch2" },
-      { code: "D14.2", title: "Trachea", category: "Ch2" },
-      { code: "D14.3", title: "Bronchus and lung", category: "Ch2" },
-      { code: "D14.4", title: "Respiratory system, unspecified", category: "Ch2" },
-
-      { code: "D15", title: "Benign neoplasm of other and unspecified intrathoracic organs", note: "Excl.: mesothelial tissue (D19.-)", category: "Ch2", isHeader: true },
-      { code: "D15.0", title: "Thymus", category: "Ch2" },
-      { code: "D15.1", title: "Heart", note: "Excl.: great vessels (D21.3)", category: "Ch2" },
-      { code: "D15.2", title: "Mediastinum", category: "Ch2" },
-      { code: "D15.7", title: "Other specified intrathoracic organs", category: "Ch2" },
-      { code: "D15.9", title: "Intrathoracic organ, unspecified", category: "Ch2" },
-
-      { code: "D16", title: "Benign neoplasm of bone and articular cartilage", note: "Excl.: connective tissue of: ear (D21.0), eyelid (D21.0), larynx (D14.1), nose (D14.0); synovia (D21.-)", category: "Ch2", isHeader: true },
-      { code: "D16.0", title: "Scapula and long bones of upper limb", category: "Ch2" },
-      { code: "D16.1", title: "Short bones of upper limb", category: "Ch2" },
-      { code: "D16.2", title: "Long bones of lower limb", category: "Ch2" },
-      { code: "D16.3", title: "Short bones of lower limb", category: "Ch2" },
-      { code: "D16.4", title: "Bones of skull and face", sub: "Maxilla (superior); Orbital bone", note: "Excl.: lower jaw bone (D16.5)", category: "Ch2" },
-      { code: "D16.5", title: "Lower jaw bone", category: "Ch2" },
-      { code: "D16.6", title: "Vertebral column", note: "Excl.: sacrum and coccyx (D16.8)", category: "Ch2" },
-      { code: "D16.7", title: "Ribs, sternum and clavicle", category: "Ch2" },
-      { code: "D16.8", title: "Pelvic bones, sacrum and coccyx", category: "Ch2" },
-      { code: "D16.9", title: "Bone and articular cartilage, unspecified", category: "Ch2" },
-
-      { code: "D17", title: "Benign lipomatous neoplasm", category: "Ch2", isHeader: true },
-      { code: "D17.0", title: "Benign lipomatous neoplasm of skin and subcutaneous tissue of head, face and neck", category: "Ch2" },
-      { code: "D17.1", title: "Benign lipomatous neoplasm of skin and subcutaneous tissue of trunk", category: "Ch2" },
-      { code: "D17.2", title: "Benign lipomatous neoplasm of skin and subcutaneous tissue of limbs", category: "Ch2" },
-      { code: "D17.3", title: "Benign lipomatous neoplasm of skin and subcutaneous tissue of other and unspecified sites", category: "Ch2" },
-      { code: "D17.4", title: "Benign lipomatous neoplasm of intrathoracic organs", category: "Ch2" },
-      { code: "D17.5", title: "Benign lipomatous neoplasm of intra-abdominal organs", note: "Excl.: peritoneum and retroperitoneum (D17.7)", category: "Ch2" },
-      { code: "D17.6", title: "Benign lipomatous neoplasm of spermatic cord", category: "Ch2" },
-      { code: "D17.7", title: "Benign lipomatous neoplasm of other sites", sub: "Peritoneum; Retroperitoneum", category: "Ch2" },
-      { code: "D17.9", title: "Benign lipomatous neoplasm, unspecified", sub: "Lipoma NOS", category: "Ch2" },
-
-      { code: "D18", title: "Haemangioma and lymphangioma, any site", note: "Excl.: blue or pigmented naevus (D22.-)", category: "Ch2", isHeader: true },
-      { code: "D18.0", title: "Haemangioma, any site", sub: "Angioma NOS", category: "Ch2" },
-      { code: "D18.1", title: "Lymphangioma, any site", category: "Ch2" },
-
-      { code: "D19", title: "Benign neoplasm of mesothelial tissue", category: "Ch2", isHeader: true },
-      { code: "D19.0", title: "Mesothelial tissue of pleura", category: "Ch2" },
-      { code: "D19.1", title: "Mesothelial tissue of peritoneum", category: "Ch2" },
-      { code: "D19.7", title: "Mesothelial tissue of other sites", category: "Ch2" },
-      { code: "D19.9", title: "Mesothelial tissue, unspecified", sub: "Benign mesothelioma NOS", category: "Ch2" },
-
-      { code: "D20", title: "Benign neoplasm of soft tissue of retroperitoneum and peritoneum", note: "Excl.: benign lipomatous neoplasm of peritoneum and retroperitoneum (D17.7); mesothelial tissue (D19.-)", category: "Ch2", isHeader: true },
-      { code: "D20.0", title: "Retroperitoneum", category: "Ch2" },
-      { code: "D20.1", title: "Peritoneum", category: "Ch2" },
-
-      { code: "D21", title: "Other benign neoplasms of connective and other soft tissue", sub: "Incl.: blood vessel; bursa; cartilage; fascia; fat; ligament, except uterine; lymphatic channel; muscle; synovia; tendon (sheath)", note: "Excl.: cartilage: articular (D16.-), larynx (D14.1), nose (D14.0); connective tissue of breast (D24); haemangioma (D18.0); lipomatous neoplasm (D17.-); lymphangioma (D18.1); peripheral nerves and autonomic nervous system (D36.1); peritoneum (D20.1); retroperitoneum (D20.0); uterine: leiomyoma (D25.-), ligament, any (D28.2); vascular tissue (D18.-)", category: "Ch2", isHeader: true },
-      { code: "D21.0", title: "Connective and other soft tissue of head, face and neck", sub: "Connective tissue of: ear, eyelid", note: "Excl.: connective tissue of orbit (D31.6)", category: "Ch2" },
-      { code: "D21.1", title: "Connective and other soft tissue of upper limb, including shoulder", category: "Ch2" },
-      { code: "D21.2", title: "Connective and other soft tissue of lower limb, including hip", category: "Ch2" },
-      { code: "D21.3", title: "Connective and other soft tissue of thorax", sub: "Axilla; Diaphragm; Great vessels", note: "Excl.: heart (D15.1); mediastinum (D15.2); thymus (D15.0)", category: "Ch2" },
-      { code: "D21.4", title: "Connective and other soft tissue of abdomen", category: "Ch2" },
-      { code: "D21.5", title: "Connective and other soft tissue of pelvis", note: "Excl.: uterine: leiomyoma (D25.-), ligament, any (D28.2)", category: "Ch2" },
-      { code: "D21.6", title: "Connective and other soft tissue of trunk, unspecified", sub: "Back NOS", category: "Ch2" },
-      { code: "D21.9", title: "Connective and other soft tissue, unspecified", category: "Ch2" },
-
-      { code: "D22", title: "Melanocytic naevi", sub: "Naevus: NOS, blue, hairy, pigmented", category: "Ch2", isHeader: true },
-      { code: "D22.0", title: "Melanocytic naevi of lip", category: "Ch2" },
-      { code: "D22.1", title: "Melanocytic naevi of eyelid, including canthus", category: "Ch2" },
-      { code: "D22.2", title: "Melanocytic naevi of ear and external auricular canal", category: "Ch2" },
-      { code: "D22.3", title: "Melanocytic naevi of other and unspecified parts of face", category: "Ch2" },
-      { code: "D22.4", title: "Melanocytic naevi of scalp and neck", category: "Ch2" },
-      { code: "D22.5", title: "Melanocytic naevi of trunk", sub: "Anal: margin, skin; Perianal skin; Skin of breast", category: "Ch2" },
-      { code: "D22.6", title: "Melanocytic naevi of upper limb, including shoulder", category: "Ch2" },
-      { code: "D22.7", title: "Melanocytic naevi of lower limb, including hip", category: "Ch2" },
-      { code: "D22.9", title: "Melanocytic naevi, unspecified", category: "Ch2" },
-
-      { code: "D23", title: "Other benign neoplasms of skin", sub: "Incl.: benign neoplasm of: hair follicles, sebaceous glands, sweat glands", note: "Excl.: benign lipomatous neoplasms (D17.0–D17.3); melanocytic naevi (D22.-)", category: "Ch2", isHeader: true },
-      { code: "D23.0", title: "Skin of lip", note: "Excl.: vermilion border of lip (D10.0)", category: "Ch2" },
-      { code: "D23.1", title: "Skin of eyelid, including canthus", category: "Ch2" },
-      { code: "D23.2", title: "Skin of ear and external auricular canal", category: "Ch2" },
-      { code: "D23.3", title: "Skin of other and unspecified parts of face", category: "Ch2" },
-      { code: "D23.4", title: "Skin of scalp and neck", category: "Ch2" },
-      { code: "D23.5", title: "Skin of trunk", sub: "Anal: margin, skin; Perianal skin; Skin of breast", note: "Excl.: anus NOS (D12.9); skin of genital organs (D28–D29)", category: "Ch2" },
-      { code: "D23.6", title: "Skin of upper limb, including shoulder", category: "Ch2" },
-      { code: "D23.7", title: "Skin of lower limb, including hip", category: "Ch2" },
-      { code: "D23.9", title: "Skin, unspecified", category: "Ch2" },
-
-      { code: "D24", title: "Benign neoplasm of breast", sub: "Incl.: breast: connective tissue, soft parts", note: "Excl.: benign mammary dysplasia (N60.-); skin of breast (D22.5, D23.5)", category: "Ch2", isHeader: true },
-
-      { code: "D25", title: "Leiomyoma of uterus", sub: "Fibromyoma of uterus", category: "Ch2", isHeader: true },
-      { code: "D25.0", title: "Submucous leiomyoma of uterus", category: "Ch2" },
-      { code: "D25.1", title: "Intramural leiomyoma of uterus", category: "Ch2" },
-      { code: "D25.2", title: "Subserosal leiomyoma of uterus", category: "Ch2" },
-      { code: "D25.9", title: "Leiomyoma of uterus, unspecified", category: "Ch2" },
-
-      { code: "D26", title: "Other benign neoplasms of uterus", category: "Ch2", isHeader: true },
-      { code: "D26.0", title: "Cervix uteri", category: "Ch2" },
-      { code: "D26.1", title: "Corpus uteri", category: "Ch2" },
-      { code: "D26.7", title: "Other parts of uterus", category: "Ch2" },
-      { code: "D26.9", title: "Uterus, unspecified", category: "Ch2" },
-
-      { code: "D27", title: "Benign neoplasm of ovary", category: "Ch2", isHeader: true },
-
-      { code: "D28", title: "Benign neoplasm of other and unspecified female genital organs", sub: "Incl.: adenomatous polyp; skin of female genital organs", category: "Ch2", isHeader: true },
-      { code: "D28.0", title: "Vulva", category: "Ch2" },
-      { code: "D28.1", title: "Vagina", category: "Ch2" },
-      { code: "D28.2", title: "Uterine tubes and ligaments", sub: "Fallopian tube; Uterine ligament (broad)(round)", category: "Ch2" },
-      { code: "D28.7", title: "Other specified female genital organs", category: "Ch2" },
-      { code: "D28.9", title: "Female genital organ, unspecified", category: "Ch2" },
-
-      { code: "D29", title: "Benign neoplasm of male genital organs", sub: "Incl.: skin of male genital organs", category: "Ch2", isHeader: true },
-      { code: "D29.0", title: "Penis", category: "Ch2" },
-      { code: "D29.1", title: "Prostate", note: "Excl.: hyperplasia of prostate (adenomatous) (N40); prostatic: enlargement (N40), hypertrophy (N40)", category: "Ch2" },
-      { code: "D29.2", title: "Testis", category: "Ch2" },
-      { code: "D29.3", title: "Epididymis", category: "Ch2" },
-      { code: "D29.4", title: "Scrotum", sub: "Skin of scrotum", category: "Ch2" },
-      { code: "D29.7", title: "Other male genital organs", sub: "Seminal vesicle; Spermatic cord; Tunica vaginalis", category: "Ch2" },
-      { code: "D29.9", title: "Male genital organ, unspecified", category: "Ch2" },
-
-      { code: "D30", title: "Benign neoplasm of urinary organs", category: "Ch2", isHeader: true },
-      { code: "D30.0", title: "Kidney", note: "Excl.: renal: calyces (D30.1), pelvis (D30.1)", category: "Ch2" },
-      { code: "D30.1", title: "Renal pelvis", category: "Ch2" },
-      { code: "D30.2", title: "Ureter", note: "Excl.: ureteric orifice of bladder (D30.3)", category: "Ch2" },
-      { code: "D30.3", title: "Bladder", sub: "Orifice of bladder: urethral, ureteric", category: "Ch2" },
-      { code: "D30.4", title: "Urethra", note: "Excl.: urethral orifice of bladder (D30.3)", category: "Ch2" },
-      { code: "D30.7", title: "Other urinary organs", sub: "Paraurethral glands", category: "Ch2" },
-      { code: "D30.9", title: "Urinary organ, unspecified", sub: "Urinary system NOS", category: "Ch2" },
-
-      { code: "D31", title: "Benign neoplasm of eye and adnexa", note: "Excl.: connective tissue of eyelid (D21.0); optic nerve (D33.3); skin of eyelid (D22.1, D23.1)", category: "Ch2", isHeader: true },
-      { code: "D31.0", title: "Conjunctiva", category: "Ch2" },
-      { code: "D31.1", title: "Cornea", category: "Ch2" },
-      { code: "D31.2", title: "Retina", category: "Ch2" },
-      { code: "D31.3", title: "Choroid", category: "Ch2" },
-      { code: "D31.4", title: "Ciliary body", category: "Ch2" },
-      { code: "D31.5", title: "Lacrimal gland and duct", sub: "Lacrimal sac; Nasolacrimal duct", category: "Ch2" },
-      { code: "D31.6", title: "Orbit, unspecified", sub: "Connective tissue of orbit; Extraocular muscle; Peripheral nerves of orbit; Retrobulbar tissue; Retro-ocular tissue", note: "Excl.: orbital bone (D16.4)", category: "Ch2" },
-      { code: "D31.9", title: "Eye, unspecified", sub: "Eyeball", category: "Ch2" },
-
-      { code: "D32", title: "Benign neoplasm of meninges", category: "Ch2", isHeader: true },
-      { code: "D32.0", title: "Cerebral meninges", category: "Ch2" },
-      { code: "D32.1", title: "Spinal meninges", category: "Ch2" },
-      { code: "D32.9", title: "Meninges, unspecified", sub: "Meningioma NOS", category: "Ch2" },
-
-      { code: "D33", title: "Benign neoplasm of brain and other parts of central nervous system", note: "Excl.: angioma (D18.0); meninges (D32.-); peripheral nerves and autonomic nervous system (D36.1); retro-ocular tissue (D31.6)", category: "Ch2", isHeader: true },
-      { code: "D33.0", title: "Brain, supratentorial", sub: "Cerebral ventricle; Cerebrum; Frontal lobe; Occipital lobe; Parietal lobe; Temporal lobe", note: "Excl.: fourth ventricle (D33.1)", category: "Ch2" },
-      { code: "D33.1", title: "Brain, infratentorial", sub: "Brain stem; Cerebellum; Fourth ventricle", category: "Ch2" },
-      { code: "D33.2", title: "Brain, unspecified", category: "Ch2" },
-      { code: "D33.3", title: "Cranial nerves", sub: "Olfactory bulb", category: "Ch2" },
-      { code: "D33.4", title: "Spinal cord", category: "Ch2" },
-      { code: "D33.7", title: "Other specified parts of central nervous system", category: "Ch2" },
-      { code: "D33.9", title: "Central nervous system, unspecified", sub: "Nervous system (central) NOS", category: "Ch2" },
-
-      { code: "D34", title: "Benign neoplasm of thyroid gland", category: "Ch2", isHeader: true },
-
-      { code: "D35", title: "Benign neoplasm of other and unspecified endocrine glands", note: "Excl.: endocrine pancreas (D13.7); ovary (D27); testis (D29.2); thymus (D15.0)", category: "Ch2", isHeader: true },
-      { code: "D35.0", title: "Adrenal gland", category: "Ch2" },
-      { code: "D35.1", title: "Parathyroid gland", category: "Ch2" },
-      { code: "D35.2", title: "Pituitary gland", category: "Ch2" },
-      { code: "D35.3", title: "Craniopharyngeal duct", category: "Ch2" },
-      { code: "D35.4", title: "Pineal gland", category: "Ch2" },
-      { code: "D35.5", title: "Carotid body", category: "Ch2" },
-      { code: "D35.6", title: "Aortic body and other paraganglia", category: "Ch2" },
-      { code: "D35.7", title: "Other specified endocrine glands", category: "Ch2" },
-      { code: "D35.8", title: "Pluriglandular involvement", category: "Ch2" },
-      { code: "D35.9", title: "Endocrine gland, unspecified", category: "Ch2" },
-
-      { code: "D36", title: "Benign neoplasm of other and unspecified sites", category: "Ch2", isHeader: true },
-      { code: "D36.0", title: "Lymph nodes", category: "Ch2" },
-      { code: "D36.1", title: "Peripheral nerves and autonomic nervous system", note: "Excl.: peripheral nerves of orbit (D31.6)", category: "Ch2" },
-      { code: "D36.7", title: "Other specified sites", sub: "Nose NOS", category: "Ch2" },
-      { code: "D36.9", title: "Benign neoplasm of unspecified site", category: "Ch2" },
-
-      { code: "D37", title: "Neoplasm of uncertain or unknown behaviour of oral cavity and digestive organs", sub: "Note: Categories D37–D48 classify by site neoplasms of uncertain or unknown behaviour, i.e. there is doubt whether the neoplasm is malignant or benign.", note: "Neoplasms of uncertain or unknown behaviour (D37–D48)", category: "Ch2", isHeader: true },
-      { code: "D37.0", title: "Lip, oral cavity and pharynx", sub: "Aryepiglottic fold: NOS, hypopharyngeal aspect, marginal zone; Major and minor salivary glands; Vermilion border of lip", note: "Excl.: aryepiglottic fold, laryngeal aspect (D38.0); epiglottis: NOS (D38.0), suprahyoid portion (D38.0); skin of lip (D48.5)", category: "Ch2" },
-      { code: "D37.1", title: "Stomach", category: "Ch2" },
-      { code: "D37.2", title: "Small intestine", category: "Ch2" },
-      { code: "D37.3", title: "Appendix", category: "Ch2" },
-      { code: "D37.4", title: "Colon", category: "Ch2" },
-      { code: "D37.5", title: "Rectum", sub: "Rectosigmoid junction", category: "Ch2" },
-      { code: "D37.6", title: "Liver, gallbladder and bile ducts", sub: "Ampulla of Vater", category: "Ch2" },
-      { code: "D37.7", title: "Other digestive organs", sub: "Anal: canal, sphincter; Anus NOS; Intestine NOS; Oesophagus; Pancreas", note: "Excl.: anal: margin (D48.5), skin (D48.5); perianal skin (D48.5)", category: "Ch2" },
-      { code: "D37.9", title: "Digestive organ, unspecified", category: "Ch2" },
-
-      { code: "D38", title: "Neoplasm of uncertain or unknown behaviour of middle ear and respiratory and intrathoracic organs", note: "Excl.: heart (D48.7)", category: "Ch2", isHeader: true },
-      { code: "D38.0", title: "Larynx", sub: "Aryepiglottic fold, laryngeal aspect; Epiglottis (suprahyoid portion)", note: "Excl.: aryepiglottic fold: NOS (D37.0), hypopharyngeal aspect (D37.0), marginal zone (D37.0)", category: "Ch2" },
-      { code: "D38.1", title: "Trachea, bronchus and lung", category: "Ch2" },
-      { code: "D38.2", title: "Pleura", category: "Ch2" },
-      { code: "D38.3", title: "Mediastinum", category: "Ch2" },
-      { code: "D38.4", title: "Thymus", category: "Ch2" },
-      { code: "D38.5", title: "Other respiratory organs", sub: "Accessory sinuses; Cartilage of nose; Middle ear; Nasal cavities", note: "Excl.: ear (external)(skin) (D48.5); nose: NOS (D48.7), skin (D48.5)", category: "Ch2" },
-      { code: "D38.6", title: "Respiratory organ, unspecified", category: "Ch2" },
-
-      { code: "D39", title: "Neoplasm of uncertain or unknown behaviour of female genital organs", category: "Ch2", isHeader: true },
-      { code: "D39.0", title: "Uterus", category: "Ch2" },
-      { code: "D39.1", title: "Ovary", category: "Ch2" },
-      { code: "D39.2", title: "Placenta", sub: "Chorioadenoma destruens; Hydatidiform mole: invasive, malignant", note: "Excl.: hydatidiform mole NOS (O01.9)", category: "Ch2" },
-      { code: "D39.7", title: "Other female genital organs", sub: "Skin of female genital organs", category: "Ch2" },
-      { code: "D39.9", title: "Female genital organ, unspecified", category: "Ch2" },
-
-      { code: "D40", title: "Neoplasm of uncertain or unknown behaviour of male genital organs", category: "Ch2", isHeader: true },
-      { code: "D40.0", title: "Prostate", category: "Ch2" },
-      { code: "D40.1", title: "Testis", category: "Ch2" },
-      { code: "D40.7", title: "Other male genital organs", sub: "Skin of male genital organs", category: "Ch2" },
-      { code: "D40.9", title: "Male genital organ, unspecified", category: "Ch2" },
-
-      { code: "D41", title: "Neoplasm of uncertain or unknown behaviour of urinary organs", category: "Ch2", isHeader: true },
-      { code: "D41.0", title: "Kidney", note: "Excl.: renal pelvis (D41.1)", category: "Ch2" },
-      { code: "D41.1", title: "Renal pelvis", category: "Ch2" },
-      { code: "D41.2", title: "Ureter", category: "Ch2" },
-      { code: "D41.3", title: "Urethra", category: "Ch2" },
-      { code: "D41.4", title: "Bladder", category: "Ch2" },
-      { code: "D41.7", title: "Other urinary organs", category: "Ch2" },
-      { code: "D41.9", title: "Urinary organ, unspecified", category: "Ch2" },
-
-      { code: "D42", title: "Neoplasm of uncertain or unknown behaviour of meninges", category: "Ch2", isHeader: true },
-      { code: "D42.0", title: "Cerebral meninges", category: "Ch2" },
-      { code: "D42.1", title: "Spinal meninges", category: "Ch2" },
-      { code: "D42.9", title: "Meninges, unspecified", category: "Ch2" },
-      { code: "D43", title: "Neoplasm of uncertain or unknown behaviour of brain and central nervous system", note: "Excl.: peripheral nerves and autonomic nervous system (D48.2)", category: "Ch2", isHeader: true },
-      { code: "D43.0", title: "Brain, supratentorial", sub: "Cerebral ventricle; Cerebrum; Frontal lobe; Occipital lobe; Parietal lobe; Temporal lobe", note: "Excl.: fourth ventricle (D43.1)", category: "Ch2" },
+      { code: "D43", title: "Neoplasm of uncertain or unknown behaviour of brain and central nervous system", note: "Neoplasms of uncertain or unknown behaviour (D37–D48) — Incl.: uncertain whether benign or malignant | Excl.: peripheral nerves and autonomic nervous system (D48.2)", category: "Ch2", isHeader: true },
+      { code: "D43.0", title: "Brain, supratentorial", sub: "Cerebral ventricle; Frontal lobe; Occipital lobe; Parietal lobe; Temporal lobe", note: "Excl.: fourth ventricle (D43.1)", category: "Ch2" },
       { code: "D43.1", title: "Brain, infratentorial", sub: "Brain stem; Cerebellum; Fourth ventricle", category: "Ch2" },
       { code: "D43.2", title: "Brain, unspecified", category: "Ch2" },
       { code: "D43.3", title: "Cranial nerves", category: "Ch2" },
       { code: "D43.4", title: "Spinal cord", category: "Ch2" },
       { code: "D43.7", title: "Other parts of central nervous system", category: "Ch2" },
-      { code: "D43.9", title: "Central nervous system, unspecified", sub: "Nervous system (central) NOS", category: "Ch2" },
+      { code: "D43.9", title: "Central nervous system, unspecified", sub: "Nervous system NOS", category: "Ch2" },
 
-      { code: "D44", title: "Neoplasm of uncertain or unknown behaviour of endocrine glands", note: "Excl.: endocrine pancreas (D37.7); ovary (D39.1); testis (D40.1); thymus (D38.4)", category: "Ch2", isHeader: true },
+      { code: "D44", title: "Neoplasm of uncertain or unknown behaviour of endocrine glands", note: "Excl.: endocrine pancreas (D37.7); ovary (D39.1); testis (D40.-)", category: "Ch2", isHeader: true },
       { code: "D44.0", title: "Thyroid gland", category: "Ch2" },
       { code: "D44.1", title: "Adrenal gland", category: "Ch2" },
       { code: "D44.2", title: "Parathyroid gland", category: "Ch2" },
@@ -2388,47 +2068,113 @@
       { code: "D44.8", title: "Pluriglandular involvement", sub: "Multiple endocrine adenomatosis", category: "Ch2" },
       { code: "D44.9", title: "Endocrine gland, unspecified", category: "Ch2" },
 
-      { code: "D45", title: "Polycythaemia vera", note: "Note: Polycythaemia vera has been reclassified in ICD-O third edition with a malignant code. The code D45 will continue to be used, although it is located in the chapter for Neoplasms of uncertain or unknown behaviour. The modification of its classification is reserved for the revision of the ICD.", category: "Ch2", isHeader: true },
+      { code: "D45", title: "Polycythaemia vera", category: "Ch2", isHeader: true },
 
-      { code: "D46", title: "Myelodysplastic syndromes", note: "Incl.: alykylating-agent-related myelodysplastic syndrome; epipodophyllotoxin-related myelodysplastic syndrome; therapy-related myelodysplastic syndrome NOS | Excl.: drug-induced aplastic anaemia (D61.1)", category: "Ch2", isHeader: true },
-      { code: "D46.0", title: "Refractory anaemia without ringed sideroblasts, so stated", note: "Note: without sideroblasts, without excess of blasts", category: "Ch2" },
-      { code: "D46.1", title: "Refractory anaemia with ringed sideroblasts", category: "Ch2" },
-      { code: "D46.2", title: "Refractory anaemia with excess of blasts [RAEB]", note: "Note: RAEB I; RAEB II", category: "Ch2" },
+      { code: "D46", title: "Myelodysplastic syndromes", note: "Excl.: drug-induced aplastic anaemia (D61.1)", category: "Ch2", isHeader: true },
+      { code: "D46.0", title: "Refractory anaemia without ring sideroblasts, so stated", category: "Ch2" },
+      { code: "D46.1", title: "Refractory anaemia with ring sideroblasts", category: "Ch2" },
+      { code: "D46.2", title: "Refractory anaemia with excess of blasts [RAEB]", sub: "RAEB-1; RAEB-2", category: "Ch2" },
       { code: "D46.4", title: "Refractory anaemia, unspecified", category: "Ch2" },
-      { code: "D46.5", title: "Refractory anaemia with multi-lineage dysplasia", category: "Ch2" },
-      { code: "D46.6", title: "Myelodysplastic syndrome with isolated del(5q) chromosomal abnormality", sub: "5q-minus syndrome", category: "Ch2" },
-      { code: "D46.7", title: "Other myelodysplastic syndromes", note: "Excl.: chronic myelomonocytic leukaemia (C93.1)", category: "Ch2" },
-      { code: "D46.9", title: "Myelodysplastic syndrome, unspecified", sub: "Myelodysplasia NOS; Preleukaemia (syndrome) NOS", category: "Ch2" },
+      { code: "D46.5", title: "Refractory cytopenia with multilineage dysplasia", category: "Ch2" },
+      { code: "D46.6", title: "Myelodysplastic syndrome with isolated del(5q) chromosome abnormality", category: "Ch2" },
+      { code: "D46.7", title: "Other myelodysplastic syndromes", category: "Ch2" },
+      { code: "D46.9", title: "Myelodysplastic syndrome, unspecified", sub: "Myelodysplasia NOS", category: "Ch2" },
 
       { code: "D47", title: "Other neoplasms of uncertain or unknown behaviour of lymphoid, haematopoietic and related tissue", category: "Ch2", isHeader: true },
-      { code: "D47.0", title: "Histiocytic and mast cell tumours of uncertain and unknown behaviour", sub: "Indolent systematic mastocytosis; Mast cell tumour NOS; Mastocytoma NOS; Systemic mastocytosis, associated with clonal haematopoietic non-mast-cell disease (SM-AHNMD)", note: "Excl.: mastocytosis (congenital) (cutaneous) (Q82.2)", category: "Ch2" },
-      { code: "D47.1", title: "Chronic myeloproliferative disease", sub: "Chronic neutrophilic leukaemia; Myeloproliferative disease, unspecified", note: "Excl.: atypical chronic myeloid leukaemia, BCR/ABL-negative (C92.2); chronic myeloid leukaemia [CML] BCR/ABL-positive (C92.1)", category: "Ch2" },
-      { code: "D47.2", title: "Monoclonal gammopathy of undetermined significance (MGUS)", category: "Ch2" },
+      { code: "D47.0", title: "Histiocytic and mast cell tumours of uncertain and unknown behaviour", sub: "Indolent mastocytosis; Mast cell tumour NOS; Mastocytoma NOS", note: "Excl.: mastocytosis (congenital) (cutaneous) (Q82.2)", category: "Ch2" },
+      { code: "D47.1", title: "Chronic myeloproliferative disease", sub: "Myelofibrosis (idiopathic)(with myeloid metaplasia); Myeloproliferative disease, unspecified; Osteomyelofibrosis", note: "Excl.: atypical chronic myeloid leukaemia, BCR/ABL-negative (C92.2); chronic myeloid leukaemia [CML], BCR/ABL-positive (C92.1)", category: "Ch2" },
+      { code: "D47.2", title: "Monoclonal gammopathy of undetermined significance [MGUS]", category: "Ch2" },
       { code: "D47.3", title: "Essential (haemorrhagic) thrombocythaemia", sub: "Idiopathic haemorrhagic thrombocythaemia", category: "Ch2" },
-      { code: "D47.4", title: "Osteomyelofibrosis", sub: "Chronic idiopathic myelofibrosis; Myelofibrosis (idiopathic) (with myeloid metaplasia); Myelosclerosis (megakaryocytic) with myeloid metaplasia; Secondary myelofibrosis in myeloproliferative disease", note: "Excl.: acute myelofibrosis (C94.4)", category: "Ch2" },
+      { code: "D47.4", title: "Osteomyelofibrosis", sub: "Chronic or acute myelofibrosis with myeloid metaplasia; Myelofibrosis (idiopathic)(primary); Myelosclerosis (megakaryocytic)(with myeloid metaplasia)", category: "Ch2" },
       { code: "D47.5", title: "Chronic eosinophilic leukaemia [hypereosinophilic syndrome]", category: "Ch2" },
-      { code: "D47.7", title: "Other specified neoplasms of uncertain or unknown behaviour of lymphoid, haematopoietic and related tissue", sub: "Histiocytic tumours of uncertain and unknown behaviour", category: "Ch2" },
+      { code: "D47.7", title: "Other specified neoplasms of uncertain or unknown behaviour of lymphoid, haematopoietic and related tissue", category: "Ch2" },
       { code: "D47.9", title: "Neoplasm of uncertain or unknown behaviour of lymphoid, haematopoietic and related tissue, unspecified", sub: "Lymphoproliferative disease NOS", category: "Ch2" },
 
-      { code: "D48", title: "Neoplasm of uncertain or unknown behaviour of other and unspecified sites", note: "Excl.: neurofibromatosis (nonmalignant) (Q85.0)", category: "Ch2", isHeader: true },
-      { code: "D48.0", title: "Bone and articular cartilage", note: "Excl.: cartilage of: ear (D48.1), larynx (D38.0), nose (D38.5); connective tissue of eyelid (D48.1); synovia (D48.1)", category: "Ch2" },
-      { code: "D48.1", title: "Connective and other soft tissue", sub: "Connective tissue of: ear, eyelid", note: "Excl.: cartilage (of): articular (D48.0), larynx (D38.0), nose (D38.5); connective tissue of breast (D48.6)", category: "Ch2" },
+      { code: "D48", title: "Neoplasm of uncertain or unknown behaviour of other and unspecified sites", note: "Excl.: neoplasm of uncertain or unknown behaviour of: brain and central nervous system (D43.-), endocrine glands (D44.-), lymphoid, haematopoietic and related tissue (D47.-), skin (D48.5)", category: "Ch2", isHeader: true },
+      { code: "D48.0", title: "Bone and articular cartilage", note: "Excl.: cartilage of: ear (D48.1), larynx (D38.0), nose (D38.5); connective tissue of eyelid (D48.1); neoplasm of uncertain or unknown behaviour of synovia (D48.1)", category: "Ch2" },
+      { code: "D48.1", title: "Connective and other soft tissue", sub: "Connective tissue of: ear, eyelid", note: "Excl.: connective tissue of breast (D48.6); peripheral nerves and autonomic nervous system (D48.2)", category: "Ch2" },
       { code: "D48.2", title: "Peripheral nerves and autonomic nervous system", note: "Excl.: peripheral nerves of orbit (D48.7)", category: "Ch2" },
       { code: "D48.3", title: "Retroperitoneum", category: "Ch2" },
       { code: "D48.4", title: "Peritoneum", category: "Ch2" },
-      { code: "D48.5", title: "Skin", sub: "Anal: margin, skin; Perianal skin; Skin of breast", note: "Excl.: anus NOS (D37.7); skin of genital organs (D39.7, D40.7); vermilion border of lip (D37.0)", category: "Ch2" },
-      { code: "D48.6", title: "Breast", sub: "Connective tissue of breast; Cystosarcoma phyllodes", note: "Excl.: skin of breast (D48.5)", category: "Ch2" },
-      { code: "D48.7", title: "Other specified sites", sub: "Eye; Heart; Peripheral nerves of orbit", note: "Excl.: connective tissue (D48.1); skin of eyelid (D48.5)", category: "Ch2" },
-      { code: "D48.9", title: "Neoplasm of uncertain or unknown behaviour, unspecified", sub: "'Growth' NOS; Neoplasm NOS; New growth NOS; Tumour NOS", category: "Ch2" },
-```[cite: 28, 29, 30, 31, 32]
-
-*(หมายเหตุ: รหัสย่อยในเล่มช่วงนี้ไม่มี `D43.5`, `D43.6`, `D43.8`, `D46.3`, `D46.8`, `D47.6`, `D47.8`, `D48.8` ครับ)*[cite: 28, 29, 30, 31, 32]
+      { code: "D48.5", title: "Skin", sub: "Perianal skin; Skin of breast", note: "Excl.: anus NOS (D37.7); skin of genital organs (D39.8, D40.8)", category: "Ch2" },
+      { code: "D48.6", title: "Breast", sub: "Connective tissue of breast; Cystosarcoma phyllodes of uncertain or unknown behaviour", note: "Excl.: skin of breast (D48.5)", category: "Ch2" },
+      { code: "D48.7", title: "Other specified sites", sub: "Eye; Heart; Ocular adnexa; Orbit; Pancreas, except endocrine pancreas", note: "Excl.: endocrine pancreas (D37.7); skin of eyelid (D48.5)", category: "Ch2" },
+      { code: "D48.9", title: "Neoplasm of uncertain or unknown behaviour, unspecified", sub: "Growth NOS; Neoplasm NOS; New growth NOS; Tumour NOS", category: "Ch2" }
     ];
+
+    function escapeHtml(str) {
+      return String(str || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function showToast(msg) {
+      const el = document.getElementById('toast');
+      el.textContent = msg;
+      el.style.display = 'block';
+      clearTimeout(window.__toastTimer);
+      window.__toastTimer = setTimeout(() => {
+        el.style.display = 'none';
+      }, 1700);
+    }
+
+    function copyCode(code) {
+      const clean = String(code || '').replace(/[†*]/g, '').trim();
+      if (!clean) return;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(clean).catch(() => {});
+      }
+      showToast(`คัดลอกรหัส ${clean} แล้ว`);
+    }
 
     function switchMode(mode) {
       currentMode = mode;
       document.getElementById('btnVol3').classList.toggle('active', mode === 'VOL3');
       document.getElementById('btnTabular').classList.toggle('active', mode === 'TABULAR');
+
+      if (mode === 'VOL3' && !vol3Loaded) {
+        loadVol3Data();
+      } else {
+        filterData();
+      }
+    }
+
+    async function loadVol3Data() {
+      const statusEl = document.getElementById('statusText');
+      statusEl.textContent = 'กำลังโหลดคลัง Vol. 3...';
+
+      const candidateUrls = [
+        './icd10_vol3_index.json',
+        './data/icd10_vol3_index.json',
+        './vol3_index.json'
+      ];
+
+      for (const url of candidateUrls) {
+        try {
+          const res = await fetch(url, { cache: 'no-store' });
+          if (res.ok) {
+            const json = await res.json();
+            vol3Data = Array.isArray(json) ? json : (json.items || json.data || []);
+            vol3Loaded = true;
+            statusEl.textContent = `Vol. 3 พร้อมใช้งาน (${vol3Data.length.toLocaleString()} รายการ)`;
+            filterData();
+            return;
+          }
+        } catch (e) {
+          // ลอง path ถัดไป
+        }
+      }
+
+      vol3Data = sampleTabular.map((item) => ({
+        code: item.code,
+        term: item.title,
+        subterm: item.sub || '',
+        chapter: item.category
+      }));
+      vol3Loaded = true;
+      statusEl.textContent = `Vol. 3 โหมดสำรอง (${vol3Data.length} รายการ)`;
       filterData();
     }
 
@@ -2438,100 +2184,86 @@
       filterData();
     }
 
-    function copyCode(code) {
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(code).catch(() => fallbackCopy(code));
-      } else {
-        fallbackCopy(code);
-      }
-      const toast = document.getElementById('toast');
-      toast.textContent = `คัดลอกรหัส ${code} แล้ว`;
-      toast.style.display = 'block';
-      clearTimeout(copyCode._timer);
-      copyCode._timer = setTimeout(() => { toast.style.display = 'none'; }, 1500);
-    }
-
-    function fallbackCopy(text) {
-      const ta = document.createElement('textarea');
-      ta.value = text;
-      ta.style.position = 'fixed';
-      ta.style.opacity = '0';
-      document.body.appendChild(ta);
-      ta.select();
-      document.execCommand('copy');
-      document.body.removeChild(ta);
-    }
-
-    function escapeHtml(str) {
-      return String(str ?? '')
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;');
-    }
-
     function filterData() {
-      const q = document.getElementById('searchInput').value.trim().toLowerCase();
+      const q = (document.getElementById('searchInput').value || '').trim().toLowerCase();
       const ch = document.getElementById('chapterFilter').value;
       const resultsEl = document.getElementById('results');
-      const list = currentMode === 'TABULAR' ? sampleTabular : vol3Data;
+      const statusEl = document.getElementById('statusText');
 
-      const filtered = list.filter(item => {
-        if (ch !== 'ALL' && item.category && item.category !== ch) return false;
-        if (!q) return true;
-        const text = [
-          item.title || item.lead_term || '',
-          item.code || (Array.isArray(item.codes) ? item.codes.join(' ') : ''),
-          item.sub || '',
-          item.note || '',
-          item.tag || ''
-        ].join(' ').toLowerCase();
-        return text.includes(q);
-      });
+      if (currentMode === 'TABULAR') {
+        const filtered = sampleTabular.filter((item) => {
+          const matchCh = (ch === 'ALL') || (item.category === ch);
+          if (!matchCh) return false;
+          if (!q) return true;
+          const hay = `${item.code} ${item.title} ${item.sub || ''} ${item.note || ''}`.toLowerCase();
+          return hay.includes(q);
+        });
 
-      const modeLabel = currentMode === 'TABULAR' ? 'Tabular List' : 'Volume 3 Index';
-      document.getElementById('statusText').textContent = `${modeLabel} · แสดง ${filtered.length} รายการ`;
+        statusEl.textContent = `Tabular: แสดง ${filtered.length} รายการ`;
 
-      if (filtered.length === 0) {
-        resultsEl.innerHTML = `<div style="padding: 28px 0; text-align: center; color: #64748b;">ไม่พบรายการที่ค้นหาในโหมด ${escapeHtml(modeLabel)}</div>`;
-        return;
-      }
-
-      resultsEl.innerHTML = filtered.map(item => {
-        const displayCode = item.code || (Array.isArray(item.codes) && item.codes[0]) || '—';
-        const displayTitle = item.title || item.lead_term || '(ไม่มีชื่อรายการ)';
-        const safeCodeArg = displayCode.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
-
-        return `
-          <div class="row-item ${item.isHeader ? 'is-header' : ''}">
-            <div>
-              <button type="button" class="code-btn ${item.isHeader ? '' : 'sub'}" onclick="copyCode('${safeCodeArg}')">
-                ${escapeHtml(displayCode)}
-              </button>
-            </div>
-            <div>
-              <div class="term-title">${escapeHtml(displayTitle)}</div>
-              ${item.sub ? `<div class="term-sub">${escapeHtml(item.sub)}</div>` : ''}
-              ${item.tag ? `<div class="flag-tag">${escapeHtml(item.tag)}</div>` : ''}
-              ${item.note ? `<div class="note-box">${escapeHtml(item.note)}</div>` : ''}
-            </div>
-          </div>
-        `;
-      }).join('');
-    }
-
-    async function init() {
-      try {
-        const res = await fetch('./data/icd10_vol3_cleaned.json');
-        if (res.ok) {
-          const data = await res.json();
-          vol3Data = Array.isArray(data) ? data : (data.items || []);
+        if (!filtered.length) {
+          resultsEl.innerHTML = `<div class="note-box">ไม่พบรายการที่ตรงกับคำค้นหา "${escapeHtml(q)}"</div>`;
+          return;
         }
-      } catch (e) { }
-      filterData();
+
+        resultsEl.innerHTML = filtered.map((item) => {
+          const btnClass = item.isHeader ? 'code-btn' : 'code-btn sub';
+          return `
+            <div class="row-item ${item.isHeader ? 'is-header' : ''}">
+              <div>
+                <button type="button" class="${btnClass}" onclick="copyCode('${escapeHtml(item.code)}')" title="คลิกเพื่อคัดลอกรหัส">
+                  ${escapeHtml(item.code)}
+                </button>
+              </div>
+              <div>
+                <div class="term-title">${escapeHtml(item.title)}</div>
+                ${item.sub ? `<div class="term-sub">${escapeHtml(item.sub)}</div>` : ''}
+                ${item.note ? `<div class="note-box">${escapeHtml(item.note)}</div>` : ''}
+                ${item.tag ? `<div class="flag-tag">${escapeHtml(item.tag)}</div>` : ''}
+              </div>
+            </div>
+          `;
+        }).join('');
+      } else {
+        const filtered = vol3Data.filter((item) => {
+          const itemCh = item.chapter || item.category || 'Ch1';
+          const matchCh = (ch === 'ALL') || (itemCh === ch);
+          if (!matchCh) return false;
+          if (!q) return true;
+          const hay = `${item.code || ''} ${item.term || item.title || ''} ${item.subterm || item.sub || ''}`.toLowerCase();
+          return hay.includes(q);
+        });
+
+        const capped = filtered.slice(0, 250);
+        statusEl.textContent = `Vol. 3: พบ ${filtered.length.toLocaleString()} รายการ (แสดง ${capped.length})`;
+
+        if (!capped.length) {
+          resultsEl.innerHTML = `<div class="note-box">ไม่พบดัชนี Vol. 3 ที่ตรงกับ "${escapeHtml(q)}"</div>`;
+          return;
+        }
+
+        resultsEl.innerHTML = capped.map((item) => {
+          const code = item.code || '';
+          const title = item.term || item.title || '';
+          const sub = item.subterm || item.sub || '';
+          return `
+            <div class="row-item">
+              <div>
+                <button type="button" class="code-btn sub" onclick="copyCode('${escapeHtml(code)}')" title="คลิกเพื่อคัดลอกรหัส">
+                  ${escapeHtml(code || '—')}
+                </button>
+              </div>
+              <div>
+                <div class="term-title">${escapeHtml(title)}</div>
+                ${sub ? `<div class="term-sub">${escapeHtml(sub)}</div>` : ''}
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
     }
 
-    init();
+    filterData();
   </script>
 </body>
 </html>
