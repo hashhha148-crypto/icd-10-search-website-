@@ -312,10 +312,10 @@
       </header>
 
       <div class="mode-switch-bar" role="tablist" aria-label="เลือกโหมดการแสดงผล">
-        <button id="btnVol3" type="button" class="btn-mode active" onclick="switchMode('VOL3')">
+        <button id="btnVol3" type="button" class="btn-mode" onclick="switchMode('VOL3')">
           Volume 3 Index (ค้นหาจากคลัง JSON)
         </button>
-        <button id="btnTabular" type="button" class="btn-mode" onclick="switchMode('TABULAR')">
+        <button id="btnTabular" type="button" class="btn-mode active" onclick="switchMode('TABULAR')">
           Tabular List (คู่มือตามเล่ม)
         </button>
       </div>
@@ -362,7 +362,7 @@
   <div id="toast" class="toast">คัดลอกรหัสแล้ว</div>
 
   <script>
-    let currentMode = 'VOL3';
+    let currentMode = 'TABULAR';
     let vol3Data = [];
 
     const sampleTabular = [
@@ -2139,7 +2139,8 @@
       { code: "D12.5", title: "Sigmoid colon", category: "Ch2" },
       { code: "D12.6", title: "Colon, unspecified", sub: "Adenomatosis of colon; Large intestine NOS; Polyposis (hereditary) of colon", category: "Ch2" },
       { code: "D12.7", title: "Rectosigmoid junction", category: "Ch2" },
-      { code: "D12.8", title: "Rectum", category: "Ch2" },{ code: "D12.9", title: "Anus and anal canal", note: "Excl.: anal: margin (D22.5, D23.5), skin (D22.5, D23.5); perianal skin (D22.5, D23.5)", category: "Ch2" },
+      { code: "D12.8", title: "Rectum", category: "Ch2" },
+      { code: "D12.9", title: "Anus and anal canal", note: "Excl.: anal: margin (D22.5, D23.5), skin (D22.5, D23.5); perianal skin (D22.5, D23.5)", category: "Ch2" },
 
       { code: "D13", title: "Benign neoplasm of other and ill-defined parts of digestive system", category: "Ch2", isHeader: true },
       { code: "D13.0", title: "Oesophagus", category: "Ch2" },
@@ -2271,7 +2272,7 @@
       { code: "D30.0", title: "Kidney", note: "Excl.: renal: calyces (D30.1), pelvis (D30.1)", category: "Ch2" },
       { code: "D30.1", title: "Renal pelvis", category: "Ch2" },
       { code: "D30.2", title: "Ureter", note: "Excl.: ureteric orifice of bladder (D30.3)", category: "Ch2" },
-        { code: "D30.3", title: "Bladder", sub: "Orifice of bladder: urethral, ureteric", category: "Ch2" },
+      { code: "D30.3", title: "Bladder", sub: "Orifice of bladder: urethral, ureteric", category: "Ch2" },
       { code: "D30.4", title: "Urethra", note: "Excl.: urethral orifice of bladder (D30.3)", category: "Ch2" },
       { code: "D30.7", title: "Other urinary organs", sub: "Paraurethral glands", category: "Ch2" },
       { code: "D30.9", title: "Urinary organ, unspecified", sub: "Urinary system NOS", category: "Ch2" },
