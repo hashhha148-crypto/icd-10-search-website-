@@ -3,348 +3,393 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ICD-10 Volume 3 Search - Medical Search Engine</title>
+  <title>ICD-10 Volume 3 Quick Index</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #2563eb;
-      --primary-hover: #1d4ed8;
-      --primary-light: #eff6ff;
-      --bg: #f8fafc;
-      --card-bg: #ffffff;
-      --text-main: #0f172a;
-      --text-muted: #64748b;
-      --border: #e2e8f0;
-      --accent-badge: #e0f2fe;
-      --accent-badge-text: #0369a1;
-      --warn-bg: #fef3c7;
-      --warn-text: #92400e;
-      --warn-border: #fde68a;
-      --radius: 12px;
-      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+      --bg: #f1f5f9;
+      --surface: #ffffff;
+      --surface-alt: #f8fafc;
+      --ink: #0f172a;
+      --muted: #475569;
+      --line: #cbd5e1;
+      --teal: #0f766e;
+      --teal-dark: #115e59;
+      --teal-soft: #ccfbf1;
+      --amber-soft: #fef3c7;
+      --amber-ink: #92400e;
+      --radius: 10px;
     }
 
     *, *::before, *::after { box-sizing: border-box; }
 
     body {
       margin: 0;
-      font-family: 'Sarabun', sans-serif;
+      font-family: 'IBM Plex Sans Thai', sans-serif;
       background: var(--bg);
-      color: var(--text-main);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
+      color: var(--ink);
+      line-height: 1.5;
     }
 
-    .header-banner {
-      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-      color: #fff;
-      padding: 32px 20px 48px;
-      text-align: center;
-      position: relative;
+    .topbar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+      padding: 18px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 20;
     }
 
-    .header-banner h1 {
-      margin: 0 0 8px;
-      font-size: 1.8rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
-
-    .header-banner p {
-      margin: 0;
-      color: #94a3b8;
-      font-size: 1rem;
-      font-weight: 300;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: -24px auto 60px;
-      padding: 0 16px;
-      position: relative;
-      z-index: 10;
-    }
-
-    .search-card {
-      background: var(--card-bg);
-      border-radius: var(--radius);
-      padding: 20px;
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
-      border: 1px solid var(--border);
-      margin-bottom: 24px;
-    }
-
-    .search-grid {
-      display: grid;
-      grid-template-columns: 1fr;
+    .topbar-inner {
+      max-width: 1040px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
       gap: 12px;
     }
 
-    @media (min-width: 640px) {
-      .search-grid {
-        grid-template-columns: 1fr auto auto;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--teal);
+    }
+
+    .brand h1 {
+      margin: 0;
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .brand span {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .wrap {
+      max-width: 1040px;
+      margin: 20px auto 64px;
+      padding: 0 16px;
+    }
+
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+      margin-bottom: 14px;
+    }
+
+    .controls {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    @media (min-width: 760px) {
+      .controls {
+        grid-template-columns: 1.6fr 1fr auto;
       }
     }
 
-    .input-wrapper {
-      position: relative;
-    }
-
-    input[type="search"] {
+    input[type="search"], select {
       width: 100%;
-      padding: 12px 16px;
-      font-size: 1.05rem;
-      font-family: inherit;
-      border: 1.5px solid var(--border);
-      border-radius: 8px;
-      outline: none;
-      transition: border-color 0.2s, box-shadow 0.2s;
-      background: #fff;
-    }
-
-    input[type="search"]:focus {
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
-    }
-
-    select, button.btn-reset {
-      padding: 12px 16px;
+      padding: 10px 13px;
       font-size: 0.95rem;
       font-family: inherit;
-      border: 1.5px solid var(--border);
+      border: 1px solid var(--line);
       border-radius: 8px;
-      background: #fff;
-      cursor: pointer;
+      background: var(--surface-alt);
+      color: var(--ink);
       outline: none;
-      transition: all 0.2s;
     }
 
-    select:focus {
-      border-color: var(--primary);
+    input[type="search"]:focus, select:focus {
+      background: var(--surface);
+      border-color: var(--teal);
+      box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.14);
     }
 
-    button.btn-reset {
-      background: #f1f5f9;
-      color: var(--text-muted);
-      font-weight: 500;
-      border: none;
-    }
-
-    button.btn-reset:hover {
-      background: #e2e8f0;
-      color: var(--text-main);
-    }
-
-    .meta-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 16px;
-      padding: 0 4px;
+    .btn {
+      padding: 10px 14px;
       font-size: 0.9rem;
-      color: var(--text-muted);
-    }
-
-    .status-count {
+      font-family: inherit;
       font-weight: 600;
-      color: var(--primary);
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--ink);
+      cursor: pointer;
+      transition: all 0.15s ease;
     }
 
-    .card {
-      background: var(--card-bg);
+    .btn:hover {
+      background: var(--surface-alt);
+    }
+
+    .btn-primary {
+      background: var(--teal);
+      border-color: var(--teal);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: var(--teal-dark);
+    }
+
+    .quick-filters {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px dashed var(--line);
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .chip-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip {
+      padding: 5px 11px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--surface-alt);
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .chip.active {
+      background: var(--teal-soft);
+      border-color: var(--teal);
+      color: var(--teal-dark);
+      font-weight: 600;
+    }
+
+    .list-box {
+      background: var(--surface);
+      border: 1px solid var(--line);
       border-radius: var(--radius);
-      border: 1px solid var(--border);
-      padding: 18px 20px;
-      margin-bottom: 12px;
-      box-shadow: var(--shadow);
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      overflow: hidden;
     }
 
-    .card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 15px -3px rgba(0, 0, 0, 0.06);
+    .row-item {
+      padding: 14px 18px;
+      border-bottom: 1px solid #e2e8f0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
     }
 
-    .card-header {
+    .row-item:last-child {
+      border-bottom: none;
+    }
+
+    .row-item:hover {
+      background: #f8fafc;
+    }
+
+    .row-main {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      gap: 16px;
-    }
-
-    .path-title {
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--text-main);
-      line-height: 1.4;
-    }
-
-    .path-sep {
-      color: #94a3b8;
-      margin: 0 6px;
-      font-weight: 400;
-    }
-
-    .code-badges {
-      display: flex;
-      gap: 6px;
+      gap: 12px;
       flex-wrap: wrap;
-      align-items: center;
     }
 
-    .code-badge {
-      background: var(--primary-light);
-      color: var(--primary);
-      border: 1px solid #bfdbfe;
-      padding: 4px 10px;
+    .term-path {
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--ink);
+      flex: 1 1 320px;
+    }
+
+    .arrow {
+      color: #94a3b8;
+      margin: 0 5px;
+    }
+
+    .code-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .code-pill {
+      background: var(--teal-soft);
+      color: var(--teal-dark);
+      border: 1px solid #99f6e4;
+      padding: 3px 9px;
       border-radius: 6px;
       font-family: 'JetBrains Mono', monospace;
       font-weight: 700;
-      font-size: 0.95rem;
-      letter-spacing: 0.02em;
+      font-size: 0.88rem;
+      cursor: pointer;
     }
 
-    .meta-tags {
+    .code-pill:hover {
+      filter: brightness(0.96);
+    }
+
+    .row-sub {
       display: flex;
-      gap: 8px;
       flex-wrap: wrap;
-      margin-top: 12px;
+      gap: 6px;
+      align-items: center;
     }
 
-    .tag {
-      font-size: 0.8rem;
-      padding: 2px 8px;
+    .mini-tag {
+      font-size: 0.78rem;
+      padding: 2px 7px;
       border-radius: 4px;
       background: #f1f5f9;
-      color: var(--text-muted);
-      font-weight: 500;
+      color: var(--muted);
     }
 
-    .tag.warn {
-      background: var(--warn-bg);
-      color: var(--warn-text);
-      border: 1px solid var(--warn-border);
-    }
-
-    .tabular-note {
-      margin-top: 12px;
-      padding: 10px 12px;
-      background: #f8fafc;
-      border-left: 3px solid var(--primary);
-      border-radius: 0 6px 6px 0;
-      font-size: 0.88rem;
-      color: #475569;
-    }
-
-    .load-more-btn {
-      width: 100%;
-      padding: 14px;
-      margin-top: 16px;
-      background: var(--card-bg);
-      border: 1.5px solid var(--border);
-      border-radius: var(--radius);
-      color: var(--primary);
+    .mini-tag.flag {
+      background: var(--amber-soft);
+      color: var(--amber-ink);
       font-weight: 600;
-      font-size: 0.95rem;
-      cursor: pointer;
-      transition: all 0.2s;
-      box-shadow: var(--shadow);
     }
 
-    .load-more-btn:hover {
-      background: var(--primary-light);
-      border-color: #bfdbfe;
+    .row-note {
+      font-size: 0.86rem;
+      color: var(--muted);
+      background: var(--surface-alt);
+      padding: 8px 10px;
+      border-radius: 6px;
     }
 
-    .disclaimer {
-      margin-top: 32px;
-      padding: 14px 16px;
-      background: var(--warn-bg);
-      border: 1px solid var(--warn-border);
-      border-radius: var(--radius);
-      font-size: 0.85rem;
-      color: var(--warn-text);
+    .footer-action {
+      margin-top: 16px;
       text-align: center;
     }
 
-    .empty-state {
-      text-align: center;
-      padding: 40px 20px;
-      background: var(--card-bg);
+    .notice {
+      margin-top: 24px;
+      padding: 12px 14px;
       border-radius: var(--radius);
-      border: 1px solid var(--border);
-      color: var(--text-muted);
+      background: var(--amber-soft);
+      color: var(--amber-ink);
+      font-size: 0.84rem;
+      text-align: center;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--ink);
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: all 0.2s ease;
+      pointer-events: none;
+      z-index: 50;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
 <body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="brand-dot"></span>
+        <h1>ICD-10 Volume 3 Index</h1>
+        <span>Alphabetical Lookup</span>
+      </div>
+      <div id="statusText">กำลังโหลดข้อมูล...</div>
+    </div>
+  </header>
 
-  <div class="header-banner">
-    <h1>ICD-10 Volume 3 Search</h1>
-    <p>ระบบค้นหารหัสโรค อ้างอิง Index ภาษาอังกฤษ (Alphabetical Index)</p>
-  </div>
-
-  <div class="container">
-    <div class="search-card">
-      <div class="search-grid">
-        <div class="input-wrapper">
-          <input
-            id="searchInput"
-            type="search"
-            placeholder="พิมพ์ชื่อโรค, รหัสโรค เช่น liver abscess, E11.9, O65.5..."
-            autocomplete="off"
-          />
-        </div>
+  <main class="wrap">
+    <section class="panel">
+      <div class="controls">
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="ค้นหาคำศัพท์ รหัสโรค หรือคำพ้อง (พิมพ์หลายคำสลับลำดับได้)..."
+          autocomplete="off"
+        />
         <select id="sectionFilter">
           <option value="ALL">ทุกหมวด / ทุกบท (All Chapters)</option>
-          <option value="Ch1">Chapter I: Infectious (A00-B99)</option>
-          <option value="Ch2">Chapter II: Neoplasms (C00-D48)</option>
-          <option value="Ch3">Chapter III: Blood Diseases (D50-D89)</option>
-          <option value="Ch4">Chapter IV: Endocrine & Metabolic (E00-E90)</option>
-          <option value="Ch5">Chapter V: Mental Disorders (F00-F99)</option>
-          <option value="Ch6">Chapter VI: Nervous System (G00-G99)</option>
-          <option value="Ch7">Chapter VII: Eye & Adnexa (H00-H59)</option>
-          <option value="Ch8">Chapter VIII: Ear & Mastoid (H60-H95)</option>
-          <option value="Ch9">Chapter IX: Circulatory System (I00-I99)</option>
-          <option value="Ch10">Chapter X: Respiratory System (J00-J99)</option>
-          <option value="Ch11">Chapter XI: Digestive System (K00-K93)</option>
-          <option value="Ch12">Chapter XII: Skin (L00-L99)</option>
-          <option value="Ch13">Chapter XIII: Musculoskeletal (M00-M99)</option>
-          <option value="Ch14">Chapter XIV: Genitourinary (N00-N99)</option>
-          <option value="Ch15">Chapter XV: Pregnancy & Childbirth (O00-O99)</option>
-          <option value="Ch16">Chapter XVI: Perinatal Period (P00-P96)</option>
-          <option value="Ch17">Chapter XVII: Congenital (Q00-Q99)</option>
-          <option value="Ch18">Chapter XVIII: Symptoms & Signs (R00-R99)</option>
-          <option value="Ch19">Chapter XIX: Injury & Poisoning (S00-T98)</option>
-          <option value="Ch20">Chapter XX: External Causes (V01-Y98)</option>
-          <option value="Ch21">Chapter XXI: Health Factors (Z00-Z99)</option>
-          <option value="Ch22">Chapter XXII: Special Purposes (U00-U85)</option>
+          <option value="Ch1">Chapter I (A00-B99)</option>
+          <option value="Ch2">Chapter II (C00-D48)</option>
+          <option value="Ch3">Chapter III (D50-D89)</option>
+          <option value="Ch4">Chapter IV (E00-E90)</option>
+          <option value="Ch5">Chapter V (F00-F99)</option>
+          <option value="Ch6">Chapter VI (G00-G99)</option>
+          <option value="Ch7">Chapter VII (H00-H59)</option>
+          <option value="Ch8">Chapter VIII (H60-H95)</option>
+          <option value="Ch9">Chapter IX (I00-I99)</option>
+          <option value="Ch10">Chapter X (J00-J99)</option>
+          <option value="Ch11">Chapter XI (K00-K93)</option>
+          <option value="Ch12">Chapter XII (L00-L99)</option>
+          <option value="Ch13">Chapter XIII (M00-M99)</option>
+          <option value="Ch14">Chapter XIV (N00-N99)</option>
+          <option value="Ch15">Chapter XV (O00-O99)</option>
+          <option value="Ch16">Chapter XVI (P00-P96)</option>
+          <option value="Ch17">Chapter XVII (Q00-Q99)</option>
+          <option value="Ch18">Chapter XVIII (R00-R99)</option>
+          <option value="Ch19">Chapter XIX (S00-T98)</option>
+          <option value="Ch20">Chapter XX (V01-Y98)</option>
+          <option value="Ch21">Chapter XXI (Z00-Z99)</option>
+          <option value="Ch22">Chapter XXII (U00-U85)</option>
         </select>
-        <button id="resetBtn" class="btn-reset" type="button">ล้างค่า</button>
+        <button id="resetBtn" class="btn" type="button">ล้างค่า</button>
       </div>
-    </div>
 
-    <div class="meta-bar">
-      <span id="statusText">กำลังโหลดข้อมูล...</span>
-      <span>พิมพ์คำค้นหาสลับลำดับกันได้</span>
-    </div>
+      <div class="quick-filters">
+        <div class="chip-group">
+          <button class="chip active" data-flag="ALL" type="button">ทั้งหมด</button>
+          <button class="chip" data-flag="NEC" type="button">เฉพาะ NEC</button>
+          <button class="chip" data-flag="PAIR" type="button">รหัสคู่ (†/*)</button>
+        </div>
+        <span>แตะที่รหัสเพื่อคัดลอก</span>
+      </div>
+    </section>
 
-    <div id="results"></div>
-    <div id="loadMoreWrap"></div>
+    <section id="results" class="list-box"></section>
+    <div id="loadMoreWrap" class="footer-action"></div>
 
-    <div class="disclaimer">
-      <strong>ข้อควรระวัง:</strong> ข้อมูลอ้างอิงจาก ICD-10 Alphabetical Index (Volume 3)
-      การลงรหัสทางคลินิกจริงควรตรวจสอบเงื่อนไขใน Volume 1 (Tabular List) ทุกครั้ง
+    <div class="notice">
+      <strong>หมายเหตุ:</strong> ข้อมูลอ้างอิงจาก ICD-10 Volume 3 (Alphabetical Index) ควรตรวจสอบเงื่อนไขรวม/ยกเว้นใน Volume 1 ก่อนลงรหัสจริง
     </div>
-  </div>
+  </main>
+
+  <div id="toast" class="toast">คัดลอกรหัสแล้ว</div>
 
   <script>
-    const PAGE_SIZE = 50;
+    const PAGE_SIZE = 60;
     let allItems = [];
     let currentFiltered = [];
     let visibleCount = PAGE_SIZE;
+    let activeFlag = "ALL";
 
     const searchInput = document.getElementById("searchInput");
     const sectionFilter = document.getElementById("sectionFilter");
@@ -352,6 +397,14 @@
     const resultsEl = document.getElementById("results");
     const loadMoreWrap = document.getElementById("loadMoreWrap");
     const statusText = document.getElementById("statusText");
+    const toastEl = document.getElementById("toast");
+
+    function showToast(msg) {
+      toastEl.textContent = msg;
+      toastEl.classList.add("show");
+      clearTimeout(showToast._timer);
+      showToast._timer = setTimeout(() => toastEl.classList.remove("show"), 1600);
+    }
 
     function escapeHtml(str = "") {
       return String(str)
@@ -424,49 +477,62 @@
       const slice = currentFiltered.slice(0, visibleCount);
       const totalMatched = currentFiltered.length;
 
-      statusText.innerHTML = `พบ <span class="status-count">${totalMatched.toLocaleString()}</span> รายการ (จากทั้งหมด ${allItems.length.toLocaleString()} รายการ)`;
+      statusText.textContent =
+        `แสดง ${slice.length} / ${totalMatched.toLocaleString()} รายการ (รวม ${allItems.length.toLocaleString()})`;
 
       if (totalMatched === 0) {
-        resultsEl.innerHTML = `<div class="empty-state">ไม่พบข้อมูลที่ตรงกับคำค้นหาของคุณ</div>`;
+        resultsEl.innerHTML = `<div class="row-item">ไม่พบรายการที่ตรงกับเงื่อนไขการค้นหา</div>`;
         loadMoreWrap.innerHTML = "";
         return;
       }
 
       resultsEl.innerHTML = slice.map((item) => {
-        const pathParts = [item.lead_term, ...(item.modifiers || [])].filter(Boolean);
-        const pathHtml = pathParts
-          .map((p, idx) => `${idx > 0 ? '<span class="path-sep">&rsaquo;</span>' : ''}${escapeHtml(p)}`)
+        const parts = [item.lead_term, ...(item.modifiers || [])].filter(Boolean);
+        const titleHtml = parts
+          .map((p, i) => `${i > 0 ? '<span class="arrow">/</span>' : ''}${escapeHtml(p)}`)
           .join("");
 
         const codesHtml = (item.codes || [])
-          .map((c) => `<span class="code-badge">${escapeHtml(c)}</span>`)
+          .map((c) => `<button type="button" class="code-pill" data-copy="${escapeHtml(c)}">${escapeHtml(c)}</button>`)
           .join("");
 
         const tags = [
-          item.section ? `<span class="tag">Chapter: ${escapeHtml(item.section)}</span>` : "",
-          item.page ? `<span class="tag">หน้า ${escapeHtml(item.page)}</span>` : "",
-          item.nec ? `<span class="tag warn">NEC</span>` : "",
-          item.dagger_star ? `<span class="tag warn">รหัสคู่ (†/*)</span>` : "",
-          item.cross_reference ? `<span class="tag warn">${escapeHtml(item.cross_reference)}</span>` : ""
+          item.section ? `<span class="mini-tag">${escapeHtml(item.section)}</span>` : "",
+          item.page ? `<span class="mini-tag">หน้า ${escapeHtml(item.page)}</span>` : "",
+          item.nec ? `<span class="mini-tag flag">NEC</span>` : "",
+          item.dagger_star ? `<span class="mini-tag flag">†/*</span>` : "",
+          item.cross_reference ? `<span class="mini-tag flag">${escapeHtml(item.cross_reference)}</span>` : ""
         ].filter(Boolean).join("");
 
         return `
-          <article class="card">
-            <div class="card-header">
-              <div class="path-title">${pathHtml || escapeHtml(item.full_text || "")}</div>
-              <div class="code-badges">${codesHtml}</div>
+          <div class="row-item">
+            <div class="row-main">
+              <div class="term-path">${titleHtml || escapeHtml(item.full_text || "")}</div>
+              <div class="code-group">${codesHtml}</div>
             </div>
-            <div class="meta-tags">${tags}</div>
-            ${item.tabular_note ? `<div class="tabular-note"><strong>Note:</strong> ${escapeHtml(item.tabular_note)}</div>` : ""}
-          </article>
+            ${tags ? `<div class="row-sub">${tags}</div>` : ""}
+            ${item.tabular_note ? `<div class="row-note">${escapeHtml(item.tabular_note)}</div>` : ""}
+          </div>
         `;
       }).join("");
+
+      resultsEl.querySelectorAll(".code-pill").forEach((btn) => {
+        btn.addEventListener("click", async () => {
+          const code = btn.getAttribute("data-copy");
+          try {
+            await navigator.clipboard.writeText(code);
+            showToast(`คัดลอกรหัส ${code} แล้ว`);
+          } catch {
+            showToast(`รหัส: ${code}`);
+          }
+        });
+      });
 
       if (visibleCount < totalMatched) {
         const remaining = totalMatched - visibleCount;
         loadMoreWrap.innerHTML = `
-          <button id="loadMoreBtn" class="load-more-btn" type="button">
-            แสดงเพิ่มอีก ${Math.min(PAGE_SIZE, remaining)} รายการ (เหลืออีก ${remaining.toLocaleString()} รายการ)
+          <button id="loadMoreBtn" class="btn btn-primary" type="button">
+            โหลดเพิ่มอีก ${Math.min(PAGE_SIZE, remaining)} รายการ (เหลือ ${remaining.toLocaleString()} รายการ)
           </button>
         `;
         document.getElementById("loadMoreBtn").addEventListener("click", () => {
@@ -487,6 +553,8 @@
 
       currentFiltered = allItems.filter((item) => {
         if (sec !== "ALL" && item.section !== sec) return false;
+        if (activeFlag === "NEC" && !item.nec) return false;
+        if (activeFlag === "PAIR" && !item.dagger_star) return false;
         if (tokens.length === 0) return true;
         return tokens.every((t) => item._searchable.includes(t));
       });
@@ -500,25 +568,21 @@
         if (!res.ok) return [];
         const data = await res.json();
         return Array.isArray(data) ? data : (data.items || []);
-      } catch (err) {
+      } catch {
         return [];
       }
     }
 
     async function loadDataset() {
-      // 1. โหลดไฟล์ icd10_vol3_cleaned.json จากโฟลเดอร์ data
       const cleanedItems = await fetchJsonSafe("./data/icd10_vol3_cleaned.json");
       if (cleanedItems.length > 0) return cleanedItems;
 
-      // 2. ดึงจากลิงก์ Repo ICD-10- โดยตรง
       const directItems = await fetchJsonSafe("https://hashhha148-crypto.github.io/ICD-10-/icd10_vol3_cleaned.json");
       if (directItems.length > 0) return directItems;
 
-      // 3. รองรับไฟล์ก้อนเดียวเดิม ./data/volume3_index.json
       const singleItems = await fetchJsonSafe("./data/volume3_index.json");
       if (singleItems.length > 0) return singleItems;
 
-      // 4. โหลดไฟล์แยกตามตัวอักษร a-z
       const letters = "abcdefghijklmnopqrstuvwxyz".split("");
       const urls = [
         ...letters.map((ch) => `./data/index_${ch}.json`),
@@ -528,7 +592,6 @@
       const merged = fetchedLists.flat();
       if (merged.length > 0) return merged;
 
-      // 5. สำรอง sample_index.json
       const fallbackItems = await fetchJsonSafe("./data/sample_index.json");
       if (fallbackItems.length > 0) return fallbackItems;
 
@@ -541,16 +604,29 @@
         allItems = rawList.map(normalizeItem);
         filterData();
       } catch (err) {
-        statusText.textContent = "เกิดข้อผิดพลาด";
-        resultsEl.innerHTML = `<div class="empty-state">ไม่สามารถโหลดไฟล์ข้อมูลได้: ${escapeHtml(err.message)}</div>`;
+        statusText.textContent = "โหลดข้อมูลไม่สำเร็จ";
+        resultsEl.innerHTML = `<div class="row-item">เกิดข้อผิดพลาด: ${escapeHtml(err.message)}</div>`;
       }
     }
+
+    document.querySelectorAll(".chip").forEach((chip) => {
+      chip.addEventListener("click", () => {
+        document.querySelectorAll(".chip").forEach((c) => c.classList.remove("active"));
+        chip.classList.add("active");
+        activeFlag = chip.getAttribute("data-flag");
+        filterData();
+      });
+    });
 
     searchInput.addEventListener("input", filterData);
     sectionFilter.addEventListener("change", filterData);
     resetBtn.addEventListener("click", () => {
       searchInput.value = "";
       sectionFilter.value = "ALL";
+      activeFlag = "ALL";
+      document.querySelectorAll(".chip").forEach((c) => {
+        c.classList.toggle("active", c.getAttribute("data-flag") === "ALL");
+      });
       filterData();
     });
 
