@@ -9,47 +9,56 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-main: #0f172a;
+      --bg-main: #0b1324;
+      --bg-glow: #162647;
       --paper: #ffffff;
       --paper-sub: #f8fafc;
       --ink: #0f172a;
       --ink-sub: #475569;
-      --gold: #b45309;
+      --navy: #0f294a;
+      --navy-soft: #eff6ff;
+      --gold: #9a5b13;
+      --gold-bright: #c88a2b;
       --gold-light: #fef3c7;
       --rule: #e2e8f0;
-      --rule-dark: #1e293b;
-      --code-bg: #1e293b;
+      --rule-dark: #0f294a;
+      --code-bg: #0f294a;
       --code-fg: #ffffff;
-      --accent-blue: #1e3a8a;
+      --sub-bg: #334155;
     }
 
     *, *::before, *::after { box-sizing: border-box; }
 
     body {
       margin: 0;
-      background: var(--bg-main);
+      background:
+        radial-gradient(circle at top center, rgba(200, 138, 43, 0.14), transparent 45%),
+        linear-gradient(180deg, var(--bg-main) 0%, var(--bg-glow) 280px, #09101f 100%);
+      min-height: 100vh;
       color: var(--ink);
       font-family: 'IBM Plex Sans Thai', -apple-system, sans-serif;
-      line-height: 1.5;
+      line-height: 1.55;
     }
 
     .app-wrap {
-      max-width: 1000px;
-      margin: 20px auto 48px;
-      padding: 0 12px;
+      max-width: 1040px;
+      margin: 24px auto 56px;
+      padding: 0 14px;
     }
 
     .atlas-frame {
       background: var(--paper);
-      border: 3px double #94a3b8;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-      padding: 24px 20px;
+      border: 1px solid #cbd5e1;
+      outline: 3px double rgba(154, 91, 19, 0.45);
+      outline-offset: -7px;
+      box-shadow: 0 24px 54px rgba(0, 0, 0, 0.42);
+      padding: 28px 24px;
     }
 
     .atlas-header {
       border-bottom: 2px solid var(--rule-dark);
       padding-bottom: 16px;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
@@ -57,131 +66,236 @@
       gap: 12px;
     }
 
+    .atlas-kicker {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
     .atlas-title {
-      font-family: 'Cinzel', serif;
-      font-size: 1.6rem;
+      font-family: 'Cinzel', 'IBM Plex Sans Thai', serif;
+      font-size: 1.65rem;
       margin: 0;
-      color: var(--accent-blue);
-      letter-spacing: 0.05em;
+      color: var(--navy);
+      letter-spacing: 0.04em;
+      line-height: 1.25;
     }
 
     .atlas-sub {
-      margin: 4px 0 0;
-      font-size: 0.88rem;
+      margin: 5px 0 0;
+      font-size: 0.9rem;
       color: var(--ink-sub);
+    }
+
+    .status-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--navy);
+      background: var(--paper-sub);
+      border: 1px solid #cbd5e1;
+      border-left: 3px solid var(--gold-bright);
+      padding: 6px 12px;
+      border-radius: 3px;
     }
 
     .mode-switch-bar {
       display: flex;
-      gap: 10px;
-      margin-bottom: 16px;
-      background: #e2e8f0;
-      padding: 4px;
+      gap: 8px;
+      margin-bottom: 14px;
+      background: #eef2f6;
+      border: 1px solid #cbd5e1;
+      padding: 5px;
       border-radius: 6px;
     }
 
     .btn-mode {
       flex: 1;
-      padding: 10px;
+      padding: 10px 14px;
       font-family: inherit;
       font-size: 0.9rem;
       font-weight: 600;
-      border: none;
+      border: 1px solid transparent;
       background: transparent;
       color: var(--ink-sub);
       cursor: pointer;
       border-radius: 4px;
-      transition: all 0.2s;
+      transition: all 0.18s ease;
+    }
+
+    .btn-mode:hover {
+      color: var(--navy);
+      background: rgba(255, 255, 255, 0.55);
     }
 
     .btn-mode.active {
-      background: var(--paper);
-      color: var(--accent-blue);
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      background: var(--navy);
+      color: #ffffff;
+      border-color: var(--navy);
+      box-shadow: 0 3px 10px rgba(15, 41, 74, 0.22);
     }
 
     .control-panel {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.6fr 1fr auto;
       gap: 10px;
       background: var(--paper-sub);
       border: 1px solid var(--rule);
+      border-top: 2px solid var(--gold-bright);
       padding: 12px;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
+      align-items: center;
     }
 
-    @media (max-width: 640px) {
+    @media (max-width: 720px) {
       .control-panel { grid-template-columns: 1fr; }
+      .atlas-frame { padding: 20px 14px; }
     }
 
     input[type="search"], select {
       width: 100%;
-      padding: 8px 12px;
+      padding: 9px 12px;
       font-family: inherit;
       font-size: 0.9rem;
+      color: var(--ink);
+      background: #ffffff;
       border: 1px solid #cbd5e1;
       border-radius: 4px;
+    }
+
+    input[type="search"]:focus, select:focus {
+      outline: none;
+      border-color: var(--navy);
+      box-shadow: 0 0 0 2px rgba(15, 41, 74, 0.12);
+    }
+
+    .btn-reset {
+      padding: 9px 14px;
+      font-family: inherit;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--navy);
       background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 4px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-reset:hover {
+      background: var(--gold-light);
+      border-color: var(--gold-bright);
     }
 
     .row-item {
       display: grid;
-      grid-template-columns: 108px 1fr;
-      gap: 12px;
-      padding: 12px 0;
+      grid-template-columns: 112px 1fr;
+      gap: 14px;
+      padding: 13px 4px;
       border-bottom: 1px solid var(--rule);
       align-items: start;
     }
 
+    .row-item.is-header {
+      background: linear-gradient(90deg, rgba(15, 41, 74, 0.04) 0%, rgba(200, 138, 43, 0.06) 100%);
+      border-top: 1px solid #cbd5e1;
+      border-bottom: 1.5px solid var(--navy);
+      margin-top: 6px;
+      padding: 14px 8px;
+    }
+
+    @media (max-width: 560px) {
+      .row-item { grid-template-columns: 88px 1fr; gap: 10px; }
+    }
+
     .code-btn {
       display: inline-block;
+      min-width: 76px;
       background: var(--code-bg);
       color: var(--code-fg);
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.85rem;
+      font-size: 0.84rem;
       font-weight: 700;
-      padding: 3px 7px;
-      border: none;
+      padding: 4px 8px;
+      border: 1px solid rgba(200, 138, 43, 0.45);
       border-radius: 3px;
       cursor: pointer;
       text-align: center;
+      transition: transform 0.1s ease, background 0.15s ease;
     }
 
-    .code-btn:hover { background: #334155; }
-    .code-btn.sub { background: #475569; }
+    .code-btn:hover {
+      background: #1a3d6b;
+      transform: translateY(-1px);
+    }
 
-    .term-title { font-weight: 700; font-size: 0.95rem; }
-    .term-sub { font-size: 0.88rem; color: #334155; margin-top: 2px; }
+    .code-btn.sub {
+      background: var(--sub-bg);
+      border-color: transparent;
+    }
+
+    .code-btn.sub:hover {
+      background: #1e293b;
+    }
+
+    .term-title {
+      font-weight: 700;
+      font-size: 0.96rem;
+      color: var(--ink);
+    }
+
+    .row-item.is-header .term-title {
+      font-size: 1.02rem;
+      color: var(--navy);
+    }
+
+    .term-sub {
+      font-size: 0.88rem;
+      color: #334155;
+      margin-top: 3px;
+    }
+
     .note-box {
       font-size: 0.83rem;
-      color: #475569;
-      background: #f1f5f9;
-      padding: 5px 8px;
-      margin-top: 5px;
-      border-left: 3px solid #94a3b8;
+      color: #334155;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-left: 3px solid var(--gold-bright);
+      padding: 6px 10px;
+      margin-top: 6px;
+      border-radius: 0 3px 3px 0;
     }
+
     .flag-tag {
       display: inline-block;
-      font-size: 0.74rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
       background: var(--gold-light);
       color: var(--gold);
-      font-weight: 600;
-      padding: 1px 6px;
+      border: 1px solid rgba(200, 138, 43, 0.45);
+      font-weight: 700;
+      padding: 1px 7px;
       border-radius: 3px;
-      margin-top: 4px;
+      margin-top: 5px;
     }
 
     .toast {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #0f172a;
-      color: #fff;
-      padding: 8px 16px;
-      font-size: 0.85rem;
+      bottom: 22px;
+      right: 22px;
+      background: var(--navy);
+      color: #ffffff;
+      border: 1px solid var(--gold-bright);
+      padding: 9px 16px;
+      font-size: 0.86rem;
+      font-weight: 600;
       border-radius: 4px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
       display: none;
-      z-index: 50;
+      z-index: 99;
     }
   </style>
 </head>
@@ -190,23 +304,34 @@
     <div class="atlas-frame">
       <header class="atlas-header">
         <div>
+          <div class="atlas-kicker">WHO ICD-10 · Grand Reference Atlas</div>
           <h1 class="atlas-title">ICD-10 Clinical Reference Atlas</h1>
-          <p class="atlas-sub">ระบบค้นหาดัชนี Volume 3 และคู่มือ Tabular List (A00–Z99)</p>
+          <p class="atlas-sub">ดัชนี Volume 3 และคู่มือ Tabular List (A00–Z99) · คลิกที่รหัสเพื่อคัดลอกทันที</p>
         </div>
-        <div id="statusText" style="font-size: 0.85rem; color: #64748b;">พร้อมใช้งาน</div>
+        <div id="statusText" class="status-pill">พร้อมใช้งาน</div>
       </header>
 
-      <div class="mode-switch-bar">
-        <button id="btnVol3" class="btn-mode active" onclick="switchMode('VOL3')">Volume 3 Index (ค้นหา JSON)</button>
-        <button id="btnTabular" class="btn-mode" onclick="switchMode('TABULAR')">Tabular List (คู่มือตามเล่ม)</button>
+      <div class="mode-switch-bar" role="tablist" aria-label="เลือกโหมดการแสดงผล">
+        <button id="btnVol3" type="button" class="btn-mode active" onclick="switchMode('VOL3')">
+          Volume 3 Index (ค้นหาจากคลัง JSON)
+        </button>
+        <button id="btnTabular" type="button" class="btn-mode" onclick="switchMode('TABULAR')">
+          Tabular List (คู่มือตามเล่ม)
+        </button>
       </div>
 
       <div class="control-panel">
-        <input type="search" id="searchInput" placeholder="พิมพ์คำค้นหา หรือ รหัสโรค เช่น A04.7, Shigella, Amoebic..." oninput="filterData()">
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="พิมพ์คำค้นหา ชื่อโรค หรือรหัส เช่น A04.7, A18.0, Leptospirosis..."
+          oninput="filterData()"
+        />
         <select id="chapterFilter" onchange="filterData()">
           <option value="ALL">ทุกบท (All Chapters)</option>
           <option value="Ch1">Chapter I (A00–B99)</option>
         </select>
+        <button type="button" class="btn-reset" onclick="resetFilters()">ล้างค่า</button>
       </div>
 
       <div id="results"></div>
@@ -296,7 +421,92 @@
       { code: "A16", title: "Respiratory tuberculosis, not confirmed bacteriologically or histologically", category: "Ch1", isHeader: true },
       { code: "A16.0", title: "Tuberculosis of lung, bacteriologically and histologically negative", sub: "Tuberculous: bronchiectasis, fibrosis of lung, pneumonia, pneumothorax (bacteriologically and histologically)", category: "Ch1" },
       { code: "A16.1", title: "Tuberculosis of lung, bacteriologically and histological examination not done", sub: "Conditions listed in A16.0, bacteriological and histological examination not done", category: "Ch1" },
-      { code: "A16.2", title: "Tuberculosis of lung, without mention of bacteriological or histological confirmation", sub: "Tuberculosis of lung NOS; Tuberculous: bronchiectasis, fibrosis of lung, pneumonia, pneumothorax (NOS)", category: "Ch1" }
+      { code: "A16.2", title: "Tuberculosis of lung, without mention of bacteriological or histological confirmation", sub: "Tuberculosis of lung NOS; Tuberculous: bronchiectasis, fibrosis of lung, pneumonia, pneumothorax (NOS)", category: "Ch1" },
+      { code: "A16.3", title: "Tuberculosis of intrathoracic lymph nodes, without mention of bacteriological or histological confirmation", sub: "Tuberculosis of lymph nodes: hilar, intrathoracic, mediastinal, tracheobronchial (without mention of bacteriological or histological confirmation)", note: "Excl.: when specified as primary (A16.7)", category: "Ch1" },
+      { code: "A16.4", title: "Tuberculosis of larynx, trachea and bronchus, without mention of bacteriological or histological confirmation", sub: "Tuberculosis of: bronchus, glottis, larynx, trachea (without mention of bacteriological or histological confirmation)", category: "Ch1" },
+      { code: "A16.5", title: "Tuberculous pleurisy, without mention of bacteriological or histological confirmation", sub: "Tuberculosis of pleura; Tuberculous: empyema, pleurisy (without mention of bacteriological or histological confirmation)", note: "Excl.: in primary respiratory tuberculosis (A16.7)", category: "Ch1" },
+      { code: "A16.7", title: "Primary respiratory tuberculosis without mention of bacteriological or histological confirmation", sub: "Primary: respiratory tuberculosis NOS, tuberculous complex", category: "Ch1" },
+      { code: "A16.8", title: "Other respiratory tuberculosis, without mention of bacteriological or histological confirmation", sub: "Mediastinal tuberculosis; Nasopharyngeal tuberculosis; Tuberculosis of: nose, sinus [any nasal] (without mention of bacteriological or histological confirmation)", category: "Ch1" },
+      { code: "A16.9", title: "Respiratory tuberculosis unspecified, without mention of bacteriological or histological confirmation", sub: "Respiratory tuberculosis NOS; Tuberculosis NOS", category: "Ch1" },
+
+      { code: "A17†", title: "Tuberculosis of nervous system", tag: "Dagger / Asterisk †/*", category: "Ch1", isHeader: true },
+      { code: "A17.0†", title: "Tuberculous meningitis (G01*)", sub: "Tuberculosis of meninges (cerebral)(spinal); Tuberculous leptomeningitis", tag: "Dagger / Asterisk †/*", category: "Ch1" },
+      { code: "A17.1†", title: "Meningeal tuberculoma (G07*)", sub: "Tuberculoma of meninges", tag: "Dagger / Asterisk †/*", category: "Ch1" },
+      { code: "A17.8†", title: "Other tuberculosis of nervous system", sub: "Tuberculoma / Tuberculosis of: brain (G07*), spinal cord (G07*); Tuberculous: abscess of brain (G07*), meningoencephalitis (G05.0*), myelitis (G05.0*), polyneuropathy (G63.0*)", tag: "Dagger / Asterisk †/*", category: "Ch1" },
+      { code: "A17.9†", title: "Tuberculosis of nervous system, unspecified (G99.8*)", tag: "Dagger / Asterisk †/*", category: "Ch1" },
+
+      { code: "A18", title: "Tuberculosis of other organs", category: "Ch1", isHeader: true },
+      { code: "A18.0†", title: "Tuberculosis of bones and joints", sub: "Tuberculosis of: hip (M01.1*), knee (M01.1*), vertebral column (M49.0*); Tuberculous: arthritis (M01.1*), mastoiditis (H75.0*), necrosis of bone (M90.0*), osteitis (M90.0*), osteomyelitis (M90.0*), synovitis (M68.0*), tenosynovitis (M68.0*)", tag: "Dagger / Asterisk †/*", category: "Ch1" },
+      { code: "A18.1", title: "Tuberculosis of genitourinary system", sub: "Tuberculosis of: bladder† (N33.0*), cervix† (N74.0*), kidney† (N29.1*), male genital organs† (N51.-*), ureter† (N29.1*); Tuberculous female pelvic inflammatory disease† (N74.1*)", tag: "Dagger / Asterisk †/*", category: "Ch1" },
+      { code: "A18.2", title: "Tuberculous peripheral lymphadenopathy", sub: "Tuberculous adenitis", note: "Excl.: tuberculosis of lymph nodes: intrathoracic (A15.4, A16.3), mesenteric and retroperitoneal (A18.3); tuberculous tracheobronchial adenopathy (A15.4, A16.3)", category: "Ch1" },
+      { code: "A18.3", title: "Tuberculosis of intestines, peritoneum and mesenteric glands", sub: "Tuberculosis (of): anus and rectum† (K93.0*), intestine (large)(small)† (K93.0*), retroperitoneal (lymph nodes); Tuberculous: ascites, enteritis† (K93.0*), peritonitis† (K67.3*)", tag: "Dagger / Asterisk †/*", category: "Ch1" },
+      { code: "A18.4", title: "Tuberculosis of skin and subcutaneous tissue", sub: "Erythema induratum, tuberculous; Lupus: exedens, vulgaris (NOS, of eyelid† H03.1*); Scrofuloderma", note: "Excl.: lupus erythematosus (L93.-), systemic (M32.-)", category: "Ch1" },
+      { code: "A18.5", title: "Tuberculosis of eye", sub: "Tuberculous: chorioretinitis† (H32.0*), episcleritis† (H19.0*), interstitial keratitis† (H19.2*), iridocyclitis† (H22.0*), keratoconjunctivitis (interstitial)(phlyctenular)† (H19.2*)", note: "Excl.: lupus vulgaris of eyelid (A18.4)", tag: "Dagger / Asterisk †/*", category: "Ch1" },
+      { code: "A18.6", title: "Tuberculosis of ear", sub: "Tuberculous otitis media† (H67.0*)", note: "Excl.: tuberculous mastoiditis (A18.0†)", tag: "Dagger / Asterisk †/*", category: "Ch1" },
+      { code: "A18.7†", title: "Tuberculosis of adrenal glands (E35.1*)", sub: "Addison disease, tuberculous", tag: "Dagger / Asterisk †/*", category: "Ch1" },
+      { code: "A18.8", title: "Tuberculosis of other specified organs", sub: "Tuberculosis of: endocardium† (I39.8*), myocardium† (I41.0*), oesophagus† (K23.0*), pericardium† (I32.0*), thyroid gland† (E35.0*); Tuberculous cerebral arteritis† (I68.1*)", tag: "Dagger / Asterisk †/*", category: "Ch1" },
+
+      { code: "A19", title: "Miliary tuberculosis", note: "Incl.: tuberculosis: disseminated, generalized; tuberculous polyserositis", category: "Ch1", isHeader: true },
+      { code: "A19.0", title: "Acute miliary tuberculosis of a single specified site", category: "Ch1" },
+      { code: "A19.1", title: "Acute miliary tuberculosis of multiple sites", category: "Ch1" },
+      { code: "A19.2", title: "Acute miliary tuberculosis, unspecified", category: "Ch1" },
+      { code: "A19.8", title: "Other miliary tuberculosis", category: "Ch1" },
+      { code: "A19.9", title: "Miliary tuberculosis, unspecified", category: "Ch1" },
+
+      { code: "A20", title: "Plague", note: "Certain zoonotic bacterial diseases (A20–A28) — Incl.: infection due to Yersinia pestis", category: "Ch1", isHeader: true },
+      { code: "A20.0", title: "Bubonic plague", category: "Ch1" },
+      { code: "A20.1", title: "Cellulocutaneous plague", category: "Ch1" },
+      { code: "A20.2", title: "Pneumonic plague", category: "Ch1" },
+      { code: "A20.3", title: "Plague meningitis", category: "Ch1" },
+      { code: "A20.7", title: "Septicaemic plague", category: "Ch1" },
+      { code: "A20.8", title: "Other forms of plague", sub: "Abortive plague; Asymptomatic plague; Pestis minor", category: "Ch1" },
+      { code: "A20.9", title: "Plague, unspecified", category: "Ch1" },
+
+      { code: "A21", title: "Tularaemia", note: "Incl.: deer-fly fever; infection due to Francisella tularensis; rabbit fever", category: "Ch1", isHeader: true },
+      { code: "A21.0", title: "Ulceroglandular tularaemia", category: "Ch1" },
+      { code: "A21.1", title: "Oculoglandular tularaemia", sub: "Ophthalmic tularaemia", category: "Ch1" },
+      { code: "A21.2", title: "Pulmonary tularaemia", category: "Ch1" },
+      { code: "A21.3", title: "Gastrointestinal tularaemia", sub: "Abdominal tularaemia", category: "Ch1" },
+      { code: "A21.7", title: "Generalized tularaemia", category: "Ch1" },
+      { code: "A21.8", title: "Other forms of tularaemia", category: "Ch1" },
+      { code: "A21.9", title: "Tularaemia, unspecified", category: "Ch1" },
+
+      { code: "A22", title: "Anthrax", note: "Incl.: infection due to Bacillus anthracis", category: "Ch1", isHeader: true },
+      { code: "A22.0", title: "Cutaneous anthrax", sub: "Malignant: carbuncle, pustule", category: "Ch1" },
+      { code: "A22.1", title: "Pulmonary anthrax", sub: "Inhalation anthrax; Ragpicker disease; Woolsorter disease", category: "Ch1" },
+      { code: "A22.2", title: "Gastrointestinal anthrax", category: "Ch1" },
+      { code: "A22.7", title: "Anthrax septicaemia", category: "Ch1" },
+      { code: "A22.8", title: "Other forms of anthrax", sub: "Anthrax meningitis† (G01*)", tag: "Dagger / Asterisk †/*", category: "Ch1" },
+      { code: "A22.9", title: "Anthrax, unspecified", category: "Ch1" },
+
+      { code: "A23", title: "Brucellosis", note: "Incl.: fever: Malta, Mediterranean, undulant", category: "Ch1", isHeader: true },
+      { code: "A23.0", title: "Brucellosis due to Brucella melitensis", category: "Ch1" },
+      { code: "A23.1", title: "Brucellosis due to Brucella abortus", category: "Ch1" },
+      { code: "A23.2", title: "Brucellosis due to Brucella suis", category: "Ch1" },
+      { code: "A23.3", title: "Brucellosis due to Brucella canis", category: "Ch1" },
+      { code: "A23.8", title: "Other brucellosis", category: "Ch1" },
+      { code: "A23.9", title: "Brucellosis, unspecified", category: "Ch1" },
+
+      { code: "A24", title: "Glanders and melioidosis", category: "Ch1", isHeader: true },
+      { code: "A24.0", title: "Glanders", sub: "Infection due to Burkholderia mallei; Infection due to Pseudomonas mallei; Malleus", category: "Ch1" },
+      { code: "A24.1", title: "Acute and fulminating melioidosis", sub: "Melioidosis: pneumonia, septicaemia", category: "Ch1" },
+      { code: "A24.2", title: "Subacute and chronic melioidosis", category: "Ch1" },
+      { code: "A24.3", title: "Other melioidosis", category: "Ch1" },
+      { code: "A24.4", title: "Melioidosis, unspecified", sub: "Infection due to Burkholderia pseudomallei NOS; Infection due to Pseudomonas pseudomallei NOS; Whitmore disease", category: "Ch1" },
+
+      { code: "A25", title: "Rat-bite fevers", category: "Ch1", isHeader: true },
+      { code: "A25.0", title: "Spirillosis", sub: "Sodoku", category: "Ch1" },
+      { code: "A25.1", title: "Streptobacillosis", sub: "Epidemic arthritic erythema; Haverhill fever; Streptobacillary rat-bite fever", category: "Ch1" },
+      { code: "A25.9", title: "Rat-bite fever, unspecified", category: "Ch1" },
+
+      { code: "A26", title: "Erysipeloid", category: "Ch1", isHeader: true },
+      { code: "A26.0", title: "Cutaneous erysipeloid", sub: "Erythema migrans", category: "Ch1" },
+      { code: "A26.7", title: "Erysipelothrix septicaemia", category: "Ch1" },
+      { code: "A26.8", title: "Other forms of erysipeloid", category: "Ch1" },
+      { code: "A26.9", title: "Erysipeloid, unspecified", category: "Ch1" },
+
+      { code: "A27", title: "Leptospirosis", category: "Ch1", isHeader: true },
+      { code: "A27.0", title: "Leptospirosis icterohaemorrhagica", sub: "Leptospirosis due to Leptospira interrogans serovar icterohaemorrhagiae", category: "Ch1" }
     ];
 
     function switchMode(mode) {
@@ -306,13 +516,42 @@
       filterData();
     }
 
+    function resetFilters() {
+      document.getElementById('searchInput').value = '';
+      document.getElementById('chapterFilter').value = 'ALL';
+      filterData();
+    }
+
     function copyCode(code) {
-      navigator.clipboard.writeText(code);
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(code).catch(() => fallbackCopy(code));
+      } else {
+        fallbackCopy(code);
+      }
       const toast = document.getElementById('toast');
       toast.textContent = `คัดลอกรหัส ${code} แล้ว`;
       toast.style.display = 'block';
       clearTimeout(copyCode._timer);
       copyCode._timer = setTimeout(() => { toast.style.display = 'none'; }, 1500);
+    }
+
+    function fallbackCopy(text) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+    }
+
+    function escapeHtml(str) {
+      return String(str ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
     }
 
     function filterData() {
@@ -328,33 +567,37 @@
           item.title || item.lead_term || '',
           item.code || (Array.isArray(item.codes) ? item.codes.join(' ') : ''),
           item.sub || '',
-          item.note || ''
+          item.note || '',
+          item.tag || ''
         ].join(' ').toLowerCase();
         return text.includes(q);
       });
 
-      document.getElementById('statusText').textContent = `แสดง ${filtered.length} รายการ`;
+      const modeLabel = currentMode === 'TABULAR' ? 'Tabular List' : 'Volume 3 Index';
+      document.getElementById('statusText').textContent = `${modeLabel} · แสดง ${filtered.length} รายการ`;
 
       if (filtered.length === 0) {
-        resultsEl.innerHTML = `<div style="padding: 24px 0; text-align: center; color: #64748b;">ไม่พบรายการที่ค้นหา</div>`;
+        resultsEl.innerHTML = `<div style="padding: 28px 0; text-align: center; color: #64748b;">ไม่พบรายการที่ค้นหาในโหมด ${escapeHtml(modeLabel)}</div>`;
         return;
       }
 
       resultsEl.innerHTML = filtered.map(item => {
         const displayCode = item.code || (Array.isArray(item.codes) && item.codes[0]) || '—';
         const displayTitle = item.title || item.lead_term || '(ไม่มีชื่อรายการ)';
+        const safeCodeArg = displayCode.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+
         return `
-          <div class="row-item">
+          <div class="row-item ${item.isHeader ? 'is-header' : ''}">
             <div>
-              <button type="button" class="code-btn ${item.isHeader ? '' : 'sub'}" onclick="copyCode('${displayCode.replace(/'/g, "\\'")}')">
-                ${displayCode}
+              <button type="button" class="code-btn ${item.isHeader ? '' : 'sub'}" onclick="copyCode('${safeCodeArg}')">
+                ${escapeHtml(displayCode)}
               </button>
             </div>
             <div>
-              <div class="term-title">${displayTitle}</div>
-              ${item.sub ? `<div class="term-sub">${item.sub}</div>` : ''}
-              ${item.tag ? `<div class="flag-tag">${item.tag}</div>` : ''}
-              ${item.note ? `<div class="note-box">${item.note}</div>` : ''}
+              <div class="term-title">${escapeHtml(displayTitle)}</div>
+              ${item.sub ? `<div class="term-sub">${escapeHtml(item.sub)}</div>` : ''}
+              ${item.tag ? `<div class="flag-tag">${escapeHtml(item.tag)}</div>` : ''}
+              ${item.note ? `<div class="note-box">${escapeHtml(item.note)}</div>` : ''}
             </div>
           </div>
         `;
