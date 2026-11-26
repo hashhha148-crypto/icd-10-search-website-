@@ -1,0 +1,6247 @@
+[
+  {
+    "lead_term": "pregnancy or childbirth O34.4",
+    "modifiers": [
+      "causing obstructed labor O65.5"
+    ],
+    "full_text": "pregnancy or childbirth O34.4 causing obstructed labor O65.5",
+    "codes": [
+      "O65.5"
+    ],
+    "section": "Ch15",
+    "page": "3",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "pregnancy or childbirth O34.4",
+    "modifiers": [
+      "causing obstructed labor O65.5",
+      "affecting fetus or newborn P03.1"
+    ],
+    "full_text": "pregnancy or childbirth O34.4 causing obstructed labor O65.5 affecting fetus or newborn P03.1",
+    "codes": [
+      "P03.1"
+    ],
+    "section": "Ch16",
+    "page": "3",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "pregnancy or childbirth O34.4",
+    "modifiers": [
+      "chemistry, blood R79.9"
+    ],
+    "full_text": "pregnancy or childbirth O34.4 chemistry, blood R79.9",
+    "codes": [
+      "R79.9"
+    ],
+    "section": "Ch18",
+    "page": "3",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "pregnancy or childbirth O34.4",
+    "modifiers": [
+      "chemistry, blood R79.9",
+      "specified NEC R79.8"
+    ],
+    "full_text": "pregnancy or childbirth O34.4 chemistry, blood R79.9 specified NEC R79.8",
+    "codes": [
+      "R79.8"
+    ],
+    "section": "Ch18",
+    "page": "3",
+    "nec": true,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "pregnancy or childbirth O34.4",
+    "modifiers": [
+      "chest sounds (friction) (rales) R09.8"
+    ],
+    "full_text": "pregnancy or childbirth O34.4 chest sounds (friction) (rales) R09.8",
+    "codes": [
+      "R09.8"
+    ],
+    "section": "Ch18",
+    "page": "3",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "pregnancy or childbirth O34.4",
+    "modifiers": [
+      "chorion O41.9"
+    ],
+    "full_text": "pregnancy or childbirth O34.4 chorion O41.9",
+    "codes": [
+      "O41.9"
+    ],
+    "section": "Ch15",
+    "page": "3",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "pregnancy or childbirth O34.4",
+    "modifiers": [
+      "chorion O41.9",
+      "affecting fetus or newborn P02.9"
+    ],
+    "full_text": "pregnancy or childbirth O34.4 chorion O41.9 affecting fetus or newborn P02.9",
+    "codes": [
+      "P02.9"
+    ],
+    "section": "Ch16",
+    "page": "3",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "pregnancy or childbirth O34.4",
+    "modifiers": [
+      "chromosome, chromosomal Q99.9"
+    ],
+    "full_text": "pregnancy or childbirth O34.4 chromosome, chromosomal Q99.9",
+    "codes": [
+      "Q99.9"
+    ],
+    "section": "Ch17",
+    "page": "3",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "pregnancy or childbirth O34.4",
+    "modifiers": [
+      "chromosome, chromosomal Q99.9",
+      "analysis result R89.8"
+    ],
+    "full_text": "pregnancy or childbirth O34.4 chromosome, chromosomal Q99.9 analysis result R89.8",
+    "codes": [
+      "R89.8"
+    ],
+    "section": "Ch18",
+    "page": "3",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "pregnancy or childbirth O34.4",
+    "modifiers": [
+      "chromosome, chromosomal Q99.9",
+      "dicentric replacement Q93.2"
+    ],
+    "full_text": "pregnancy or childbirth O34.4 chromosome, chromosomal Q99.9 dicentric replacement Q93.2",
+    "codes": [
+      "Q93.2"
+    ],
+    "section": "Ch17",
+    "page": "3",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "present, congenital Q71.1",
+    "modifiers": [
+      "ureter (congenital) Q62.4"
+    ],
+    "full_text": "present, congenital Q71.1 ureter (congenital) Q62.4",
+    "codes": [
+      "Q62.4"
+    ],
+    "section": "Ch17",
+    "page": "1",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "present, congenital Q71.1",
+    "modifiers": [
+      "ureter (congenital) Q62.4",
+      "acquired Z90.6"
+    ],
+    "full_text": "present, congenital Q71.1 ureter (congenital) Q62.4 acquired Z90.6",
+    "codes": [
+      "Z90.6"
+    ],
+    "section": "Ch21",
+    "page": "1",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "present, congenital Q71.1",
+    "modifiers": [
+      "urethra, congenital Q64.5"
+    ],
+    "full_text": "present, congenital Q71.1 urethra, congenital Q64.5",
+    "codes": [
+      "Q64.5"
+    ],
+    "section": "Ch17",
+    "page": "1",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "present, congenital Q71.1",
+    "modifiers": [
+      "uterus (acquired) Z90.7"
+    ],
+    "full_text": "present, congenital Q71.1 uterus (acquired) Z90.7",
+    "codes": [
+      "Z90.7"
+    ],
+    "section": "Ch21",
+    "page": "1",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "present, congenital Q71.1",
+    "modifiers": [
+      "uterus",
+      "congenital Q51.0"
+    ],
+    "full_text": "present, congenital Q71.1 uterus congenital Q51.0",
+    "codes": [
+      "Q51.0"
+    ],
+    "section": "Ch17",
+    "page": "1",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "present, congenital Q71.1",
+    "modifiers": [
+      "uvula, congenital Q38.5"
+    ],
+    "full_text": "present, congenital Q71.1 uvula, congenital Q38.5",
+    "codes": [
+      "Q38.5"
+    ],
+    "section": "Ch17",
+    "page": "1",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "present, congenital Q71.1",
+    "modifiers": [
+      "vagina, congenital Q52.0"
+    ],
+    "full_text": "present, congenital Q71.1 vagina, congenital Q52.0",
+    "codes": [
+      "Q52.0"
+    ],
+    "section": "Ch17",
+    "page": "1",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "present, congenital Q71.1",
+    "modifiers": [
+      "vas deferens (congenital) Q55.4"
+    ],
+    "full_text": "present, congenital Q71.1 vas deferens (congenital) Q55.4",
+    "codes": [
+      "Q55.4"
+    ],
+    "section": "Ch17",
+    "page": "1",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "present, congenital Q71.1",
+    "modifiers": [
+      "vas deferens (congenital) Q55.4",
+      "acquired Z90.7"
+    ],
+    "full_text": "present, congenital Q71.1 vas deferens (congenital) Q55.4 acquired Z90.7",
+    "codes": [
+      "Z90.7"
+    ],
+    "section": "Ch21",
+    "page": "1",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "present, congenital Q71.1",
+    "modifiers": [
+      "vein (peripheral), congenital Q27.8"
+    ],
+    "full_text": "present, congenital Q71.1 vein (peripheral), congenital Q27.8",
+    "codes": [
+      "Q27.8"
+    ],
+    "section": "Ch17",
+    "page": "1",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "present, congenital Q71.1",
+    "modifiers": [
+      "vein (peripheral), congenital Q27.8",
+      "brain Q28.3"
+    ],
+    "full_text": "present, congenital Q71.1 vein (peripheral), congenital Q27.8 brain Q28.3",
+    "codes": [
+      "Q28.3"
+    ],
+    "section": "Ch17",
+    "page": "1",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "present, congenital Q71.1",
+    "modifiers": [
+      "vein (peripheral), congenital Q27.8",
+      "great Q26.8"
+    ],
+    "full_text": "present, congenital Q71.1 vein (peripheral), congenital Q27.8 great Q26.8",
+    "codes": [
+      "Q26.8"
+    ],
+    "section": "Ch17",
+    "page": "1",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "present, congenital Q71.1",
+    "modifiers": [
+      "vein (peripheral), congenital Q27.8",
+      "portal Q26.5"
+    ],
+    "full_text": "present, congenital Q71.1 vein (peripheral), congenital Q27.8 portal Q26.5",
+    "codes": [
+      "Q26.5"
+    ],
+    "section": "Ch17",
+    "page": "1",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "present, congenital Q71.1",
+    "modifiers": [
+      "vein (peripheral), congenital Q27.8",
+      "specified NEC Q27.8"
+    ],
+    "full_text": "present, congenital Q71.1 vein (peripheral), congenital Q27.8 specified NEC Q27.8",
+    "codes": [
+      "Q27.8"
+    ],
+    "section": "Ch17",
+    "page": "1",
+    "nec": true,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "P04.9",
+    "modifiers": [
+      "environmental substance P04.6"
+    ],
+    "full_text": "P04.9 environmental substance P04.6",
+    "codes": [
+      "P04.6"
+    ],
+    "section": "Ch16",
+    "page": "1",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "P04.9",
+    "modifiers": [
+      "environmental substance P04.6",
+      "nutritional substance P04.5"
+    ],
+    "full_text": "P04.9 environmental substance P04.6 nutritional substance P04.5",
+    "codes": [
+      "P04.5"
+    ],
+    "section": "Ch16",
+    "page": "1",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "pregnancy O35.8",
+    "modifiers": [
+      "drug NEC (see also Reaction, drug) T88.7"
+    ],
+    "full_text": "pregnancy O35.8 drug NEC (see also Reaction, drug) T88.7",
+    "codes": [
+      "T88.7"
+    ],
+    "section": "Ch19",
+    "page": "1",
+    "nec": true,
+    "dagger_star": false,
+    "cross_reference": "see also Reaction, drug",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "28",
+    "modifiers": [
+      "cerebral I64"
+    ],
+    "full_text": "28 cerebral I64",
+    "codes": [
+      "I64"
+    ],
+    "section": "Ch9",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "28",
+    "modifiers": [
+      "cerebrovascular I64"
+    ],
+    "full_text": "28 cerebrovascular I64",
+    "codes": [
+      "I64"
+    ],
+    "section": "Ch9",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "28",
+    "modifiers": [
+      "cerebrovascular I64",
+      "hemorrhagic I61.9"
+    ],
+    "full_text": "28 cerebrovascular I64 hemorrhagic I61.9",
+    "codes": [
+      "I61.9"
+    ],
+    "section": "Ch9",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "28",
+    "modifiers": [
+      "cerebrovascular I64",
+      "ischemic (see also Infarct, cerebral)"
+    ],
+    "full_text": "28 cerebrovascular I64 ischemic (see also Infarct, cerebral)",
+    "codes": [],
+    "section": "",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "see also Infarct, cerebral",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": ".1",
+    "modifiers": [
+      "fetal – see Distress, fetal"
+    ],
+    "full_text": ".1 fetal – see Distress, fetal",
+    "codes": [],
+    "section": "",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "see Distress, fetal",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": ".1",
+    "modifiers": [
+      "intrauterine – see Distress, fetal"
+    ],
+    "full_text": ".1 intrauterine – see Distress, fetal",
+    "codes": [],
+    "section": "",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "see Distress, fetal",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": ".1",
+    "modifiers": [
+      "kidney, tubular N25.8"
+    ],
+    "full_text": ".1 kidney, tubular N25.8",
+    "codes": [
+      "N25.8"
+    ],
+    "section": "Ch14",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": ".1",
+    "modifiers": [
+      "metabolic NEC E87.2"
+    ],
+    "full_text": ".1 metabolic NEC E87.2",
+    "codes": [
+      "E87.2"
+    ],
+    "section": "Ch4",
+    "page": "12",
+    "nec": true,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": ".1",
+    "modifiers": [
+      "metabolic NEC E87.2",
+      "late, of newborn P74.0"
+    ],
+    "full_text": ".1 metabolic NEC E87.2 late, of newborn P74.0",
+    "codes": [
+      "P74.0"
+    ],
+    "section": "Ch16",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": ".1",
+    "modifiers": [
+      "renal (hyperchloremic) (tubular) N25.8"
+    ],
+    "full_text": ".1 renal (hyperchloremic) (tubular) N25.8",
+    "codes": [
+      "N25.8"
+    ],
+    "section": "Ch14",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "20",
+    "modifiers": [
+      "kidney",
+      "with calculus",
+      "with hydronephrosis N13.6"
+    ],
+    "full_text": "20 kidney with calculus with hydronephrosis N13.6",
+    "codes": [
+      "N13.6"
+    ],
+    "section": "Ch14",
+    "page": "4",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "20",
+    "modifiers": [
+      "kidney",
+      "complicating pregnancy O23.0"
+    ],
+    "full_text": "20 kidney complicating pregnancy O23.0",
+    "codes": [
+      "O23.0"
+    ],
+    "section": "Ch15",
+    "page": "4",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "20",
+    "modifiers": [
+      "kidney",
+      "complicating pregnancy O23.0",
+      "affecting fetus or newborn P00.1"
+    ],
+    "full_text": "20 kidney complicating pregnancy O23.0 affecting fetus or newborn P00.1",
+    "codes": [
+      "P00.1"
+    ],
+    "section": "Ch16",
+    "page": "4",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "20",
+    "modifiers": [
+      "kidney",
+      "puerperal, postpartum O86.2"
+    ],
+    "full_text": "20 kidney puerperal, postpartum O86.2",
+    "codes": [
+      "O86.2"
+    ],
+    "section": "Ch15",
+    "page": "4",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "20",
+    "modifiers": [
+      "knee L02.4"
+    ],
+    "full_text": "20 knee L02.4",
+    "codes": [
+      "L02.4"
+    ],
+    "section": "Ch12",
+    "page": "4",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "20",
+    "modifiers": [
+      "knee L02.4",
+      "joint M00.9"
+    ],
+    "full_text": "20 knee L02.4 joint M00.9",
+    "codes": [
+      "M00.9"
+    ],
+    "section": "Ch13",
+    "page": "4",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "20",
+    "modifiers": [
+      "labium (majus) (minus) N76.4"
+    ],
+    "full_text": "20 labium (majus) (minus) N76.4",
+    "codes": [
+      "N76.4"
+    ],
+    "section": "Ch14",
+    "page": "4",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "20",
+    "modifiers": [
+      "labium (majus) (minus) N76.4",
+      "complicating pregnancy O23.5"
+    ],
+    "full_text": "20 labium (majus) (minus) N76.4 complicating pregnancy O23.5",
+    "codes": [
+      "O23.5"
+    ],
+    "section": "Ch15",
+    "page": "4",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "20",
+    "modifiers": [
+      "labium (majus) (minus) N76.4",
+      "puerperal, postpartum O86.1"
+    ],
+    "full_text": "20 labium (majus) (minus) N76.4 puerperal, postpartum O86.1",
+    "codes": [
+      "O86.1"
+    ],
+    "section": "Ch15",
+    "page": "4",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "20",
+    "modifiers": [
+      "lacrimal",
+      "caruncle H04.3"
+    ],
+    "full_text": "20 lacrimal caruncle H04.3",
+    "codes": [
+      "H04.3"
+    ],
+    "section": "Ch7",
+    "page": "4",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "20",
+    "modifiers": [
+      "lacrimal",
+      "gland H04.0"
+    ],
+    "full_text": "20 lacrimal gland H04.0",
+    "codes": [
+      "H04.0"
+    ],
+    "section": "Ch7",
+    "page": "4",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "20",
+    "modifiers": [
+      "lacrimal",
+      "passages (duct) (sac) H04.3"
+    ],
+    "full_text": "20 lacrimal passages (duct) (sac) H04.3",
+    "codes": [
+      "H04.3"
+    ],
+    "section": "Ch7",
+    "page": "4",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "20",
+    "modifiers": [
+      "larynx J38.7"
+    ],
+    "full_text": "20 larynx J38.7",
+    "codes": [
+      "J38.7"
+    ],
+    "section": "Ch10",
+    "page": "4",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O35.9",
+    "modifiers": [
+      "causing disproportion O33.7"
+    ],
+    "full_text": "O35.9 causing disproportion O33.7",
+    "codes": [
+      "O33.7"
+    ],
+    "section": "Ch15",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O35.9",
+    "modifiers": [
+      "causing disproportion O33.7",
+      "with obstructed labor O66.3"
+    ],
+    "full_text": "O35.9 causing disproportion O33.7 with obstructed labor O66.3",
+    "codes": [
+      "O66.3"
+    ],
+    "section": "Ch15",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O35.9",
+    "modifiers": [
+      "causing disproportion O33.7",
+      "with obstructed labor O66.3",
+      "affecting fetus or newborn P03.1"
+    ],
+    "full_text": "O35.9 causing disproportion O33.7 with obstructed labor O66.3 affecting fetus or newborn P03.1",
+    "codes": [
+      "P03.1"
+    ],
+    "section": "Ch16",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O35.9",
+    "modifiers": [
+      "causing disproportion O33.7",
+      "heart rate – see Distress, fetal"
+    ],
+    "full_text": "O35.9 causing disproportion O33.7 heart rate – see Distress, fetal",
+    "codes": [],
+    "section": "",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "see Distress, fetal",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O35.9",
+    "modifiers": [
+      "finding",
+      "antenatal screening, mother O28.9"
+    ],
+    "full_text": "O35.9 finding antenatal screening, mother O28.9",
+    "codes": [
+      "O28.9"
+    ],
+    "section": "Ch15",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O35.9",
+    "modifiers": [
+      "finding",
+      "antenatal screening, mother O28.9",
+      "biochemical NEC O28.1"
+    ],
+    "full_text": "O35.9 finding antenatal screening, mother O28.9 biochemical NEC O28.1",
+    "codes": [
+      "O28.1"
+    ],
+    "section": "Ch15",
+    "page": "12",
+    "nec": true,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O35.9",
+    "modifiers": [
+      "finding",
+      "antenatal screening, mother O28.9",
+      "chromosomal NEC O28.5"
+    ],
+    "full_text": "O35.9 finding antenatal screening, mother O28.9 chromosomal NEC O28.5",
+    "codes": [
+      "O28.5"
+    ],
+    "section": "Ch15",
+    "page": "12",
+    "nec": true,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O35.9",
+    "modifiers": [
+      "finding",
+      "antenatal screening, mother O28.9",
+      "cytological NEC O28.2"
+    ],
+    "full_text": "O35.9 finding antenatal screening, mother O28.9 cytological NEC O28.2",
+    "codes": [
+      "O28.2"
+    ],
+    "section": "Ch15",
+    "page": "12",
+    "nec": true,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O35.9",
+    "modifiers": [
+      "finding",
+      "antenatal screening, mother O28.9",
+      "genetic NEC O28.5"
+    ],
+    "full_text": "O35.9 finding antenatal screening, mother O28.9 genetic NEC O28.5",
+    "codes": [
+      "O28.5"
+    ],
+    "section": "Ch15",
+    "page": "12",
+    "nec": true,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O35.9",
+    "modifiers": [
+      "finding",
+      "antenatal screening, mother O28.9",
+      "hematological NEC O28.0"
+    ],
+    "full_text": "O35.9 finding antenatal screening, mother O28.9 hematological NEC O28.0",
+    "codes": [
+      "O28.0"
+    ],
+    "section": "Ch15",
+    "page": "12",
+    "nec": true,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O35.9",
+    "modifiers": [
+      "finding",
+      "antenatal screening, mother O28.9",
+      "radiological NEC O28.4"
+    ],
+    "full_text": "O35.9 finding antenatal screening, mother O28.9 radiological NEC O28.4",
+    "codes": [
+      "O28.4"
+    ],
+    "section": "Ch15",
+    "page": "12",
+    "nec": true,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O35.9",
+    "modifiers": [
+      "finding",
+      "antenatal screening, mother O28.9",
+      "specified NEC O28.8"
+    ],
+    "full_text": "O35.9 finding antenatal screening, mother O28.9 specified NEC O28.8",
+    "codes": [
+      "O28.8"
+    ],
+    "section": "Ch15",
+    "page": "12",
+    "nec": true,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O35.9",
+    "modifiers": [
+      "finding",
+      "antenatal screening, mother",
+      "ultrasonic O28.3"
+    ],
+    "full_text": "O35.9 finding antenatal screening, mother ultrasonic O28.3",
+    "codes": [
+      "O28.3"
+    ],
+    "section": "Ch15",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O35.9",
+    "modifiers": [
+      "finding",
+      "specimen – see Abnormal, specimen"
+    ],
+    "full_text": "O35.9 finding specimen – see Abnormal, specimen",
+    "codes": [],
+    "section": "",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "see Abnormal, specimen",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O35.9",
+    "modifiers": [
+      "fluid",
+      "amniotic R89.-"
+    ],
+    "full_text": "O35.9 fluid amniotic R89.-",
+    "codes": [
+      "R89"
+    ],
+    "section": "Ch18",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O35.9",
+    "modifiers": [
+      "fluid",
+      "cerebrospinal R83.-"
+    ],
+    "full_text": "O35.9 fluid cerebrospinal R83.-",
+    "codes": [
+      "R83"
+    ],
+    "section": "Ch18",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O35.9",
+    "modifiers": [
+      "fluid",
+      "peritoneal R85.-"
+    ],
+    "full_text": "O35.9 fluid peritoneal R85.-",
+    "codes": [
+      "R85"
+    ],
+    "section": "Ch18",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O35.9",
+    "modifiers": [
+      "fluid",
+      "pleural R84.-"
+    ],
+    "full_text": "O35.9 fluid pleural R84.-",
+    "codes": [
+      "R84"
+    ],
+    "section": "Ch18",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "of) T75.8",
+    "modifiers": [
+      "hair (color) (shaft) L67.9"
+    ],
+    "full_text": "of) T75.8 hair (color) (shaft) L67.9",
+    "codes": [
+      "L67.9"
+    ],
+    "section": "Ch12",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "of) T75.8",
+    "modifiers": [
+      "hair (color) (shaft) L67.9",
+      "specified NEC L67.8"
+    ],
+    "full_text": "of) T75.8 hair (color) (shaft) L67.9 specified NEC L67.8",
+    "codes": [
+      "L67.8"
+    ],
+    "section": "Ch12",
+    "page": "12",
+    "nec": true,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O45.9",
+    "modifiers": [
+      "affecting fetus or newborn P02.1"
+    ],
+    "full_text": "O45.9 affecting fetus or newborn P02.1",
+    "codes": [
+      "P02.1"
+    ],
+    "section": "Ch16",
+    "page": "3",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O45.9",
+    "modifiers": [
+      "retinae (see also Detachment, retina)"
+    ],
+    "full_text": "O45.9 retinae (see also Detachment, retina)",
+    "codes": [],
+    "section": "",
+    "page": "3",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "see also Detachment, retina",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "of pregnancy O35.1",
+    "modifiers": [
+      "ring replacement Q93.2"
+    ],
+    "full_text": "of pregnancy O35.1 ring replacement Q93.2",
+    "codes": [
+      "Q93.2"
+    ],
+    "section": "Ch17",
+    "page": "3",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "of pregnancy O35.1",
+    "modifiers": [
+      "ring replacement Q93.2",
+      "sex Q99.8"
+    ],
+    "full_text": "of pregnancy O35.1 ring replacement Q93.2 sex Q99.8",
+    "codes": [
+      "Q99.8"
+    ],
+    "section": "Ch17",
+    "page": "3",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "of pregnancy O35.1",
+    "modifiers": [
+      "ring replacement Q93.2",
+      "sex Q99.8",
+      "female phenotype Q97.9"
+    ],
+    "full_text": "of pregnancy O35.1 ring replacement Q93.2 sex Q99.8 female phenotype Q97.9",
+    "codes": [
+      "Q97.9"
+    ],
+    "section": "Ch17",
+    "page": "3",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "of pregnancy O35.1",
+    "modifiers": [
+      "ring replacement Q93.2",
+      "sex Q99.8",
+      "female phenotype Q97.9",
+      "specified NEC Q97.8"
+    ],
+    "full_text": "of pregnancy O35.1 ring replacement Q93.2 sex Q99.8 female phenotype Q97.9 specified NEC Q97.8",
+    "codes": [
+      "Q97.8"
+    ],
+    "section": "Ch17",
+    "page": "3",
+    "nec": true,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "of pregnancy O35.1",
+    "modifiers": [
+      "ring replacement Q93.2",
+      "sex Q99.8",
+      "male phenotype Q98.9"
+    ],
+    "full_text": "of pregnancy O35.1 ring replacement Q93.2 sex Q99.8 male phenotype Q98.9",
+    "codes": [
+      "Q98.9"
+    ],
+    "section": "Ch17",
+    "page": "3",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "of pregnancy O35.1",
+    "modifiers": [
+      "ring replacement Q93.2",
+      "sex Q99.8",
+      "male phenotype Q98.9",
+      "specified NEC Q98.8"
+    ],
+    "full_text": "of pregnancy O35.1 ring replacement Q93.2 sex Q99.8 male phenotype Q98.9 specified NEC Q98.8",
+    "codes": [
+      "Q98.8"
+    ],
+    "section": "Ch17",
+    "page": "3",
+    "nec": true,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "of pregnancy O35.1",
+    "modifiers": [
+      "ring replacement Q93.2",
+      "sex Q99.8",
+      "structural, male Q98.6"
+    ],
+    "full_text": "of pregnancy O35.1 ring replacement Q93.2 sex Q99.8 structural, male Q98.6",
+    "codes": [
+      "Q98.6"
+    ],
+    "section": "Ch17",
+    "page": "3",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "of pregnancy O35.1",
+    "modifiers": [
+      "ring replacement Q93.2",
+      "specified NEC Q99.8"
+    ],
+    "full_text": "of pregnancy O35.1 ring replacement Q93.2 specified NEC Q99.8",
+    "codes": [
+      "Q99.8"
+    ],
+    "section": "Ch17",
+    "page": "3",
+    "nec": true,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "of pregnancy O35.1",
+    "modifiers": [
+      "clinical findings NEC R68.8"
+    ],
+    "full_text": "of pregnancy O35.1 clinical findings NEC R68.8",
+    "codes": [
+      "R68.8"
+    ],
+    "section": "Ch18",
+    "page": "3",
+    "nec": true,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "of pregnancy O35.1",
+    "modifiers": [
+      "coagulation D68.9"
+    ],
+    "full_text": "of pregnancy O35.1 coagulation D68.9",
+    "codes": [
+      "D68.9"
+    ],
+    "section": "Ch3",
+    "page": "3",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "of pregnancy O35.1",
+    "modifiers": [
+      "coagulation D68.9",
+      "newborn, transient P61.6"
+    ],
+    "full_text": "of pregnancy O35.1 coagulation D68.9 newborn, transient P61.6",
+    "codes": [
+      "P61.6"
+    ],
+    "section": "Ch16",
+    "page": "3",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "of pregnancy O35.1",
+    "modifiers": [
+      "communication – see Fistula"
+    ],
+    "full_text": "of pregnancy O35.1 communication – see Fistula",
+    "codes": [],
+    "section": "",
+    "page": "3",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "see Fistula",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "of pregnancy O35.1",
+    "modifiers": [
+      "course, eustachian tube Q16.4"
+    ],
+    "full_text": "of pregnancy O35.1 course, eustachian tube Q16.4",
+    "codes": [
+      "Q16.4"
+    ],
+    "section": "Ch17",
+    "page": "3",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "organ(s) O07.3",
+    "modifiers": [
+      "circulatory collapse O07.3"
+    ],
+    "full_text": "organ(s) O07.3 circulatory collapse O07.3",
+    "codes": [
+      "O07.3"
+    ],
+    "section": "Ch15",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "organ(s) O07.3",
+    "modifiers": [
+      "circulatory collapse O07.3",
+      "defibrination syndrome O07.1"
+    ],
+    "full_text": "organ(s) O07.3 circulatory collapse O07.3 defibrination syndrome O07.1",
+    "codes": [
+      "O07.1"
+    ],
+    "section": "Ch15",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "organ(s) O07.3",
+    "modifiers": [
+      "circulatory collapse O07.3",
+      "defibrination syndrome O07.1",
+      "electrolyte imbalance O07.3"
+    ],
+    "full_text": "organ(s) O07.3 circulatory collapse O07.3 defibrination syndrome O07.1 electrolyte imbalance O07.3",
+    "codes": [
+      "O07.3"
+    ],
+    "section": "Ch15",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O07.2",
+    "modifiers": [
+      "endometritis O07.0"
+    ],
+    "full_text": "O07.2 endometritis O07.0",
+    "codes": [
+      "O07.0"
+    ],
+    "section": "Ch15",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O07.0",
+    "modifiers": [
+      "intravascular coagulation O07.1"
+    ],
+    "full_text": "O07.0 intravascular coagulation O07.1",
+    "codes": [
+      "O07.1"
+    ],
+    "section": "Ch15",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O07.3– – – – oliguria O07.3",
+    "modifiers": [
+      "oophoritis O07.0"
+    ],
+    "full_text": "O07.3– – – – oliguria O07.3 oophoritis O07.0",
+    "codes": [
+      "O07.0"
+    ],
+    "section": "Ch15",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O07.3– – – – oliguria O07.3",
+    "modifiers": [
+      "oophoritis O07.0",
+      "parametritis O07.0"
+    ],
+    "full_text": "O07.3– – – – oliguria O07.3 oophoritis O07.0 parametritis O07.0",
+    "codes": [
+      "O07.0"
+    ],
+    "section": "Ch15",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O07.3– – – – oliguria O07.3",
+    "modifiers": [
+      "oophoritis O07.0",
+      "parametritis O07.0",
+      "pelvic peritonitis O07.0"
+    ],
+    "full_text": "O07.3– – – – oliguria O07.3 oophoritis O07.0 parametritis O07.0 pelvic peritonitis O07.0",
+    "codes": [
+      "O07.0"
+    ],
+    "section": "Ch15",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O07.3",
+    "modifiers": [
+      "renal failure or shutdown O07.3"
+    ],
+    "full_text": "O07.3 renal failure or shutdown O07.3",
+    "codes": [
+      "O07.3"
+    ],
+    "section": "Ch15",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O07.0",
+    "modifiers": [
+      "sepsis O07.0"
+    ],
+    "full_text": "O07.0 sepsis O07.0",
+    "codes": [
+      "O07.0"
+    ],
+    "section": "Ch15",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O07.0",
+    "modifiers": [
+      "sepsis O07.0",
+      "septic shock O07.0"
+    ],
+    "full_text": "O07.0 sepsis O07.0 septic shock O07.0",
+    "codes": [
+      "O07.0"
+    ],
+    "section": "Ch15",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O07.0",
+    "modifiers": [
+      "sepsis O07.0",
+      "septic shock O07.0",
+      "shock O07.3"
+    ],
+    "full_text": "O07.0 sepsis O07.0 septic shock O07.0 shock O07.3",
+    "codes": [
+      "O07.3"
+    ],
+    "section": "Ch15",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O07.0",
+    "modifiers": [
+      "sepsis O07.0",
+      "septic shock O07.0",
+      "shock O07.3",
+      "septic O07.0"
+    ],
+    "full_text": "O07.0 sepsis O07.0 septic shock O07.0 shock O07.3 septic O07.0",
+    "codes": [
+      "O07.0"
+    ],
+    "section": "Ch15",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O07.0",
+    "modifiers": [
+      "sepsis O07.0",
+      "septic shock O07.0",
+      "shock O07.3",
+      "specified condition NEC O07.3"
+    ],
+    "full_text": "O07.0 sepsis O07.0 septic shock O07.0 shock O07.3 specified condition NEC O07.3",
+    "codes": [
+      "O07.3"
+    ],
+    "section": "Ch15",
+    "page": "15",
+    "nec": true,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O07.0",
+    "modifiers": [
+      "sepsis O07.0",
+      "septic shock O07.0",
+      "shock O07.3",
+      "tubular necrosis (renal) O07.3"
+    ],
+    "full_text": "O07.0 sepsis O07.0 septic shock O07.0 shock O07.3 tubular necrosis (renal) O07.3",
+    "codes": [
+      "O07.3"
+    ],
+    "section": "Ch15",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O07.0",
+    "modifiers": [
+      "sepsis O07.0",
+      "septic shock O07.0",
+      "shock O07.3",
+      "urinary infection O07.3"
+    ],
+    "full_text": "O07.0 sepsis O07.0 septic shock O07.0 shock O07.3 urinary infection O07.3",
+    "codes": [
+      "O07.3"
+    ],
+    "section": "Ch15",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O34.7",
+    "modifiers": [
+      "vulva and perineum",
+      "causing obstructed labor O65.5"
+    ],
+    "full_text": "O34.7 vulva and perineum causing obstructed labor O65.5",
+    "codes": [
+      "O65.5"
+    ],
+    "section": "Ch15",
+    "page": "27",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O34.7",
+    "modifiers": [
+      "vulva and perineum",
+      "causing obstructed labor O65.5",
+      "affecting fetus or newborn P03.1"
+    ],
+    "full_text": "O34.7 vulva and perineum causing obstructed labor O65.5 affecting fetus or newborn P03.1",
+    "codes": [
+      "P03.1"
+    ],
+    "section": "Ch16",
+    "page": "27",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O34.7",
+    "modifiers": [
+      "white blood cells NEC R72"
+    ],
+    "full_text": "O34.7 white blood cells NEC R72",
+    "codes": [
+      "R72"
+    ],
+    "section": "Ch18",
+    "page": "27",
+    "nec": true,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O34.7",
+    "modifiers": [
+      "X-ray examination – see Abnormal, diagnostic imaging Abnormity (any organ or part) – see Anomaly ABO hemolytic disease (fetus or newborn)"
+    ],
+    "full_text": "O34.7 X-ray examination – see Abnormal, diagnostic imaging Abnormity (any organ or part) – see Anomaly ABO hemolytic disease (fetus or newborn)",
+    "codes": [],
+    "section": "",
+    "page": "27",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "see Abnormal, diagnostic imaging Abnormity (any organ or part",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O07.9",
+    "modifiers": [
+      "complicated by",
+      "afibrinogenemia O07.6"
+    ],
+    "full_text": "O07.9 complicated by afibrinogenemia O07.6",
+    "codes": [
+      "O07.6"
+    ],
+    "section": "Ch15",
+    "page": "27",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O07.9",
+    "modifiers": [
+      "complicated by",
+      "afibrinogenemia O07.6",
+      "cardiac arrest O07.8"
+    ],
+    "full_text": "O07.9 complicated by afibrinogenemia O07.6 cardiac arrest O07.8",
+    "codes": [
+      "O07.8"
+    ],
+    "section": "Ch15",
+    "page": "27",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O07.8",
+    "modifiers": [
+      "circulatory collapse O07.8"
+    ],
+    "full_text": "O07.8 circulatory collapse O07.8",
+    "codes": [
+      "O07.8"
+    ],
+    "section": "Ch15",
+    "page": "27",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O07.8",
+    "modifiers": [
+      "circulatory collapse O07.8",
+      "defibrination syndrome O07.6"
+    ],
+    "full_text": "O07.8 circulatory collapse O07.8 defibrination syndrome O07.6",
+    "codes": [
+      "O07.6"
+    ],
+    "section": "Ch15",
+    "page": "27",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "O07.8",
+    "modifiers": [
+      "circulatory collapse O07.8",
+      "defibrination syndrome O07.6",
+      "electrolyte imbalance O07.8"
+    ],
+    "full_text": "O07.8 circulatory collapse O07.8 defibrination syndrome O07.6 electrolyte imbalance O07.8",
+    "codes": [
+      "O07.8"
+    ],
+    "section": "Ch15",
+    "page": "27",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "mouth, congenital Q38.6",
+    "modifiers": [
+      "spleen Q89.0"
+    ],
+    "full_text": "mouth, congenital Q38.6 spleen Q89.0",
+    "codes": [
+      "Q89.0"
+    ],
+    "section": "Ch17",
+    "page": "3",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "mouth, congenital Q38.6",
+    "modifiers": [
+      "subclavian artery Q27.8"
+    ],
+    "full_text": "mouth, congenital Q38.6 subclavian artery Q27.8",
+    "codes": [
+      "Q27.8"
+    ],
+    "section": "Ch17",
+    "page": "3",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "mouth, congenital Q38.6",
+    "modifiers": [
+      "thymus (gland) Q89.2"
+    ],
+    "full_text": "mouth, congenital Q38.6 thymus (gland) Q89.2",
+    "codes": [
+      "Q89.2"
+    ],
+    "section": "Ch17",
+    "page": "3",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "mouth, congenital Q38.6",
+    "modifiers": [
+      "thyroid gland Q89.2"
+    ],
+    "full_text": "mouth, congenital Q38.6 thyroid gland Q89.2",
+    "codes": [
+      "Q89.2"
+    ],
+    "section": "Ch17",
+    "page": "3",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "mouth, congenital Q38.6",
+    "modifiers": [
+      "vein (peripheral) NEC Q27.8"
+    ],
+    "full_text": "mouth, congenital Q38.6 vein (peripheral) NEC Q27.8",
+    "codes": [
+      "Q27.8"
+    ],
+    "section": "Ch17",
+    "page": "3",
+    "nec": true,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "medication P04.0",
+    "modifiers": [
+      "fat, disturbance K90.4"
+    ],
+    "full_text": "medication P04.0 fat, disturbance K90.4",
+    "codes": [
+      "K90.4"
+    ],
+    "section": "Ch11",
+    "page": "1",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "medication P04.0",
+    "modifiers": [
+      "fat, disturbance K90.4",
+      "pancreatic K90.3"
+    ],
+    "full_text": "medication P04.0 fat, disturbance K90.4 pancreatic K90.3",
+    "codes": [
+      "K90.3"
+    ],
+    "section": "Ch11",
+    "page": "1",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "movement) G25.9",
+    "modifiers": [
+      "head R25.0"
+    ],
+    "full_text": "movement) G25.9 head R25.0",
+    "codes": [
+      "R25.0"
+    ],
+    "section": "Ch18",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "movement) G25.9",
+    "modifiers": [
+      "head R25.0",
+      "involuntary R25.8"
+    ],
+    "full_text": "movement) G25.9 head R25.0 involuntary R25.8",
+    "codes": [
+      "R25.8"
+    ],
+    "section": "Ch18",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "movement) G25.9",
+    "modifiers": [
+      "myoglobin (Aberdeen) (Annapolis) R89.-"
+    ],
+    "full_text": "movement) G25.9 myoglobin (Aberdeen) (Annapolis) R89.-",
+    "codes": [
+      "R89"
+    ],
+    "section": "Ch18",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "movement) G25.9",
+    "modifiers": [
+      "organs or tissues of pelvis NEC",
+      "in pregnancy or childbirth O34.9"
+    ],
+    "full_text": "movement) G25.9 organs or tissues of pelvis NEC in pregnancy or childbirth O34.9",
+    "codes": [
+      "O34.9"
+    ],
+    "section": "Ch15",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "movement) G25.9",
+    "modifiers": [
+      "organs or tissues of pelvis NEC",
+      "in pregnancy or childbirth O34.9",
+      "affecting fetus or newborn P03.8"
+    ],
+    "full_text": "movement) G25.9 organs or tissues of pelvis NEC in pregnancy or childbirth O34.9 affecting fetus or newborn P03.8",
+    "codes": [
+      "P03.8"
+    ],
+    "section": "Ch16",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "movement) G25.9",
+    "modifiers": [
+      "organs or tissues of pelvis NEC",
+      "in pregnancy or childbirth O34.9",
+      "causing obstructed labor O65.5"
+    ],
+    "full_text": "movement) G25.9 organs or tissues of pelvis NEC in pregnancy or childbirth O34.9 causing obstructed labor O65.5",
+    "codes": [
+      "O65.5"
+    ],
+    "section": "Ch15",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "movement) G25.9",
+    "modifiers": [
+      "organs or tissues of pelvis NEC",
+      "in pregnancy or childbirth O34.9",
+      "causing obstructed labor O65.5",
+      "affecting fetus or newborn P03.1"
+    ],
+    "full_text": "movement) G25.9 organs or tissues of pelvis NEC in pregnancy or childbirth O34.9 causing obstructed labor O65.5 affecting fetus or newborn P03.1",
+    "codes": [
+      "P03.1"
+    ],
+    "section": "Ch16",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "movement) G25.9",
+    "modifiers": [
+      "organs or tissues of pelvis NEC",
+      "in pregnancy or childbirth O34.9",
+      "specified NEC O34.8"
+    ],
+    "full_text": "movement) G25.9 organs or tissues of pelvis NEC in pregnancy or childbirth O34.9 specified NEC O34.8",
+    "codes": [
+      "O34.8"
+    ],
+    "section": "Ch15",
+    "page": "12",
+    "nec": true,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "movement) G25.9",
+    "modifiers": [
+      "palmar creases Q82.8"
+    ],
+    "full_text": "movement) G25.9 palmar creases Q82.8",
+    "codes": [
+      "Q82.8"
+    ],
+    "section": "Ch17",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "movement) G25.9",
+    "modifiers": [
+      "Papanicolaou (smear)",
+      "cervix R87.6"
+    ],
+    "full_text": "movement) G25.9 Papanicolaou (smear) cervix R87.6",
+    "codes": [
+      "R87.6"
+    ],
+    "section": "Ch18",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "movement) G25.9",
+    "modifiers": [
+      "Papanicolaou (smear)",
+      "sites NEC R89.6"
+    ],
+    "full_text": "movement) G25.9 Papanicolaou (smear) sites NEC R89.6",
+    "codes": [
+      "R89.6"
+    ],
+    "section": "Ch18",
+    "page": "12",
+    "nec": true,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "movement) G25.9",
+    "modifiers": [
+      "parturition",
+      "affecting fetus or newborn P03.9"
+    ],
+    "full_text": "movement) G25.9 parturition affecting fetus or newborn P03.9",
+    "codes": [
+      "P03.9"
+    ],
+    "section": "Ch16",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "movement) G25.9",
+    "modifiers": [
+      "parturition",
+      "mother – see Delivery, complicated"
+    ],
+    "full_text": "movement) G25.9 parturition mother – see Delivery, complicated",
+    "codes": [],
+    "section": "",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "see Delivery, complicated",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "movement) G25.9",
+    "modifiers": [
+      "pelvis (bony) – see Deformity, pelvis"
+    ],
+    "full_text": "movement) G25.9 pelvis (bony) – see Deformity, pelvis",
+    "codes": [],
+    "section": "",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "see Deformity, pelvis",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "movement) G25.9",
+    "modifiers": [
+      "percussion, chest (tympany) R09.8"
+    ],
+    "full_text": "movement) G25.9 percussion, chest (tympany) R09.8",
+    "codes": [
+      "R09.8"
+    ],
+    "section": "Ch18",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "movement) G25.9",
+    "modifiers": [
+      "periods (grossly) (see also Menstruation)"
+    ],
+    "full_text": "movement) G25.9 periods (grossly) (see also Menstruation)",
+    "codes": [],
+    "section": "",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "see also Menstruation",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "look up the disease or injury reported on the medical record and under that term to find the site or adjectival modifier. Abdomen, abdominal see also condition",
+    "modifiers": [
+      "acute R10.0"
+    ],
+    "full_text": "look up the disease or injury reported on the medical record and under that term to find the site or adjectival modifier. Abdomen, abdominal see also condition acute R10.0",
+    "codes": [
+      "R10.0"
+    ],
+    "section": "Ch18",
+    "page": "27",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "look up the disease or injury reported on the medical record and under that term to find the site or adjectival modifier. Abdomen, abdominal see also condition",
+    "modifiers": [
+      "convulsive equivalent G40.8"
+    ],
+    "full_text": "look up the disease or injury reported on the medical record and under that term to find the site or adjectival modifier. Abdomen, abdominal see also condition convulsive equivalent G40.8",
+    "codes": [
+      "G40.8"
+    ],
+    "section": "Ch6",
+    "page": "27",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "look up the disease or injury reported on the medical record and under that term to find the site or adjectival modifier. Abdomen, abdominal see also condition",
+    "modifiers": [
+      "muscle deficiency syndrome Q79.4"
+    ],
+    "full_text": "look up the disease or injury reported on the medical record and under that term to find the site or adjectival modifier. Abdomen, abdominal see also condition muscle deficiency syndrome Q79.4",
+    "codes": [
+      "Q79.4"
+    ],
+    "section": "Ch17",
+    "page": "27",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "(lymphogenic) (pylephlebitic) K75.0",
+    "modifiers": [
+      "amebic A06.4† K77.0"
+    ],
+    "full_text": "(lymphogenic) (pylephlebitic) K75.0 amebic A06.4† K77.0",
+    "codes": [
+      "A06.4",
+      "K77.0"
+    ],
+    "section": "Ch1",
+    "page": "4",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "L04.9",
+    "modifiers": [
+      "mesentery I88.0"
+    ],
+    "full_text": "L04.9 mesentery I88.0",
+    "codes": [
+      "I88.0"
+    ],
+    "section": "Ch9",
+    "page": "4",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "L04.9",
+    "modifiers": [
+      "mammary gland – see Abscess, breast"
+    ],
+    "full_text": "L04.9 mammary gland – see Abscess, breast",
+    "codes": [],
+    "section": "",
+    "page": "4",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "see Abscess, breast",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "L04.9",
+    "modifiers": [
+      "marginal, anus K61.0"
+    ],
+    "full_text": "L04.9 marginal, anus K61.0",
+    "codes": [
+      "K61.0"
+    ],
+    "section": "Ch11",
+    "page": "4",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "L04.9",
+    "modifiers": [
+      "mastoid H70.0"
+    ],
+    "full_text": "L04.9 mastoid H70.0",
+    "codes": [
+      "H70.0"
+    ],
+    "section": "Ch8",
+    "page": "4",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "L04.9",
+    "modifiers": [
+      "maxilla, maxillary K10.2"
+    ],
+    "full_text": "L04.9 maxilla, maxillary K10.2",
+    "codes": [
+      "K10.2"
+    ],
+    "section": "Ch11",
+    "page": "4",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "L04.9",
+    "modifiers": [
+      "maxilla, maxillary K10.2",
+      "sinus (chronic) J32.0"
+    ],
+    "full_text": "L04.9 maxilla, maxillary K10.2 sinus (chronic) J32.0",
+    "codes": [
+      "J32.0"
+    ],
+    "section": "Ch10",
+    "page": "4",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "L04.9",
+    "modifiers": [
+      "mediastinum J85.3"
+    ],
+    "full_text": "L04.9 mediastinum J85.3",
+    "codes": [
+      "J85.3"
+    ],
+    "section": "Ch10",
+    "page": "4",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "L04.9",
+    "modifiers": [
+      "meibomian gland H00.0"
+    ],
+    "full_text": "L04.9 meibomian gland H00.0",
+    "codes": [
+      "H00.0"
+    ],
+    "section": "Ch7",
+    "page": "4",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "L04.9",
+    "modifiers": [
+      "meninges G06.2"
+    ],
+    "full_text": "L04.9 meninges G06.2",
+    "codes": [
+      "G06.2"
+    ],
+    "section": "Ch6",
+    "page": "4",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "L04.9",
+    "modifiers": [
+      "mesentery, mesenteric K65.0"
+    ],
+    "full_text": "L04.9 mesentery, mesenteric K65.0",
+    "codes": [
+      "K65.0"
+    ],
+    "section": "Ch11",
+    "page": "4",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "L04.9",
+    "modifiers": [
+      "mesosalpinx (see also Salpingo-oophoritis)"
+    ],
+    "full_text": "L04.9 mesosalpinx (see also Salpingo-oophoritis)",
+    "codes": [],
+    "section": "",
+    "page": "4",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "see also Salpingo-oophoritis",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "L02.9",
+    "modifiers": [
+      "dental K04.7"
+    ],
+    "full_text": "L02.9 dental K04.7",
+    "codes": [
+      "K04.7"
+    ],
+    "section": "Ch11",
+    "page": "19",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "L02.9",
+    "modifiers": [
+      "dental K04.7",
+      "with sinus (alveolar) K04.6"
+    ],
+    "full_text": "L02.9 dental K04.7 with sinus (alveolar) K04.6",
+    "codes": [
+      "K04.6"
+    ],
+    "section": "Ch11",
+    "page": "19",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "L02.9",
+    "modifiers": [
+      "dentoalveolar K04.7"
+    ],
+    "full_text": "L02.9 dentoalveolar K04.7",
+    "codes": [
+      "K04.7"
+    ],
+    "section": "Ch11",
+    "page": "19",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "L02.9",
+    "modifiers": [
+      "dentoalveolar K04.7",
+      "with sinus K04.6"
+    ],
+    "full_text": "L02.9 dentoalveolar K04.7 with sinus K04.6",
+    "codes": [
+      "K04.6"
+    ],
+    "section": "Ch11",
+    "page": "19",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "L02.9",
+    "modifiers": [
+      "diaphragm, diaphragmatic K65.0"
+    ],
+    "full_text": "L02.9 diaphragm, diaphragmatic K65.0",
+    "codes": [
+      "K65.0"
+    ],
+    "section": "Ch11",
+    "page": "19",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "L02.9",
+    "modifiers": [
+      "Douglas' cul-de-sac or pouch (see also"
+    ],
+    "full_text": "L02.9 Douglas' cul-de-sac or pouch (see also",
+    "codes": [],
+    "section": "",
+    "page": "19",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "see also",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "L02.0",
+    "modifiers": [
+      "fallopian tube (see also Salpingo-"
+    ],
+    "full_text": "L02.0 fallopian tube (see also Salpingo-",
+    "codes": [],
+    "section": "",
+    "page": "19",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "see also Salpingo-",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "Lymphadenitis, acute) L04.9",
+    "modifiers": [
+      "gluteal (region) L02.3"
+    ],
+    "full_text": "Lymphadenitis, acute) L04.9 gluteal (region) L02.3",
+    "codes": [
+      "L02.3"
+    ],
+    "section": "Ch12",
+    "page": "19",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "Lymphadenitis, acute) L04.9",
+    "modifiers": [
+      "gonorrheal NEC (see also Gonococcus)"
+    ],
+    "full_text": "Lymphadenitis, acute) L04.9 gonorrheal NEC (see also Gonococcus)",
+    "codes": [],
+    "section": "",
+    "page": "19",
+    "nec": true,
+    "dagger_star": false,
+    "cross_reference": "see also Gonococcus",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "(lymphogenic) (pylephlebitic) K75.0",
+    "modifiers": [
+      "hip (region) L02.4"
+    ],
+    "full_text": "(lymphogenic) (pylephlebitic) K75.0 hip (region) L02.4",
+    "codes": [
+      "L02.4"
+    ],
+    "section": "Ch12",
+    "page": "19",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "(lymphogenic) (pylephlebitic) K75.0",
+    "modifiers": [
+      "ileocecal K35.3"
+    ],
+    "full_text": "(lymphogenic) (pylephlebitic) K75.0 ileocecal K35.3",
+    "codes": [
+      "K35.3"
+    ],
+    "section": "Ch11",
+    "page": "19",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "(lymphogenic) (pylephlebitic) K75.0",
+    "modifiers": [
+      "ileostomy (bud) K91.4"
+    ],
+    "full_text": "(lymphogenic) (pylephlebitic) K75.0 ileostomy (bud) K91.4",
+    "codes": [
+      "K91.4"
+    ],
+    "section": "Ch11",
+    "page": "19",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "(lymphogenic) (pylephlebitic) K75.0",
+    "modifiers": [
+      "iliac (region) L02.2"
+    ],
+    "full_text": "(lymphogenic) (pylephlebitic) K75.0 iliac (region) L02.2",
+    "codes": [
+      "L02.2"
+    ],
+    "section": "Ch12",
+    "page": "19",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "(lymphogenic) (pylephlebitic) K75.0",
+    "modifiers": [
+      "infraclavicular (fossa) L02.4"
+    ],
+    "full_text": "(lymphogenic) (pylephlebitic) K75.0 infraclavicular (fossa) L02.4",
+    "codes": [
+      "L02.4"
+    ],
+    "section": "Ch12",
+    "page": "19",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "K04.3",
+    "modifiers": [
+      "head movement R25.0"
+    ],
+    "full_text": "K04.3 head movement R25.0",
+    "codes": [
+      "R25.0"
+    ],
+    "section": "Ch18",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "K66.0",
+    "modifiers": [
+      "intestine (see also Adhesions,"
+    ],
+    "full_text": "K66.0 intestine (see also Adhesions,",
+    "codes": [],
+    "section": "",
+    "page": "35",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "see also Adhesions,",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "K66.0",
+    "modifiers": [
+      "lung J98.4"
+    ],
+    "full_text": "K66.0 lung J98.4",
+    "codes": [
+      "J98.4"
+    ],
+    "section": "Ch10",
+    "page": "35",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "K66.0",
+    "modifiers": [
+      "mediastinum J98.5"
+    ],
+    "full_text": "K66.0 mediastinum J98.5",
+    "codes": [
+      "J98.5"
+    ],
+    "section": "Ch10",
+    "page": "35",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "K66.0",
+    "modifiers": [
+      "meninges",
+      "cerebral G96.1"
+    ],
+    "full_text": "K66.0 meninges cerebral G96.1",
+    "codes": [
+      "G96.1"
+    ],
+    "section": "Ch6",
+    "page": "35",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "K66.0",
+    "modifiers": [
+      "meninges",
+      "cerebral G96.1",
+      "congenital Q04.8"
+    ],
+    "full_text": "K66.0 meninges cerebral G96.1 congenital Q04.8",
+    "codes": [
+      "Q04.8"
+    ],
+    "section": "Ch17",
+    "page": "35",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "K66.0",
+    "modifiers": [
+      "meninges",
+      "congenital Q07.8"
+    ],
+    "full_text": "K66.0 meninges congenital Q07.8",
+    "codes": [
+      "Q07.8"
+    ],
+    "section": "Ch17",
+    "page": "35",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "K66.0",
+    "modifiers": [
+      "meninges",
+      "spinal G96.1"
+    ],
+    "full_text": "K66.0 meninges spinal G96.1",
+    "codes": [
+      "G96.1"
+    ],
+    "section": "Ch6",
+    "page": "35",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "K66.0",
+    "modifiers": [
+      "meninges",
+      "spinal G96.1",
+      "congenital Q06.8"
+    ],
+    "full_text": "K66.0 meninges spinal G96.1 congenital Q06.8",
+    "codes": [
+      "Q06.8"
+    ],
+    "section": "Ch17",
+    "page": "35",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "K66.0",
+    "modifiers": [
+      "postpartal (old) N73.6"
+    ],
+    "full_text": "K66.0 postpartal (old) N73.6",
+    "codes": [
+      "N73.6"
+    ],
+    "section": "Ch14",
+    "page": "35",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "K66.0",
+    "modifiers": [
+      "postpartal (old) N73.6",
+      "tuberculous A18.1† N74.1"
+    ],
+    "full_text": "K66.0 postpartal (old) N73.6 tuberculous A18.1† N74.1",
+    "codes": [
+      "A18.1",
+      "N74.1"
+    ],
+    "section": "Ch1",
+    "page": "35",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "K66.0",
+    "modifiers": [
+      "penis to scrotum (congenital) Q55.8"
+    ],
+    "full_text": "K66.0 penis to scrotum (congenital) Q55.8",
+    "codes": [
+      "Q55.8"
+    ],
+    "section": "Ch17",
+    "page": "35",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "K66.0",
+    "modifiers": [
+      "periappendiceal (see also Adhesions,"
+    ],
+    "full_text": "K66.0 periappendiceal (see also Adhesions,",
+    "codes": [],
+    "section": "",
+    "page": "35",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "see also Adhesions,",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "K66.0",
+    "modifiers": [
+      "periovarian N73.6"
+    ],
+    "full_text": "K66.0 periovarian N73.6",
+    "codes": [
+      "N73.6"
+    ],
+    "section": "Ch14",
+    "page": "35",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "K66.0",
+    "modifiers": [
+      "periprostatic N42.8"
+    ],
+    "full_text": "K66.0 periprostatic N42.8",
+    "codes": [
+      "N42.8"
+    ],
+    "section": "Ch14",
+    "page": "35",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "K66.0",
+    "modifiers": [
+      "perirenal N28.8"
+    ],
+    "full_text": "K66.0 perirenal N28.8",
+    "codes": [
+      "N28.8"
+    ],
+    "section": "Ch14",
+    "page": "35",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "K66.0",
+    "modifiers": [
+      "peritoneum, peritoneal K66.0"
+    ],
+    "full_text": "K66.0 peritoneum, peritoneal K66.0",
+    "codes": [
+      "K66.0"
+    ],
+    "section": "Ch11",
+    "page": "35",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "K66.0",
+    "modifiers": [
+      "peritoneum, peritoneal K66.0",
+      "with obstruction (intestinal) K56.5"
+    ],
+    "full_text": "K66.0 peritoneum, peritoneal K66.0 with obstruction (intestinal) K56.5",
+    "codes": [
+      "K56.5"
+    ],
+    "section": "Ch11",
+    "page": "35",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "K66.0",
+    "modifiers": [
+      "peritoneum, peritoneal K66.0",
+      "congenital Q43.3"
+    ],
+    "full_text": "K66.0 peritoneum, peritoneal K66.0 congenital Q43.3",
+    "codes": [
+      "Q43.3"
+    ],
+    "section": "Ch17",
+    "page": "35",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "K66.0",
+    "modifiers": [
+      "peritoneum, peritoneal K66.0",
+      "pelvic, female N73.6"
+    ],
+    "full_text": "K66.0 peritoneum, peritoneal K66.0 pelvic, female N73.6",
+    "codes": [
+      "N73.6"
+    ],
+    "section": "Ch14",
+    "page": "35",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "K66.0",
+    "modifiers": [
+      "peritoneum, peritoneal K66.0",
+      "pelvic, female N73.6",
+      "postprocedural N99.4"
+    ],
+    "full_text": "K66.0 peritoneum, peritoneal K66.0 pelvic, female N73.6 postprocedural N99.4",
+    "codes": [
+      "N99.4"
+    ],
+    "section": "Ch14",
+    "page": "35",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "K66.0",
+    "modifiers": [
+      "peritoneum, peritoneal K66.0",
+      "postpartal, pelvic N73.6"
+    ],
+    "full_text": "K66.0 peritoneum, peritoneal K66.0 postpartal, pelvic N73.6",
+    "codes": [
+      "N73.6"
+    ],
+    "section": "Ch14",
+    "page": "35",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "K66.0",
+    "modifiers": [
+      "peritoneum, peritoneal K66.0",
+      "to uterus N73.6"
+    ],
+    "full_text": "K66.0 peritoneum, peritoneal K66.0 to uterus N73.6",
+    "codes": [
+      "N73.6"
+    ],
+    "section": "Ch14",
+    "page": "35",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "K66.0",
+    "modifiers": [
+      "peritubal N73.6"
+    ],
+    "full_text": "K66.0 peritubal N73.6",
+    "codes": [
+      "N73.6"
+    ],
+    "section": "Ch14",
+    "page": "35",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "K66.0",
+    "modifiers": [
+      "periureteral N28.8"
+    ],
+    "full_text": "K66.0 periureteral N28.8",
+    "codes": [
+      "N28.8"
+    ],
+    "section": "Ch14",
+    "page": "35",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "K66.0",
+    "modifiers": [
+      "periuterine N73.6"
+    ],
+    "full_text": "K66.0 periuterine N73.6",
+    "codes": [
+      "N73.6"
+    ],
+    "section": "Ch14",
+    "page": "35",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "K66.0",
+    "modifiers": [
+      "perivesical N32.8"
+    ],
+    "full_text": "K66.0 perivesical N32.8",
+    "codes": [
+      "N32.8"
+    ],
+    "section": "Ch14",
+    "page": "35",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "K66.0",
+    "modifiers": [
+      "perivesicular (seminal vesicle) N50.8"
+    ],
+    "full_text": "K66.0 perivesicular (seminal vesicle) N50.8",
+    "codes": [
+      "N50.8"
+    ],
+    "section": "Ch14",
+    "page": "35",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "K66.0",
+    "modifiers": [
+      "pleura, pleuritic J94.8"
+    ],
+    "full_text": "K66.0 pleura, pleuritic J94.8",
+    "codes": [
+      "J94.8"
+    ],
+    "section": "Ch10",
+    "page": "35",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "K66.0",
+    "modifiers": [
+      "pleura, pleuritic J94.8",
+      "tuberculous NEC A16.5"
+    ],
+    "full_text": "K66.0 pleura, pleuritic J94.8 tuberculous NEC A16.5",
+    "codes": [
+      "A16.5"
+    ],
+    "section": "Ch1",
+    "page": "35",
+    "nec": true,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "K66.0",
+    "modifiers": [
+      "pleuropericardial J94.8"
+    ],
+    "full_text": "K66.0 pleuropericardial J94.8",
+    "codes": [
+      "J94.8"
+    ],
+    "section": "Ch10",
+    "page": "35",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "K66.0",
+    "modifiers": [
+      "postoperative",
+      "with obstruction K91.3"
+    ],
+    "full_text": "K66.0 postoperative with obstruction K91.3",
+    "codes": [
+      "K91.3"
+    ],
+    "section": "Ch11",
+    "page": "35",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "J99.8",
+    "modifiers": [
+      "with",
+      "brain abscess A06.6† G07"
+    ],
+    "full_text": "J99.8 with brain abscess A06.6† G07",
+    "codes": [
+      "A06.6",
+      "G07"
+    ],
+    "section": "Ch1",
+    "page": "4",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "J99.8",
+    "modifiers": [
+      "with",
+      "brain abscess A06.6† G07",
+      "pneumonia A06.5† J17.0"
+    ],
+    "full_text": "J99.8 with brain abscess A06.6† G07 pneumonia A06.5† J17.0",
+    "codes": [
+      "A06.5",
+      "J17.0"
+    ],
+    "section": "Ch1",
+    "page": "4",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "J99.8",
+    "modifiers": [
+      "lymph, lymphatic, gland or node (acute) (see also Lymphadenitis, acute)"
+    ],
+    "full_text": "J99.8 lymph, lymphatic, gland or node (acute) (see also Lymphadenitis, acute)",
+    "codes": [],
+    "section": "",
+    "page": "4",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "see also Lymphadenitis, acute",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "jejunum) K50.0",
+    "modifiers": [
+      "cul-de-sac (Douglas') (posterior) (see also Peritonitis, pelvic,"
+    ],
+    "full_text": "jejunum) K50.0 cul-de-sac (Douglas') (posterior) (see also Peritonitis, pelvic,",
+    "codes": [],
+    "section": "",
+    "page": "19",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "see also Peritonitis, pelvic,",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "J01.9",
+    "modifiers": [
+      "alveolar K04.7"
+    ],
+    "full_text": "J01.9 alveolar K04.7",
+    "codes": [
+      "K04.7"
+    ],
+    "section": "Ch11",
+    "page": "18",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "J01.9",
+    "modifiers": [
+      "amebic A06.4† K77.0"
+    ],
+    "full_text": "J01.9 amebic A06.4† K77.0",
+    "codes": [
+      "A06.4",
+      "K77.0"
+    ],
+    "section": "Ch1",
+    "page": "18",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "J84.1",
+    "modifiers": [
+      "jaw K10.3"
+    ],
+    "full_text": "J84.1 jaw K10.3",
+    "codes": [
+      "K10.3"
+    ],
+    "section": "Ch11",
+    "page": "41",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "J21.9",
+    "modifiers": [
+      "with",
+      "bronchospasm or obstruction J21.9"
+    ],
+    "full_text": "J21.9 with bronchospasm or obstruction J21.9",
+    "codes": [
+      "J21.9"
+    ],
+    "section": "Ch10",
+    "page": "68",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "J21.9",
+    "modifiers": [
+      "with",
+      "influenza, flu or grippe (see also Influenza, with, respiratory"
+    ],
+    "full_text": "J21.9 with influenza, flu or grippe (see also Influenza, with, respiratory",
+    "codes": [],
+    "section": "",
+    "page": "68",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "see also Influenza, with, respiratory",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "J21.9",
+    "modifiers": [
+      "caseous (tuberculous) A16.4"
+    ],
+    "full_text": "J21.9 caseous (tuberculous) A16.4",
+    "codes": [
+      "A16.4"
+    ],
+    "section": "Ch1",
+    "page": "68",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "J21.9",
+    "modifiers": [
+      "catarrhal (15 years of age and above) J40"
+    ],
+    "full_text": "J21.9 catarrhal (15 years of age and above) J40",
+    "codes": [
+      "J40"
+    ],
+    "section": "Ch10",
+    "page": "68",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "J21.9",
+    "modifiers": [
+      "catarrhal (15 years of age and above) J40",
+      "acute – see Bronchitis, acute or subacute"
+    ],
+    "full_text": "J21.9 catarrhal (15 years of age and above) J40 acute – see Bronchitis, acute or subacute",
+    "codes": [],
+    "section": "",
+    "page": "68",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "see Bronchitis, acute or subacute",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "J21.9",
+    "modifiers": [
+      "catarrhal (15 years of age and above) J40",
+      "chronic J41.0"
+    ],
+    "full_text": "J21.9 catarrhal (15 years of age and above) J40 chronic J41.0",
+    "codes": [
+      "J41.0"
+    ],
+    "section": "Ch10",
+    "page": "68",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "J21.9",
+    "modifiers": [
+      "catarrhal (15 years of age and above) J40",
+      "under 15 years of age J20.9"
+    ],
+    "full_text": "J21.9 catarrhal (15 years of age and above) J40 under 15 years of age J20.9",
+    "codes": [
+      "J20.9"
+    ],
+    "section": "Ch10",
+    "page": "68",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "J21.9",
+    "modifiers": [
+      "chemical (acute) (subacute) J68.0"
+    ],
+    "full_text": "J21.9 chemical (acute) (subacute) J68.0",
+    "codes": [
+      "J68.0"
+    ],
+    "section": "Ch10",
+    "page": "68",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "J21.9",
+    "modifiers": [
+      "chemical (acute) (subacute) J68.0",
+      "chronic J68.4"
+    ],
+    "full_text": "J21.9 chemical (acute) (subacute) J68.0 chronic J68.4",
+    "codes": [
+      "J68.4"
+    ],
+    "section": "Ch10",
+    "page": "68",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "J21.9",
+    "modifiers": [
+      "chronic J42"
+    ],
+    "full_text": "J21.9 chronic J42",
+    "codes": [
+      "J42"
+    ],
+    "section": "Ch10",
+    "page": "68",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "J21.9",
+    "modifiers": [
+      "chronic J42",
+      "with",
+      "airways obstruction J44.8"
+    ],
+    "full_text": "J21.9 chronic J42 with airways obstruction J44.8",
+    "codes": [
+      "J44.8"
+    ],
+    "section": "Ch10",
+    "page": "68",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "J21.9",
+    "modifiers": [
+      "chronic J42",
+      "with",
+      "tracheitis (chronic) J42"
+    ],
+    "full_text": "J21.9 chronic J42 with tracheitis (chronic) J42",
+    "codes": [
+      "J42"
+    ],
+    "section": "Ch10",
+    "page": "68",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "J21.9",
+    "modifiers": [
+      "chronic J42",
+      "asthmatic (obstructive) J44.8"
+    ],
+    "full_text": "J21.9 chronic J42 asthmatic (obstructive) J44.8",
+    "codes": [
+      "J44.8"
+    ],
+    "section": "Ch10",
+    "page": "68",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "I63.9",
+    "modifiers": [
+      "old I69.4"
+    ],
+    "full_text": "I63.9 old I69.4",
+    "codes": [
+      "I69.4"
+    ],
+    "section": "Ch9",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "I63.9",
+    "modifiers": [
+      "coronary (see also Infarct,"
+    ],
+    "full_text": "I63.9 coronary (see also Infarct,",
+    "codes": [],
+    "section": "",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "see also Infarct,",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "in parentheses are reported or not. For example: Abscess (embolic) (infective) (metastatic) (multiple) (pyogenic) (septic)",
+    "modifiers": [
+      "brain (any part) G06.0"
+    ],
+    "full_text": "in parentheses are reported or not. For example: Abscess (embolic) (infective) (metastatic) (multiple) (pyogenic) (septic) brain (any part) G06.0",
+    "codes": [
+      "G06.0"
+    ],
+    "section": "Ch6",
+    "page": "14",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "inflammatory) N73.2",
+    "modifiers": [
+      "paravaginal N76.0"
+    ],
+    "full_text": "inflammatory) N73.2 paravaginal N76.0",
+    "codes": [
+      "N76.0"
+    ],
+    "section": "Ch14",
+    "page": "4",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "inflammatory) N73.2",
+    "modifiers": [
+      "parietal region (scalp) L02.8"
+    ],
+    "full_text": "inflammatory) N73.2 parietal region (scalp) L02.8",
+    "codes": [
+      "L02.8"
+    ],
+    "section": "Ch12",
+    "page": "4",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "inflammatory) N73.2",
+    "modifiers": [
+      "parotid (duct) (gland) K11.3"
+    ],
+    "full_text": "inflammatory) N73.2 parotid (duct) (gland) K11.3",
+    "codes": [
+      "K11.3"
+    ],
+    "section": "Ch11",
+    "page": "4",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "inflammatory) N73.2",
+    "modifiers": [
+      "pectoral (region) L02.2"
+    ],
+    "full_text": "inflammatory) N73.2 pectoral (region) L02.2",
+    "codes": [
+      "L02.2"
+    ],
+    "section": "Ch12",
+    "page": "4",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "inflammatory) N73.2",
+    "modifiers": [
+      "pelvis, pelvic",
+      "female (see also Disease, pelvis,"
+    ],
+    "full_text": "inflammatory) N73.2 pelvis, pelvic female (see also Disease, pelvis,",
+    "codes": [],
+    "section": "",
+    "page": "4",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "see also Disease, pelvis,",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "inflammatory) N73.9",
+    "modifiers": [
+      "male, peritoneal K65.0"
+    ],
+    "full_text": "inflammatory) N73.9 male, peritoneal K65.0",
+    "codes": [
+      "K65.0"
+    ],
+    "section": "Ch11",
+    "page": "4",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "inflammatory) N73.9",
+    "modifiers": [
+      "penis N48.2"
+    ],
+    "full_text": "inflammatory) N73.9 penis N48.2",
+    "codes": [
+      "N48.2"
+    ],
+    "section": "Ch14",
+    "page": "4",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "inflammatory) N73.9",
+    "modifiers": [
+      "corpus",
+      "luteum (see also Salpingo-oophoritis)"
+    ],
+    "full_text": "inflammatory) N73.9 corpus luteum (see also Salpingo-oophoritis)",
+    "codes": [],
+    "section": "",
+    "page": "19",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "see also Salpingo-oophoritis",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "inflammatory) N73.2",
+    "modifiers": [
+      "Brodie's (chronic) (localized) M86.8"
+    ],
+    "full_text": "inflammatory) N73.2 Brodie's (chronic) (localized) M86.8",
+    "codes": [
+      "M86.8"
+    ],
+    "section": "Ch13",
+    "page": "18",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "inflammatory) N73.2",
+    "modifiers": [
+      "bronchi J98.0"
+    ],
+    "full_text": "inflammatory) N73.2 bronchi J98.0",
+    "codes": [
+      "J98.0"
+    ],
+    "section": "Ch10",
+    "page": "18",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "inflammatory) N73.2",
+    "modifiers": [
+      "buccal cavity K12.2"
+    ],
+    "full_text": "inflammatory) N73.2 buccal cavity K12.2",
+    "codes": [
+      "K12.2"
+    ],
+    "section": "Ch11",
+    "page": "18",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "inflammatory) N73.2",
+    "modifiers": [
+      "bulbourethral gland N34.0"
+    ],
+    "full_text": "inflammatory) N73.2 bulbourethral gland N34.0",
+    "codes": [
+      "N34.0"
+    ],
+    "section": "Ch14",
+    "page": "18",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "inflammatory) N73.2",
+    "modifiers": [
+      "bursa M71.0"
+    ],
+    "full_text": "inflammatory) N73.2 bursa M71.0",
+    "codes": [
+      "M71.0"
+    ],
+    "section": "Ch13",
+    "page": "18",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "inflammatory) N73.2",
+    "modifiers": [
+      "bursa M71.0",
+      "pharyngeal J39.1"
+    ],
+    "full_text": "inflammatory) N73.2 bursa M71.0 pharyngeal J39.1",
+    "codes": [
+      "J39.1"
+    ],
+    "section": "Ch10",
+    "page": "18",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "inflammatory) N73.2",
+    "modifiers": [
+      "buttock L02.3"
+    ],
+    "full_text": "inflammatory) N73.2 buttock L02.3",
+    "codes": [
+      "L02.3"
+    ],
+    "section": "Ch12",
+    "page": "18",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "inflammatory) N73.2",
+    "modifiers": [
+      "canthus H10.5"
+    ],
+    "full_text": "inflammatory) N73.2 canthus H10.5",
+    "codes": [
+      "H10.5"
+    ],
+    "section": "Ch7",
+    "page": "18",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "inflammatory) N73.2",
+    "modifiers": [
+      "cartilage M94.8"
+    ],
+    "full_text": "inflammatory) N73.2 cartilage M94.8",
+    "codes": [
+      "M94.8"
+    ],
+    "section": "Ch13",
+    "page": "18",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "inflammatory) N73.2",
+    "modifiers": [
+      "cerebellum, cerebellar G06.0"
+    ],
+    "full_text": "inflammatory) N73.2 cerebellum, cerebellar G06.0",
+    "codes": [
+      "G06.0"
+    ],
+    "section": "Ch6",
+    "page": "18",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "inflammatory) N73.2",
+    "modifiers": [
+      "cerebral (embolic) G06.0"
+    ],
+    "full_text": "inflammatory) N73.2 cerebral (embolic) G06.0",
+    "codes": [
+      "G06.0"
+    ],
+    "section": "Ch6",
+    "page": "18",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "inflammatory) N73.2",
+    "modifiers": [
+      "cervical (meaning neck) L02.1"
+    ],
+    "full_text": "inflammatory) N73.2 cervical (meaning neck) L02.1",
+    "codes": [
+      "L02.1"
+    ],
+    "section": "Ch12",
+    "page": "18",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "inflammatory) N73.2",
+    "modifiers": [
+      "cervical (meaning neck) L02.1",
+      "lymph gland or node L04.0"
+    ],
+    "full_text": "inflammatory) N73.2 cervical (meaning neck) L02.1 lymph gland or node L04.0",
+    "codes": [
+      "L04.0"
+    ],
+    "section": "Ch12",
+    "page": "18",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "inflammatory) N73.2",
+    "modifiers": [
+      "cervix (uteri) (see also Cervicitis) N72"
+    ],
+    "full_text": "inflammatory) N73.2 cervix (uteri) (see also Cervicitis) N72",
+    "codes": [
+      "N72"
+    ],
+    "section": "Ch14",
+    "page": "18",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "see also Cervicitis",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "inflammatory) N73.2",
+    "modifiers": [
+      "cheek (external) L02.0"
+    ],
+    "full_text": "inflammatory) N73.2 cheek (external) L02.0",
+    "codes": [
+      "L02.0"
+    ],
+    "section": "Ch12",
+    "page": "18",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "inflammatory) N73.2",
+    "modifiers": [
+      "chest J86.9"
+    ],
+    "full_text": "inflammatory) N73.2 chest J86.9",
+    "codes": [
+      "J86.9"
+    ],
+    "section": "Ch10",
+    "page": "18",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "H33.2",
+    "modifiers": [
+      "uterus Z90.7"
+    ],
+    "full_text": "H33.2 uterus Z90.7",
+    "codes": [
+      "Z90.7"
+    ],
+    "section": "Ch21",
+    "page": "3",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "hemoglobin) D58.2",
+    "modifiers": [
+      "trait – see Trait, hemoglobin, abnormal"
+    ],
+    "full_text": "hemoglobin) D58.2 trait – see Trait, hemoglobin, abnormal",
+    "codes": [],
+    "section": "",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "see Trait, hemoglobin, abnormal",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "hemoglobin) D58.2",
+    "modifiers": [
+      "histology NEC R89.7"
+    ],
+    "full_text": "hemoglobin) D58.2 histology NEC R89.7",
+    "codes": [
+      "R89.7"
+    ],
+    "section": "Ch18",
+    "page": "12",
+    "nec": true,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "hemoglobin) D58.2",
+    "modifiers": [
+      "immunological findings R89.4"
+    ],
+    "full_text": "hemoglobin) D58.2 immunological findings R89.4",
+    "codes": [
+      "R89.4"
+    ],
+    "section": "Ch18",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "hemoglobin) D58.2",
+    "modifiers": [
+      "immunological findings R89.4",
+      "in serum R76.9"
+    ],
+    "full_text": "hemoglobin) D58.2 immunological findings R89.4 in serum R76.9",
+    "codes": [
+      "R76.9"
+    ],
+    "section": "Ch18",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "hemoglobin) D58.2",
+    "modifiers": [
+      "immunological findings R89.4",
+      "in serum R76.9",
+      "specified NEC R76.8"
+    ],
+    "full_text": "hemoglobin) D58.2 immunological findings R89.4 in serum R76.9 specified NEC R76.8",
+    "codes": [
+      "R76.8"
+    ],
+    "section": "Ch18",
+    "page": "12",
+    "nec": true,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "hemoglobin) D58.2",
+    "modifiers": [
+      "immunological findings R89.4",
+      "resulting from HIV disease B23.2"
+    ],
+    "full_text": "hemoglobin) D58.2 immunological findings R89.4 resulting from HIV disease B23.2",
+    "codes": [
+      "B23.2"
+    ],
+    "section": "Ch1",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "hemoglobin) D58.2",
+    "modifiers": [
+      "involuntary movement R25.8"
+    ],
+    "full_text": "hemoglobin) D58.2 involuntary movement R25.8",
+    "codes": [
+      "R25.8"
+    ],
+    "section": "Ch18",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "hemoglobin) D58.2",
+    "modifiers": [
+      "jaw closure K07.5"
+    ],
+    "full_text": "hemoglobin) D58.2 jaw closure K07.5",
+    "codes": [
+      "K07.5"
+    ],
+    "section": "Ch11",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "hemoglobin) D58.2",
+    "modifiers": [
+      "karyotype R89.8"
+    ],
+    "full_text": "hemoglobin) D58.2 karyotype R89.8",
+    "codes": [
+      "R89.8"
+    ],
+    "section": "Ch18",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "hemoglobin) D58.2",
+    "modifiers": [
+      "kidney function test R94.4"
+    ],
+    "full_text": "hemoglobin) D58.2 kidney function test R94.4",
+    "codes": [
+      "R94.4"
+    ],
+    "section": "Ch18",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "hemoglobin) D58.2",
+    "modifiers": [
+      "labor NEC O75.8"
+    ],
+    "full_text": "hemoglobin) D58.2 labor NEC O75.8",
+    "codes": [
+      "O75.8"
+    ],
+    "section": "Ch15",
+    "page": "12",
+    "nec": true,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "hemoglobin) D58.2",
+    "modifiers": [
+      "labor NEC O75.8",
+      "affecting fetus or newborn P03.6"
+    ],
+    "full_text": "hemoglobin) D58.2 labor NEC O75.8 affecting fetus or newborn P03.6",
+    "codes": [
+      "P03.6"
+    ],
+    "section": "Ch16",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "hemoglobin) D58.2",
+    "modifiers": [
+      "leukocyte (cell) (differential) NEC R72"
+    ],
+    "full_text": "hemoglobin) D58.2 leukocyte (cell) (differential) NEC R72",
+    "codes": [
+      "R72"
+    ],
+    "section": "Ch18",
+    "page": "12",
+    "nec": true,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "hemoglobin) D58.2",
+    "modifiers": [
+      "loss of weight R63.4"
+    ],
+    "full_text": "hemoglobin) D58.2 loss of weight R63.4",
+    "codes": [
+      "R63.4"
+    ],
+    "section": "Ch18",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "hemoglobin) D58.2",
+    "modifiers": [
+      "Mantoux test R76.1"
+    ],
+    "full_text": "hemoglobin) D58.2 Mantoux test R76.1",
+    "codes": [
+      "R76.1"
+    ],
+    "section": "Ch18",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "hemoglobin) D58.2",
+    "modifiers": [
+      "membranes (fetal)",
+      "affecting fetus or newborn P02.9"
+    ],
+    "full_text": "hemoglobin) D58.2 membranes (fetal) affecting fetus or newborn P02.9",
+    "codes": [
+      "P02.9"
+    ],
+    "section": "Ch16",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "hemoglobin) D58.2",
+    "modifiers": [
+      "membranes (fetal)",
+      "complicating pregnancy O41.9"
+    ],
+    "full_text": "hemoglobin) D58.2 membranes (fetal) complicating pregnancy O41.9",
+    "codes": [
+      "O41.9"
+    ],
+    "section": "Ch15",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "hemorrhage) O72.0",
+    "modifiers": [
+      "without hemorrhage O73.0"
+    ],
+    "full_text": "hemorrhage) O72.0 without hemorrhage O73.0",
+    "codes": [
+      "O73.0"
+    ],
+    "section": "Ch15",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "hemorrhage) O72.0",
+    "modifiers": [
+      "maternal care O43.2"
+    ],
+    "full_text": "hemorrhage) O72.0 maternal care O43.2",
+    "codes": [
+      "O43.2"
+    ],
+    "section": "Ch15",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "(HMP) shunt pathway NEC D55.1",
+    "modifiers": [
+      "specified type NEC D55.8"
+    ],
+    "full_text": "(HMP) shunt pathway NEC D55.1 specified type NEC D55.8",
+    "codes": [
+      "D55.8"
+    ],
+    "section": "Ch3",
+    "page": "29",
+    "nec": true,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "(HMP) shunt pathway NEC D55.1",
+    "modifiers": [
+      "specified type NEC D55.8",
+      "erythrocytic glutathione D55.1"
+    ],
+    "full_text": "(HMP) shunt pathway NEC D55.1 specified type NEC D55.8 erythrocytic glutathione D55.1",
+    "codes": [
+      "D55.1"
+    ],
+    "section": "Ch3",
+    "page": "29",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "G07",
+    "modifiers": [
+      "tuberculous A17.8† G07"
+    ],
+    "full_text": "G07 tuberculous A17.8† G07",
+    "codes": [
+      "A17.8",
+      "G07"
+    ],
+    "section": "Ch1",
+    "page": "18",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "G07",
+    "modifiers": [
+      "breast (acute) (chronic) (nonpuerperal) N61"
+    ],
+    "full_text": "G07 breast (acute) (chronic) (nonpuerperal) N61",
+    "codes": [
+      "N61"
+    ],
+    "section": "Ch14",
+    "page": "18",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "G07",
+    "modifiers": [
+      "breast (acute) (chronic) (nonpuerperal) N61",
+      "gestational O91.1"
+    ],
+    "full_text": "G07 breast (acute) (chronic) (nonpuerperal) N61 gestational O91.1",
+    "codes": [
+      "O91.1"
+    ],
+    "section": "Ch15",
+    "page": "18",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "G07",
+    "modifiers": [
+      "breast (acute) (chronic) (nonpuerperal) N61",
+      "newborn P39.0"
+    ],
+    "full_text": "G07 breast (acute) (chronic) (nonpuerperal) N61 newborn P39.0",
+    "codes": [
+      "P39.0"
+    ],
+    "section": "Ch16",
+    "page": "18",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "G07",
+    "modifiers": [
+      "breast (acute) (chronic) (nonpuerperal) N61",
+      "puerperal, postpartum O91.1"
+    ],
+    "full_text": "G07 breast (acute) (chronic) (nonpuerperal) N61 puerperal, postpartum O91.1",
+    "codes": [
+      "O91.1"
+    ],
+    "section": "Ch15",
+    "page": "18",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "G07",
+    "modifiers": [
+      "broad ligament (see also Disease, pelvis,)"
+    ],
+    "full_text": "G07 broad ligament (see also Disease, pelvis,",
+    "codes": [],
+    "section": "",
+    "page": "18",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "see also Disease, pelvis,",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "G06.1",
+    "modifiers": [
+      "tuberculous A17.8† G07"
+    ],
+    "full_text": "G06.1 tuberculous A17.8† G07",
+    "codes": [
+      "A17.8",
+      "G07"
+    ],
+    "section": "Ch1",
+    "page": "22",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "G06.1",
+    "modifiers": [
+      "spine (column) (tuberculous) A18.0†"
+    ],
+    "full_text": "G06.1 spine (column) (tuberculous) A18.0†",
+    "codes": [
+      "A18.0"
+    ],
+    "section": "Ch1",
+    "page": "22",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "G32.0",
+    "modifiers": [
+      "due to dietary vitamin B12 deficiency"
+    ],
+    "full_text": "G32.0 due to dietary vitamin B12 deficiency",
+    "codes": [],
+    "section": "Ch6",
+    "page": "29",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "(G6PD) D55.0",
+    "modifiers": [
+      "glycolytic D55.2"
+    ],
+    "full_text": "(G6PD) D55.0 glycolytic D55.2",
+    "codes": [
+      "D55.2"
+    ],
+    "section": "Ch3",
+    "page": "29",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "(G6PD) D55.0",
+    "modifiers": [
+      "glycolytic D55.2",
+      "nucleotide metabolism D55.3"
+    ],
+    "full_text": "(G6PD) D55.0 glycolytic D55.2 nucleotide metabolism D55.3",
+    "codes": [
+      "D55.3"
+    ],
+    "section": "Ch3",
+    "page": "29",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "G71.8",
+    "modifiers": [
+      "congenita Q79.8"
+    ],
+    "full_text": "G71.8 congenita Q79.8",
+    "codes": [
+      "Q79.8"
+    ],
+    "section": "Ch17",
+    "page": "35",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "G71.8",
+    "modifiers": [
+      "diabetic (see also E10-E14 with fourth"
+    ],
+    "full_text": "G71.8 diabetic (see also E10-E14 with fourth",
+    "codes": [
+      "E10",
+      "E14"
+    ],
+    "section": "Ch4",
+    "page": "35",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "see also E10-E14 with fourth",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "gland) A18.2",
+    "modifiers": [
+      "tracheobronchial A16.3"
+    ],
+    "full_text": "gland) A18.2 tracheobronchial A16.3",
+    "codes": [
+      "A16.3"
+    ],
+    "section": "Ch1",
+    "page": "34",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "gland) A18.2",
+    "modifiers": [
+      "tracheobronchial A16.3",
+      "primary (progressive) A16.7"
+    ],
+    "full_text": "gland) A18.2 tracheobronchial A16.3 primary (progressive) A16.7",
+    "codes": [
+      "A16.7"
+    ],
+    "section": "Ch1",
+    "page": "34",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "G97.8",
+    "modifiers": [
+      "newborn (see also Asphyxia,"
+    ],
+    "full_text": "G97.8 newborn (see also Asphyxia,",
+    "codes": [],
+    "section": "",
+    "page": "41",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "see also Asphyxia,",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "given T41.-",
+    "modifiers": [
+      "specified anesthetic – see Table of drugs and chemicals"
+    ],
+    "full_text": "given T41.- specified anesthetic – see Table of drugs and chemicals",
+    "codes": [],
+    "section": "",
+    "page": "41",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "see Table of drugs and chemicals",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "given T41.-",
+    "modifiers": [
+      "cornea H18.8"
+    ],
+    "full_text": "given T41.- cornea H18.8",
+    "codes": [
+      "H18.8"
+    ],
+    "section": "Ch7",
+    "page": "41",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "G03.9",
+    "modifiers": [
+      "meningococcal (chronic) A39.0† G01"
+    ],
+    "full_text": "G03.9 meningococcal (chronic) A39.0† G01",
+    "codes": [
+      "A39.0",
+      "G01"
+    ],
+    "section": "Ch1",
+    "page": "29",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "G03.9",
+    "modifiers": [
+      "syphilitic (late) (tertiary) A52.1† G01"
+    ],
+    "full_text": "G03.9 syphilitic (late) (tertiary) A52.1† G01",
+    "codes": [
+      "A52.1",
+      "G01"
+    ],
+    "section": "Ch1",
+    "page": "29",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluid) R84.-",
+    "modifiers": [
+      "vaginal R87.-"
+    ],
+    "full_text": "fluid) R84.- vaginal R87.-",
+    "codes": [
+      "R87"
+    ],
+    "section": "Ch18",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluid) R84.-",
+    "modifiers": [
+      "forces of labor O62.9"
+    ],
+    "full_text": "fluid) R84.- forces of labor O62.9",
+    "codes": [
+      "O62.9"
+    ],
+    "section": "Ch15",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluid) R84.-",
+    "modifiers": [
+      "forces of labor O62.9",
+      "affecting fetus or newborn P03.6"
+    ],
+    "full_text": "fluid) R84.- forces of labor O62.9 affecting fetus or newborn P03.6",
+    "codes": [
+      "P03.6"
+    ],
+    "section": "Ch16",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluid) R84.-",
+    "modifiers": [
+      "forces of labor O62.9",
+      "specified type NEC O62.8"
+    ],
+    "full_text": "fluid) R84.- forces of labor O62.9 specified type NEC O62.8",
+    "codes": [
+      "O62.8"
+    ],
+    "section": "Ch15",
+    "page": "12",
+    "nec": true,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluid) R84.-",
+    "modifiers": [
+      "form",
+      "teeth K00.2"
+    ],
+    "full_text": "fluid) R84.- form teeth K00.2",
+    "codes": [
+      "K00.2"
+    ],
+    "section": "Ch11",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluid) R84.-",
+    "modifiers": [
+      "form",
+      "uterus – see Anomaly, uterus"
+    ],
+    "full_text": "fluid) R84.- form uterus – see Anomaly, uterus",
+    "codes": [],
+    "section": "",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "see Anomaly, uterus",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluid) R84.-",
+    "modifiers": [
+      "function studies",
+      "bladder R94.8"
+    ],
+    "full_text": "fluid) R84.- function studies bladder R94.8",
+    "codes": [
+      "R94.8"
+    ],
+    "section": "Ch18",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluid) R84.-",
+    "modifiers": [
+      "function studies",
+      "brain R94.0"
+    ],
+    "full_text": "fluid) R84.- function studies brain R94.0",
+    "codes": [
+      "R94.0"
+    ],
+    "section": "Ch18",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluid) R84.-",
+    "modifiers": [
+      "function studies",
+      "cardiovascular R94.3"
+    ],
+    "full_text": "fluid) R84.- function studies cardiovascular R94.3",
+    "codes": [
+      "R94.3"
+    ],
+    "section": "Ch18",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluid) R84.-",
+    "modifiers": [
+      "function studies",
+      "endocrine NEC R94.7"
+    ],
+    "full_text": "fluid) R84.- function studies endocrine NEC R94.7",
+    "codes": [
+      "R94.7"
+    ],
+    "section": "Ch18",
+    "page": "12",
+    "nec": true,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluid) R84.-",
+    "modifiers": [
+      "function studies",
+      "kidney R94.4"
+    ],
+    "full_text": "fluid) R84.- function studies kidney R94.4",
+    "codes": [
+      "R94.4"
+    ],
+    "section": "Ch18",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluid) R84.-",
+    "modifiers": [
+      "function studies",
+      "liver R94.5"
+    ],
+    "full_text": "fluid) R84.- function studies liver R94.5",
+    "codes": [
+      "R94.5"
+    ],
+    "section": "Ch18",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluid) R84.-",
+    "modifiers": [
+      "function studies",
+      "nervous system",
+      "central R94.0"
+    ],
+    "full_text": "fluid) R84.- function studies nervous system central R94.0",
+    "codes": [
+      "R94.0"
+    ],
+    "section": "Ch18",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluid) R84.-",
+    "modifiers": [
+      "function studies",
+      "nervous system",
+      "peripheral R94.1"
+    ],
+    "full_text": "fluid) R84.- function studies nervous system peripheral R94.1",
+    "codes": [
+      "R94.1"
+    ],
+    "section": "Ch18",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluid) R84.-",
+    "modifiers": [
+      "function studies",
+      "pulmonary R94.2"
+    ],
+    "full_text": "fluid) R84.- function studies pulmonary R94.2",
+    "codes": [
+      "R94.2"
+    ],
+    "section": "Ch18",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluid) R84.-",
+    "modifiers": [
+      "function studies",
+      "special senses R94.1"
+    ],
+    "full_text": "fluid) R84.- function studies special senses R94.1",
+    "codes": [
+      "R94.1"
+    ],
+    "section": "Ch18",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluid) R84.-",
+    "modifiers": [
+      "function studies",
+      "spleen R94.8"
+    ],
+    "full_text": "fluid) R84.- function studies spleen R94.8",
+    "codes": [
+      "R94.8"
+    ],
+    "section": "Ch18",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluid) R84.-",
+    "modifiers": [
+      "function studies",
+      "thyroid R94.6"
+    ],
+    "full_text": "fluid) R84.- function studies thyroid R94.6",
+    "codes": [
+      "R94.6"
+    ],
+    "section": "Ch18",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluid) R84.-",
+    "modifiers": [
+      "gait (see also Gait) R26.8"
+    ],
+    "full_text": "fluid) R84.- gait (see also Gait) R26.8",
+    "codes": [
+      "R26.8"
+    ],
+    "section": "Ch18",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "see also Gait",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluid) R84.-",
+    "modifiers": [
+      "gait (see also Gait) R26.8",
+      "hysterical F44.4"
+    ],
+    "full_text": "fluid) R84.- gait (see also Gait) R26.8 hysterical F44.4",
+    "codes": [
+      "F44.4"
+    ],
+    "section": "Ch5",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluid) R84.-",
+    "modifiers": [
+      "globulin R77.1"
+    ],
+    "full_text": "fluid) R84.- globulin R77.1",
+    "codes": [
+      "R77.1"
+    ],
+    "section": "Ch18",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluid) R84.-",
+    "modifiers": [
+      "globulin R77.1",
+      "cortisol-binding E27.8"
+    ],
+    "full_text": "fluid) R84.- globulin R77.1 cortisol-binding E27.8",
+    "codes": [
+      "E27.8"
+    ],
+    "section": "Ch4",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluid) R84.-",
+    "modifiers": [
+      "globulin R77.1",
+      "thyroid-binding E07.8"
+    ],
+    "full_text": "fluid) R84.- globulin R77.1 thyroid-binding E07.8",
+    "codes": [
+      "E07.8"
+    ],
+    "section": "Ch4",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluid) R84.-",
+    "modifiers": [
+      "glomerular, minor – code to N00-N07"
+    ],
+    "full_text": "fluid) R84.- glomerular, minor – code to N00-N07",
+    "codes": [
+      "N00",
+      "N07"
+    ],
+    "section": "Ch14",
+    "page": "12",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "(fetus or newborn) P04.1",
+    "modifiers": [
+      "protein, disturbance K90.4"
+    ],
+    "full_text": "(fetus or newborn) P04.1 protein, disturbance K90.4",
+    "codes": [
+      "K90.4"
+    ],
+    "section": "Ch11",
+    "page": "1",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "(fetus or newborn) P04.1",
+    "modifiers": [
+      "starch, disturbance K90.4"
+    ],
+    "full_text": "(fetus or newborn) P04.1 starch, disturbance K90.4",
+    "codes": [
+      "K90.4"
+    ],
+    "section": "Ch11",
+    "page": "1",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "(fetus or newborn) P04.1",
+    "modifiers": [
+      "toxic substance – see Absorption, chemical"
+    ],
+    "full_text": "(fetus or newborn) P04.1 toxic substance – see Absorption, chemical",
+    "codes": [],
+    "section": "",
+    "page": "1",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "see Absorption, chemical",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "(fetus or newborn) P04.1",
+    "modifiers": [
+      "uremic – see Uremia Abstinence symptoms, syndrome"
+    ],
+    "full_text": "(fetus or newborn) P04.1 uremic – see Uremia Abstinence symptoms, syndrome",
+    "codes": [],
+    "section": "",
+    "page": "1",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "see Uremia Abstinence symptoms, syndrome",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "(fetus or newborn) P04.1",
+    "modifiers": [
+      "alcohol F10.3"
+    ],
+    "full_text": "(fetus or newborn) P04.1 alcohol F10.3",
+    "codes": [
+      "F10.3"
+    ],
+    "section": "Ch5",
+    "page": "1",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "(fetus or newborn) P04.1",
+    "modifiers": [
+      "drug – see F11-F19 with fourth character .3"
+    ],
+    "full_text": "(fetus or newborn) P04.1 drug – see F11-F19 with fourth character .3",
+    "codes": [
+      "F11",
+      "F19"
+    ],
+    "section": "Ch5",
+    "page": "1",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "see F11-F19 with fourth character .3",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F15.1",
+    "modifiers": [
+      "antacids F55"
+    ],
+    "full_text": "F15.1 antacids F55",
+    "codes": [
+      "F55"
+    ],
+    "section": "Ch5",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F15.1",
+    "modifiers": [
+      "anxiolytic F13.1"
+    ],
+    "full_text": "F15.1 anxiolytic F13.1",
+    "codes": [
+      "F13.1"
+    ],
+    "section": "Ch5",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F15.1",
+    "modifiers": [
+      "cannabis, cannabinoids F12.1"
+    ],
+    "full_text": "F15.1 cannabis, cannabinoids F12.1",
+    "codes": [
+      "F12.1"
+    ],
+    "section": "Ch5",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F15.1",
+    "modifiers": [
+      "child T74.9"
+    ],
+    "full_text": "F15.1 child T74.9",
+    "codes": [
+      "T74.9"
+    ],
+    "section": "Ch19",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F15.1",
+    "modifiers": [
+      "child T74.9",
+      "physical, alleged Z61.6"
+    ],
+    "full_text": "F15.1 child T74.9 physical, alleged Z61.6",
+    "codes": [
+      "Z61.6"
+    ],
+    "section": "Ch21",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F15.1",
+    "modifiers": [
+      "child T74.9",
+      "sexual, alleged (by)",
+      "family member Z61.4"
+    ],
+    "full_text": "F15.1 child T74.9 sexual, alleged (by) family member Z61.4",
+    "codes": [
+      "Z61.4"
+    ],
+    "section": "Ch21",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F15.1",
+    "modifiers": [
+      "child T74.9",
+      "sexual, alleged (by)",
+      "person outside family Z61.5"
+    ],
+    "full_text": "F15.1 child T74.9 sexual, alleged (by) person outside family Z61.5",
+    "codes": [
+      "Z61.5"
+    ],
+    "section": "Ch21",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F15.1",
+    "modifiers": [
+      "child T74.9",
+      "specified NEC T74.8"
+    ],
+    "full_text": "F15.1 child T74.9 specified NEC T74.8",
+    "codes": [
+      "T74.8"
+    ],
+    "section": "Ch19",
+    "page": "15",
+    "nec": true,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F15.1",
+    "modifiers": [
+      "cocaine F14.1"
+    ],
+    "full_text": "F15.1 cocaine F14.1",
+    "codes": [
+      "F14.1"
+    ],
+    "section": "Ch5",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F15.1",
+    "modifiers": [
+      "drugs",
+      "anxiolytics F13.1"
+    ],
+    "full_text": "F15.1 drugs anxiolytics F13.1",
+    "codes": [
+      "F13.1"
+    ],
+    "section": "Ch5",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F15.1",
+    "modifiers": [
+      "drugs",
+      "counseling and surveillance Z71.5"
+    ],
+    "full_text": "F15.1 drugs counseling and surveillance Z71.5",
+    "codes": [
+      "Z71.5"
+    ],
+    "section": "Ch21",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F15.1",
+    "modifiers": [
+      "drugs",
+      "hypnotics F13.1"
+    ],
+    "full_text": "F15.1 drugs hypnotics F13.1",
+    "codes": [
+      "F13.1"
+    ],
+    "section": "Ch5",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F15.1",
+    "modifiers": [
+      "drugs",
+      "non-dependent (psychoactive) F19.1"
+    ],
+    "full_text": "F15.1 drugs non-dependent (psychoactive) F19.1",
+    "codes": [
+      "F19.1"
+    ],
+    "section": "Ch5",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F15.1",
+    "modifiers": [
+      "drugs",
+      "non-dependent (psychoactive) F19.1",
+      "amfetamine-type F15.1"
+    ],
+    "full_text": "F15.1 drugs non-dependent (psychoactive) F19.1 amfetamine-type F15.1",
+    "codes": [
+      "F15.1"
+    ],
+    "section": "Ch5",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F15.1",
+    "modifiers": [
+      "drugs",
+      "non-dependent (psychoactive) F19.1",
+      "analgesics (non-prescribed) F55"
+    ],
+    "full_text": "F15.1 drugs non-dependent (psychoactive) F19.1 analgesics (non-prescribed) F55",
+    "codes": [
+      "F55"
+    ],
+    "section": "Ch5",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F15.1",
+    "modifiers": [
+      "drugs",
+      "non-dependent (psychoactive) F19.1",
+      "antacids F55"
+    ],
+    "full_text": "F15.1 drugs non-dependent (psychoactive) F19.1 antacids F55",
+    "codes": [
+      "F55"
+    ],
+    "section": "Ch5",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F15.1",
+    "modifiers": [
+      "drugs",
+      "non-dependent (psychoactive) F19.1",
+      "antidepressants F55"
+    ],
+    "full_text": "F15.1 drugs non-dependent (psychoactive) F19.1 antidepressants F55",
+    "codes": [
+      "F55"
+    ],
+    "section": "Ch5",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F15.1",
+    "modifiers": [
+      "drugs",
+      "non-dependent (psychoactive) F19.1",
+      "barbiturates F13.1"
+    ],
+    "full_text": "F15.1 drugs non-dependent (psychoactive) F19.1 barbiturates F13.1",
+    "codes": [
+      "F13.1"
+    ],
+    "section": "Ch5",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F15.1",
+    "modifiers": [
+      "drugs",
+      "non-dependent (psychoactive) F19.1",
+      "caffeine F15.1"
+    ],
+    "full_text": "F15.1 drugs non-dependent (psychoactive) F19.1 caffeine F15.1",
+    "codes": [
+      "F15.1"
+    ],
+    "section": "Ch5",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F15.1",
+    "modifiers": [
+      "drugs",
+      "non-dependent (psychoactive) F19.1",
+      "cannabis F12.1"
+    ],
+    "full_text": "F15.1 drugs non-dependent (psychoactive) F19.1 cannabis F12.1",
+    "codes": [
+      "F12.1"
+    ],
+    "section": "Ch5",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F15.1",
+    "modifiers": [
+      "drugs",
+      "non-dependent (psychoactive) F19.1",
+      "cocaine-type F14.1"
+    ],
+    "full_text": "F15.1 drugs non-dependent (psychoactive) F19.1 cocaine-type F14.1",
+    "codes": [
+      "F14.1"
+    ],
+    "section": "Ch5",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F15.1",
+    "modifiers": [
+      "drugs",
+      "non-dependent (psychoactive) F19.1",
+      "hallucinogens F16.1"
+    ],
+    "full_text": "F15.1 drugs non-dependent (psychoactive) F19.1 hallucinogens F16.1",
+    "codes": [
+      "F16.1"
+    ],
+    "section": "Ch5",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F15.1",
+    "modifiers": [
+      "drugs",
+      "non-dependent (psychoactive) F19.1",
+      "hashish F12.1"
+    ],
+    "full_text": "F15.1 drugs non-dependent (psychoactive) F19.1 hashish F12.1",
+    "codes": [
+      "F12.1"
+    ],
+    "section": "Ch5",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F15.1",
+    "modifiers": [
+      "drugs",
+      "non-dependent (psychoactive) F19.1",
+      "herbal or folk remedies F55"
+    ],
+    "full_text": "F15.1 drugs non-dependent (psychoactive) F19.1 herbal or folk remedies F55",
+    "codes": [
+      "F55"
+    ],
+    "section": "Ch5",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F15.1",
+    "modifiers": [
+      "drugs",
+      "non-dependent (psychoactive) F19.1",
+      "hormones F55"
+    ],
+    "full_text": "F15.1 drugs non-dependent (psychoactive) F19.1 hormones F55",
+    "codes": [
+      "F55"
+    ],
+    "section": "Ch5",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F15.1",
+    "modifiers": [
+      "drugs",
+      "non-dependent (psychoactive) F19.1",
+      "laxatives F55"
+    ],
+    "full_text": "F15.1 drugs non-dependent (psychoactive) F19.1 laxatives F55",
+    "codes": [
+      "F55"
+    ],
+    "section": "Ch5",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F15.1",
+    "modifiers": [
+      "drugs",
+      "non-dependent (psychoactive) F19.1",
+      "LSD F16.1"
+    ],
+    "full_text": "F15.1 drugs non-dependent (psychoactive) F19.1 LSD F16.1",
+    "codes": [
+      "F16.1"
+    ],
+    "section": "Ch5",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F15.1",
+    "modifiers": [
+      "drugs",
+      "non-dependent (psychoactive) F19.1",
+      "marihuana F12.1"
+    ],
+    "full_text": "F15.1 drugs non-dependent (psychoactive) F19.1 marihuana F12.1",
+    "codes": [
+      "F12.1"
+    ],
+    "section": "Ch5",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F15.1",
+    "modifiers": [
+      "drugs",
+      "non-dependent (psychoactive) F19.1",
+      "mixed F19.1"
+    ],
+    "full_text": "F15.1 drugs non-dependent (psychoactive) F19.1 mixed F19.1",
+    "codes": [
+      "F19.1"
+    ],
+    "section": "Ch5",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F15.1",
+    "modifiers": [
+      "drugs",
+      "non-dependent (psychoactive) F19.1",
+      "morphine-type (opioids) F11.1"
+    ],
+    "full_text": "F15.1 drugs non-dependent (psychoactive) F19.1 morphine-type (opioids) F11.1",
+    "codes": [
+      "F11.1"
+    ],
+    "section": "Ch5",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F15.1",
+    "modifiers": [
+      "drugs",
+      "non-dependent (psychoactive) F19.1",
+      "sedatives F13.1"
+    ],
+    "full_text": "F15.1 drugs non-dependent (psychoactive) F19.1 sedatives F13.1",
+    "codes": [
+      "F13.1"
+    ],
+    "section": "Ch5",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F15.1",
+    "modifiers": [
+      "drugs",
+      "non-dependent (psychoactive) F19.1",
+      "specified NEC F19.1"
+    ],
+    "full_text": "F15.1 drugs non-dependent (psychoactive) F19.1 specified NEC F19.1",
+    "codes": [
+      "F19.1"
+    ],
+    "section": "Ch5",
+    "page": "15",
+    "nec": true,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F15.1",
+    "modifiers": [
+      "drugs",
+      "non-dependent (psychoactive) F19.1",
+      "steroids F55"
+    ],
+    "full_text": "F15.1 drugs non-dependent (psychoactive) F19.1 steroids F55",
+    "codes": [
+      "F55"
+    ],
+    "section": "Ch5",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F15.1",
+    "modifiers": [
+      "drugs",
+      "non-dependent (psychoactive) F19.1",
+      "stimulants NEC F15.1"
+    ],
+    "full_text": "F15.1 drugs non-dependent (psychoactive) F19.1 stimulants NEC F15.1",
+    "codes": [
+      "F15.1"
+    ],
+    "section": "Ch5",
+    "page": "15",
+    "nec": true,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F15.1",
+    "modifiers": [
+      "drugs",
+      "non-dependent (psychoactive) F19.1",
+      "tranquilizers F13.1"
+    ],
+    "full_text": "F15.1 drugs non-dependent (psychoactive) F19.1 tranquilizers F13.1",
+    "codes": [
+      "F13.1"
+    ],
+    "section": "Ch5",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F15.1",
+    "modifiers": [
+      "drugs",
+      "non-dependent (psychoactive) F19.1",
+      "vitamins F55"
+    ],
+    "full_text": "F15.1 drugs non-dependent (psychoactive) F19.1 vitamins F55",
+    "codes": [
+      "F55"
+    ],
+    "section": "Ch5",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F19.1",
+    "modifiers": [
+      "physical (adult) (child) T74.1"
+    ],
+    "full_text": "F19.1 physical (adult) (child) T74.1",
+    "codes": [
+      "T74.1"
+    ],
+    "section": "Ch19",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F19.1",
+    "modifiers": [
+      "psychological (adult) (child) T74.3"
+    ],
+    "full_text": "F19.1 psychological (adult) (child) T74.3",
+    "codes": [
+      "T74.3"
+    ],
+    "section": "Ch19",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F19.1",
+    "modifiers": [
+      "sedative F13.1"
+    ],
+    "full_text": "F19.1 sedative F13.1",
+    "codes": [
+      "F13.1"
+    ],
+    "section": "Ch5",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F19.1",
+    "modifiers": [
+      "sexual T74.2"
+    ],
+    "full_text": "F19.1 sexual T74.2",
+    "codes": [
+      "T74.2"
+    ],
+    "section": "Ch19",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F19.1",
+    "modifiers": [
+      "sexual T74.2",
+      "child, alleged (by)",
+      "family member Z61.4"
+    ],
+    "full_text": "F19.1 sexual T74.2 child, alleged (by) family member Z61.4",
+    "codes": [
+      "Z61.4"
+    ],
+    "section": "Ch21",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F19.1",
+    "modifiers": [
+      "sexual T74.2",
+      "child, alleged (by)",
+      "person outside family Z61.5"
+    ],
+    "full_text": "F19.1 sexual T74.2 child, alleged (by) person outside family Z61.5",
+    "codes": [
+      "Z61.5"
+    ],
+    "section": "Ch21",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F19.1",
+    "modifiers": [
+      "solvent F18.1"
+    ],
+    "full_text": "F19.1 solvent F18.1",
+    "codes": [
+      "F18.1"
+    ],
+    "section": "Ch5",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F19.1",
+    "modifiers": [
+      "steroids F55"
+    ],
+    "full_text": "F19.1 steroids F55",
+    "codes": [
+      "F55"
+    ],
+    "section": "Ch5",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F19.1",
+    "modifiers": [
+      "tobacco F17.1"
+    ],
+    "full_text": "F19.1 tobacco F17.1",
+    "codes": [
+      "F17.1"
+    ],
+    "section": "Ch5",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "F19.1",
+    "modifiers": [
+      "tobacco F17.1",
+      "counseling and surveillance Z71.6"
+    ],
+    "full_text": "F19.1 tobacco F17.1 counseling and surveillance Z71.6",
+    "codes": [
+      "Z71.6"
+    ],
+    "section": "Ch21",
+    "page": "15",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluids) R84.-",
+    "modifiers": [
+      "vagina (secretion) (smear) R87.-"
+    ],
+    "full_text": "fluids) R84.- vagina (secretion) (smear) R87.-",
+    "codes": [
+      "R87"
+    ],
+    "section": "Ch18",
+    "page": "27",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluids) R84.-",
+    "modifiers": [
+      "vagina (secretion) (smear) R87.-",
+      "vulva (secretion) (smear) R87.-"
+    ],
+    "full_text": "fluids) R84.- vagina (secretion) (smear) R87.- vulva (secretion) (smear) R87.-",
+    "codes": [
+      "R87"
+    ],
+    "section": "Ch18",
+    "page": "27",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluids) R84.-",
+    "modifiers": [
+      "vagina (secretion) (smear) R87.-",
+      "wound secretion R89.-"
+    ],
+    "full_text": "fluids) R84.- vagina (secretion) (smear) R87.- wound secretion R89.-",
+    "codes": [
+      "R89"
+    ],
+    "section": "Ch18",
+    "page": "27",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluids) R84.-",
+    "modifiers": [
+      "spermatozoa R86.-"
+    ],
+    "full_text": "fluids) R84.- spermatozoa R86.-",
+    "codes": [
+      "R86"
+    ],
+    "section": "Ch18",
+    "page": "27",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluids) R84.-",
+    "modifiers": [
+      "sputum (amount) (color) (odor) R09.3"
+    ],
+    "full_text": "fluids) R84.- sputum (amount) (color) (odor) R09.3",
+    "codes": [
+      "R09.3"
+    ],
+    "section": "Ch18",
+    "page": "27",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluids) R84.-",
+    "modifiers": [
+      "stool (color) (contents) (mucus) R19.5"
+    ],
+    "full_text": "fluids) R84.- stool (color) (contents) (mucus) R19.5",
+    "codes": [
+      "R19.5"
+    ],
+    "section": "Ch18",
+    "page": "27",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluids) R84.-",
+    "modifiers": [
+      "synchondrosis Q78.8"
+    ],
+    "full_text": "fluids) R84.- synchondrosis Q78.8",
+    "codes": [
+      "Q78.8"
+    ],
+    "section": "Ch17",
+    "page": "27",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluids) R84.-",
+    "modifiers": [
+      "thermography – see Abnormal, diagnostic imaging"
+    ],
+    "full_text": "fluids) R84.- thermography – see Abnormal, diagnostic imaging",
+    "codes": [],
+    "section": "",
+    "page": "27",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "see Abnormal, diagnostic imaging",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluids) R84.-",
+    "modifiers": [
+      "thyroid-binding globulin E07.8"
+    ],
+    "full_text": "fluids) R84.- thyroid-binding globulin E07.8",
+    "codes": [
+      "E07.8"
+    ],
+    "section": "Ch4",
+    "page": "27",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluids) R84.-",
+    "modifiers": [
+      "tooth, teeth (form) (size) K00.2"
+    ],
+    "full_text": "fluids) R84.- tooth, teeth (form) (size) K00.2",
+    "codes": [
+      "K00.2"
+    ],
+    "section": "Ch11",
+    "page": "27",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluids) R84.-",
+    "modifiers": [
+      "toxicology (findings) R78.9"
+    ],
+    "full_text": "fluids) R84.- toxicology (findings) R78.9",
+    "codes": [
+      "R78.9"
+    ],
+    "section": "Ch18",
+    "page": "27",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluids) R84.-",
+    "modifiers": [
+      "transport protein E88.0"
+    ],
+    "full_text": "fluids) R84.- transport protein E88.0",
+    "codes": [
+      "E88.0"
+    ],
+    "section": "Ch4",
+    "page": "27",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluids) R84.-",
+    "modifiers": [
+      "ultrasound results – see Abnormal, diagnostic imaging"
+    ],
+    "full_text": "fluids) R84.- ultrasound results – see Abnormal, diagnostic imaging",
+    "codes": [],
+    "section": "",
+    "page": "27",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "see Abnormal, diagnostic imaging",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluids) R84.-",
+    "modifiers": [
+      "umbilical cord",
+      "affecting fetus or newborn P02.6"
+    ],
+    "full_text": "fluids) R84.- umbilical cord affecting fetus or newborn P02.6",
+    "codes": [
+      "P02.6"
+    ],
+    "section": "Ch16",
+    "page": "27",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluids) R84.-",
+    "modifiers": [
+      "umbilical cord",
+      "complicating delivery O69.9"
+    ],
+    "full_text": "fluids) R84.- umbilical cord complicating delivery O69.9",
+    "codes": [
+      "O69.9"
+    ],
+    "section": "Ch15",
+    "page": "27",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluids) R84.-",
+    "modifiers": [
+      "urination NEC R39.1"
+    ],
+    "full_text": "fluids) R84.- urination NEC R39.1",
+    "codes": [
+      "R39.1"
+    ],
+    "section": "Ch18",
+    "page": "27",
+    "nec": true,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluids) R84.-",
+    "modifiers": [
+      "urine (constituents) NEC R82.9"
+    ],
+    "full_text": "fluids) R84.- urine (constituents) NEC R82.9",
+    "codes": [
+      "R82.9"
+    ],
+    "section": "Ch18",
+    "page": "27",
+    "nec": true,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluids) R84.-",
+    "modifiers": [
+      "urine (constituents) NEC R82.9",
+      "cytological examination R82.8"
+    ],
+    "full_text": "fluids) R84.- urine (constituents) NEC R82.9 cytological examination R82.8",
+    "codes": [
+      "R82.8"
+    ],
+    "section": "Ch18",
+    "page": "27",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  },
+  {
+    "lead_term": "fluids) R84.-",
+    "modifiers": [
+      "urine (constituents) NEC R82.9",
+      "heavy metals R82.6"
+    ],
+    "full_text": "fluids) R84.- urine (constituents) NEC R82.9 heavy metals R82.6",
+    "codes": [
+      "R82.6"
+    ],
+    "section": "Ch18",
+    "page": "27",
+    "nec": false,
+    "dagger_star": false,
+    "cross_reference": "",
+    "tabular_note": ""
+  }
+]
