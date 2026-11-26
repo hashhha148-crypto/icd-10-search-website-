@@ -2577,7 +2577,7 @@
   { code: "E63.0", title: "Essential fatty acid [EFA] deficiency", category: "Ch4" },
   { code: "E63.1", title: "Imbalance of constituents of food intake", category: "Ch4" },
   { code: "E63.8", title: "Other specified nutritional deficiencies", category: "Ch4" },
-  { code: "E63.9", title: "Nutritional deficiency, unspecified", sub: "Nutritional cardiomyopathy NOS† (I43.2*)", category: "Ch4" },
+  { code: "E63.9", title: "Nutritional deficiency, unspecified", sub: "Nutritional cardiomyopathy NOS† (I43.2*); Nutritional deficiency NOS", category: "Ch4" },
 
   { code: "E64", title: "Sequelae of malnutrition and other nutritional deficiencies", note: "Not to be used for chronic malnutrition or nutritional deficiency. Code these to current malnutrition or nutritional deficiency.", category: "Ch4" },
   { code: "E64.0", title: "Sequelae of protein-energy malnutrition", note: "Excl.: retarded development following protein-energy malnutrition (E45)", category: "Ch4" },
@@ -2609,7 +2609,7 @@
   { code: "E70.0", title: "Classical phenylketonuria", category: "Ch4" },
   { code: "E70.1", title: "Other hyperphenylalaninaemias", category: "Ch4" },
   { code: "E70.2", title: "Disorders of tyrosine metabolism", sub: "Alkaptonuria; Hypertyrosinaemia; Ochronosis; Tyrosinaemia; Tyrosinosis", category: "Ch4" },
-  { code: "E70.3", title: "Albinism", sub: "Albinism: ocular; oculocutaneous; Syndrome: Chediak(–Steinbrinck)–Higashi; Cross; Hermansky–Pudlak", category: "Ch4" },
+  { code: "E70.3", title: "Albinism", sub: "Albinism: NOS; ocular; oculocutaneous; Syndrome: Chediak(–Steinbrinck)–Higashi; Cross; Hermansky–Pudlak", category: "Ch4" },
   { code: "E70.8", title: "Other disorders of aromatic amino-acid metabolism", sub: "Disorders of: histidine metabolism; tryptophan metabolism", category: "Ch4" },
   { code: "E70.9", title: "Disorder of aromatic amino-acid metabolism, unspecified", category: "Ch4" },
 
@@ -2624,7 +2624,7 @@
   { code: "E72.1", title: "Disorders of sulfur-bearing amino-acid metabolism", sub: "Cystathioninuria; Homocystinuria; Methioninaemia; Sulfite oxidase deficiency", note: "Excl.: transcobalamin II deficiency (D51.2)", category: "Ch4" },
   { code: "E72.2", title: "Disorders of urea cycle metabolism", sub: "Argininaemia; Argininosuccinic aciduria; Citrullinaemia; Hyperammonaemia", note: "Excl.: disorders of ornithine metabolism (E72.4)", category: "Ch4" },
   { code: "E72.3", title: "Disorders of lysine and hydroxylysine metabolism", sub: "Glutaric aciduria; Hydroxylysinaemia; Hyperlysinaemia", note: "Excl.: Refsum disease (G60.1); Zellweger syndrome (Q87.8)", category: "Ch4" },
-      { code: "E72.4", title: "Disorders of ornithine metabolism", sub: "Ornithinaemia (types I, II)", category: "Ch4" },
+  { code: "E72.4", title: "Disorders of ornithine metabolism", sub: "Ornithinaemia (types I, II)", category: "Ch4" },
   { code: "E72.5", title: "Disorders of glycine metabolism", sub: "Hyperhydroxyprolinaemia; Hyperprolinaemia (types I, II); Non-ketotic hyperglycinaemia; Sarcosinaemia", category: "Ch4" },
   { code: "E72.8", title: "Other specified disorders of amino-acid metabolism", sub: "Disorders of: beta-amino-acid metabolism; gamma-glutamyl cycle", category: "Ch4" },
   { code: "E72.9", title: "Disorder of amino-acid metabolism, unspecified", category: "Ch4" },
@@ -2751,8 +2751,7 @@
   { code: "E89.8", title: "Other postprocedural endocrine and metabolic disorders", category: "Ch4" },
   { code: "E89.9", title: "Postprocedural endocrine and metabolic disorder, unspecified", category: "Ch4" },
 
-  { code: "E90*", title: "Nutritional and metabolic disorders in diseases classified elsewhere", category: "Ch4" },/g, '&gt;')
-        .replace(/"/g, '&quot;');
+  { code: "E90*", title: "Nutritional and metabolic disorders in diseases classified elsewhere", category: "Ch4" },
     ];
 
     function showToast(msg) {
