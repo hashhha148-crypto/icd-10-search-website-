@@ -3,240 +3,345 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ICD-10 Volume 3 Search Web</title>
+  <title>ICD-10 Volume 3 Search - Medical Search Engine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #f6f8fa;
-      --card: #ffffff;
-      --text: #1f2328;
-      --muted: #59636e;
-      --border: #d0d7de;
-      --accent: #0969da;
-      --accent-bg: #ddf4ff;
-      --warn-bg: #fff8c5;
-      --warn-border: #d4a72c;
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --primary-light: #eff6ff;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --accent-badge: #e0f2fe;
+      --accent-badge-text: #0369a1;
+      --warn-bg: #fef3c7;
+      --warn-text: #92400e;
+      --warn-border: #fde68a;
+      --radius: 12px;
+      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
     }
 
     *, *::before, *::after { box-sizing: border-box; }
 
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      font-family: 'Sarabun', sans-serif;
       background: var(--bg);
-      color: var(--text);
-      line-height: 1.5;
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .header-banner {
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      color: #fff;
+      padding: 32px 20px 48px;
+      text-align: center;
+      position: relative;
+    }
+
+    .header-banner h1 {
+      margin: 0 0 8px;
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .header-banner p {
+      margin: 0;
+      color: #94a3b8;
+      font-size: 1rem;
+      font-weight: 300;
     }
 
     .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 24px 16px 64px;
+      max-width: 900px;
+      margin: -24px auto 60px;
+      padding: 0 16px;
+      position: relative;
+      z-index: 10;
     }
 
-    h1 {
-      margin: 0 0 6px;
-      font-size: 1.6rem;
-    }
-
-    .subtitle {
-      margin: 0 0 20px;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .search-box {
-      background: var(--card);
+    .search-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
       border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 16px;
-      margin-bottom: 16px;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+      margin-bottom: 24px;
     }
 
-    .search-row {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
+    .search-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    @media (min-width: 640px) {
+      .search-grid {
+        grid-template-columns: 1fr auto auto;
+      }
+    }
+
+    .input-wrapper {
+      position: relative;
     }
 
     input[type="search"] {
-      flex: 1 1 280px;
-      padding: 10px 14px;
-      font-size: 1rem;
-      border: 1px solid var(--border);
+      width: 100%;
+      padding: 12px 16px;
+      font-size: 1.05rem;
+      font-family: inherit;
+      border: 1.5px solid var(--border);
       border-radius: 8px;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      background: #fff;
     }
 
-    select, button.btn {
-      padding: 10px 12px;
+    input[type="search"]:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    }
+
+    select, button.btn-reset {
+      padding: 12px 16px;
       font-size: 0.95rem;
-      border: 1px solid var(--border);
+      font-family: inherit;
+      border: 1.5px solid var(--border);
       border-radius: 8px;
       background: #fff;
       cursor: pointer;
+      outline: none;
+      transition: all 0.2s;
     }
 
-    button.btn:hover {
-      background: #f3f4f6;
+    select:focus {
+      border-color: var(--primary);
+    }
+
+    button.btn-reset {
+      background: #f1f5f9;
+      color: var(--text-muted);
+      font-weight: 500;
+      border: none;
+    }
+
+    button.btn-reset:hover {
+      background: #e2e8f0;
+      color: var(--text-main);
     }
 
     .meta-bar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
+      padding: 0 4px;
       font-size: 0.9rem;
-      color: var(--muted);
+      color: var(--text-muted);
+    }
+
+    .status-count {
+      font-weight: 600;
+      color: var(--primary);
     }
 
     .card {
-      background: var(--card);
+      background: var(--card-bg);
+      border-radius: var(--radius);
       border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 16px;
+      padding: 18px 20px;
       margin-bottom: 12px;
+      box-shadow: var(--shadow);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
 
-    .card-top {
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 15px -3px rgba(0, 0, 0, 0.06);
+    }
+
+    .card-header {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      gap: 12px;
-      flex-wrap: wrap;
+      gap: 16px;
     }
 
-    .path {
+    .path-title {
+      font-size: 1.1rem;
       font-weight: 600;
-      font-size: 1.05rem;
+      color: var(--text-main);
+      line-height: 1.4;
     }
 
-    .path span.sep {
-      color: var(--muted);
+    .path-sep {
+      color: #94a3b8;
       margin: 0 6px;
+      font-weight: 400;
     }
 
-    .codes {
+    .code-badges {
       display: flex;
       gap: 6px;
       flex-wrap: wrap;
+      align-items: center;
     }
 
     .code-badge {
-      background: var(--accent-bg);
-      color: var(--accent);
-      border: 1px solid #9bd1ff;
-      padding: 3px 9px;
-      border-radius: 999px;
-      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      background: var(--primary-light);
+      color: var(--primary);
+      border: 1px solid #bfdbfe;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-family: 'JetBrains Mono', monospace;
       font-weight: 700;
-      font-size: 0.88rem;
+      font-size: 0.95rem;
+      letter-spacing: 0.02em;
     }
 
-    .tags {
+    .meta-tags {
       display: flex;
-      gap: 6px;
+      gap: 8px;
       flex-wrap: wrap;
-      margin-top: 8px;
+      margin-top: 12px;
     }
 
     .tag {
-      font-size: 0.78rem;
+      font-size: 0.8rem;
       padding: 2px 8px;
-      border-radius: 6px;
-      background: #eff2f5;
-      color: var(--muted);
+      border-radius: 4px;
+      background: #f1f5f9;
+      color: var(--text-muted);
+      font-weight: 500;
     }
 
     .tag.warn {
       background: var(--warn-bg);
+      color: var(--warn-text);
       border: 1px solid var(--warn-border);
-      color: #634400;
     }
 
-    .note {
-      margin-top: 10px;
-      padding-top: 10px;
-      border-top: 1px dashed var(--border);
-      font-size: 0.9rem;
-      color: var(--muted);
+    .tabular-note {
+      margin-top: 12px;
+      padding: 10px 12px;
+      background: #f8fafc;
+      border-left: 3px solid var(--primary);
+      border-radius: 0 6px 6px 0;
+      font-size: 0.88rem;
+      color: #475569;
     }
 
-    .load-more-wrap {
-      text-align: center;
+    .load-more-btn {
+      width: 100%;
+      padding: 14px;
       margin-top: 16px;
+      background: var(--card-bg);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      box-shadow: var(--shadow);
+    }
+
+    .load-more-btn:hover {
+      background: var(--primary-light);
+      border-color: #bfdbfe;
     }
 
     .disclaimer {
-      margin-top: 24px;
-      padding: 12px 14px;
-      border-radius: 8px;
+      margin-top: 32px;
+      padding: 14px 16px;
       background: var(--warn-bg);
       border: 1px solid var(--warn-border);
+      border-radius: var(--radius);
       font-size: 0.85rem;
-      color: #4d3500;
+      color: var(--warn-text);
+      text-align: center;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 40px 20px;
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>ระบบค้นหารหัส ICD-10 (Volume 3: Alphabetical Index)</h1>
-    <p class="subtitle">ค้นหาจากชื่อโรค คำขยาย คำพ้อง หรือรหัส พร้อมตัวกรองตาม Chapter</p>
 
-    <div class="search-box">
-      <div class="search-row">
-        <input
-          id="searchInput"
-          type="search"
-          placeholder="เช่น liver abscess, E11.9, meningitis, fall, acetaminophen..."
-          autocomplete="off"
-        />
+  <div class="header-banner">
+    <h1>ICD-10 Volume 3 Search</h1>
+    <p>ระบบค้นหารหัสโรค อ้างอิง Index ภาษาอังกฤษ (Alphabetical Index)</p>
+  </div>
+
+  <div class="container">
+    <div class="search-card">
+      <div class="search-grid">
+        <div class="input-wrapper">
+          <input
+            id="searchInput"
+            type="search"
+            placeholder="พิมพ์ชื่อโรค, รหัสโรค เช่น liver abscess, E11.9, O65.5..."
+            autocomplete="off"
+          />
+        </div>
         <select id="sectionFilter">
           <option value="ALL">ทุกหมวด / ทุกบท (All Chapters)</option>
-          <option value="Ch1">Chapter I: Certain infectious and parasitic diseases (A00-B99)</option>
+          <option value="Ch1">Chapter I: Infectious (A00-B99)</option>
           <option value="Ch2">Chapter II: Neoplasms (C00-D48)</option>
-          <option value="Ch3">Chapter III: Diseases of the blood and blood-forming organs... (D50-D89)</option>
-          <option value="Ch4">Chapter IV: Endocrine, nutritional and metabolic diseases (E00-E90)</option>
-          <option value="Ch5">Chapter V: Mental and behavioural disorders (F00-F99)</option>
-          <option value="Ch6">Chapter VI: Diseases of the nervous system (G00-G99)</option>
-          <option value="Ch7">Chapter VII: Diseases of the eye and adnexa (H00-H59)</option>
-          <option value="Ch8">Chapter VIII: Diseases of the ear and mastoid process (H60-H95)</option>
-          <option value="Ch9">Chapter IX: Diseases of the circulatory system (I00-I99)</option>
-          <option value="Ch10">Chapter X: Diseases of the respiratory system (J00-J99)</option>
-          <option value="Ch11">Chapter XI: Diseases of the digestive system (K00-K93)</option>
-          <option value="Ch12">Chapter XII: Diseases of the skin and subcutaneous tissue (L00-L99)</option>
-          <option value="Ch13">Chapter XIII: Diseases of the musculoskeletal system... (M00-M99)</option>
-          <option value="Ch14">Chapter XIV: Diseases of the genitourinary system (N00-N99)</option>
-          <option value="Ch15">Chapter XV: Pregnancy, childbirth and the puerperium (O00-O99)</option>
-          <option value="Ch16">Chapter XVI: Certain conditions originating in the perinatal period (P00-P96)</option>
-          <option value="Ch17">Chapter XVII: Congenital malformations... (Q00-Q99)</option>
-          <option value="Ch18">Chapter XVIII: Symptoms, signs... (R00-R99)</option>
-          <option value="Ch19">Chapter XIX: Injury, poisoning... (S00-T98)</option>
-          <option value="Ch20">Chapter XX: External causes of morbidity and mortality (V01-Y98)</option>
-          <option value="Ch21">Chapter XXI: Factors influencing health status... (Z00-Z99)</option>
-          <option value="Ch22">Chapter XXII: Codes for special purposes (U00-U85)</option>
+          <option value="Ch3">Chapter III: Blood Diseases (D50-D89)</option>
+          <option value="Ch4">Chapter IV: Endocrine & Metabolic (E00-E90)</option>
+          <option value="Ch5">Chapter V: Mental Disorders (F00-F99)</option>
+          <option value="Ch6">Chapter VI: Nervous System (G00-G99)</option>
+          <option value="Ch7">Chapter VII: Eye & Adnexa (H00-H59)</option>
+          <option value="Ch8">Chapter VIII: Ear & Mastoid (H60-H95)</option>
+          <option value="Ch9">Chapter IX: Circulatory System (I00-I99)</option>
+          <option value="Ch10">Chapter X: Respiratory System (J00-J99)</option>
+          <option value="Ch11">Chapter XI: Digestive System (K00-K93)</option>
+          <option value="Ch12">Chapter XII: Skin (L00-L99)</option>
+          <option value="Ch13">Chapter XIII: Musculoskeletal (M00-M99)</option>
+          <option value="Ch14">Chapter XIV: Genitourinary (N00-N99)</option>
+          <option value="Ch15">Chapter XV: Pregnancy & Childbirth (O00-O99)</option>
+          <option value="Ch16">Chapter XVI: Perinatal Period (P00-P96)</option>
+          <option value="Ch17">Chapter XVII: Congenital (Q00-Q99)</option>
+          <option value="Ch18">Chapter XVIII: Symptoms & Signs (R00-R99)</option>
+          <option value="Ch19">Chapter XIX: Injury & Poisoning (S00-T98)</option>
+          <option value="Ch20">Chapter XX: External Causes (V01-Y98)</option>
+          <option value="Ch21">Chapter XXI: Health Factors (Z00-Z99)</option>
+          <option value="Ch22">Chapter XXII: Special Purposes (U00-U85)</option>
         </select>
-        <button id="resetBtn" class="btn" type="button">ล้างค่า</button>
+        <button id="resetBtn" class="btn-reset" type="button">ล้างค่า</button>
       </div>
     </div>
 
     <div class="meta-bar">
-      <span id="statusText">กำลังโหลดข้อมูลทั้งหมด...</span>
-      <span>พิมพ์หลายคำสลับลำดับกันได้</span>
+      <span id="statusText">กำลังโหลดข้อมูล...</span>
+      <span>พิมพ์คำค้นหาสลับลำดับกันได้</span>
     </div>
 
     <div id="results"></div>
-    <div id="loadMoreWrap" class="load-more-wrap"></div>
+    <div id="loadMoreWrap"></div>
 
     <div class="disclaimer">
       <strong>ข้อควรระวัง:</strong> ข้อมูลอ้างอิงจาก ICD-10 Alphabetical Index (Volume 3)
-      การลงรหัสทางคลินิกจริงควรตรวจสอบเงื่อนไขรวม/ยกเว้นและหลักที่ 4 ใน Volume 1 (Tabular List) และคู่มืออ้างอิงทุกครั้ง
+      การลงรหัสทางคลินิกจริงควรตรวจสอบเงื่อนไขใน Volume 1 (Tabular List) ทุกครั้ง
     </div>
   </div>
 
   <script>
-    const PAGE_SIZE = 100;
+    const PAGE_SIZE = 50;
     let allItems = [];
     let currentFiltered = [];
     let visibleCount = PAGE_SIZE;
@@ -319,12 +424,10 @@
       const slice = currentFiltered.slice(0, visibleCount);
       const totalMatched = currentFiltered.length;
 
-      statusText.textContent =
-        `แสดง ${slice.length} จากที่พบ ${totalMatched.toLocaleString()} รายการ ` +
-        `(คลังข้อมูลทั้งหมด ${allItems.length.toLocaleString()} รายการ)`;
+      statusText.innerHTML = `พบ <span class="status-count">${totalMatched.toLocaleString()}</span> รายการ (จากทั้งหมด ${allItems.length.toLocaleString()} รายการ)`;
 
       if (totalMatched === 0) {
-        resultsEl.innerHTML = `<div class="card">ไม่พบรายการที่ตรงกับคำค้นหา ลองเปลี่ยนคำหรือเลือก "ทุกหมวด"</div>`;
+        resultsEl.innerHTML = `<div class="empty-state">ไม่พบข้อมูลที่ตรงกับคำค้นหาของคุณ</div>`;
         loadMoreWrap.innerHTML = "";
         return;
       }
@@ -332,7 +435,7 @@
       resultsEl.innerHTML = slice.map((item) => {
         const pathParts = [item.lead_term, ...(item.modifiers || [])].filter(Boolean);
         const pathHtml = pathParts
-          .map((p, idx) => `${idx > 0 ? '<span class="sep">&gt;</span>' : ''}${escapeHtml(p)}`)
+          .map((p, idx) => `${idx > 0 ? '<span class="path-sep">&rsaquo;</span>' : ''}${escapeHtml(p)}`)
           .join("");
 
         const codesHtml = (item.codes || [])
@@ -349,12 +452,12 @@
 
         return `
           <article class="card">
-            <div class="card-top">
-              <div class="path">${pathHtml || escapeHtml(item.full_text || "")}</div>
-              <div class="codes">${codesHtml}</div>
+            <div class="card-header">
+              <div class="path-title">${pathHtml || escapeHtml(item.full_text || "")}</div>
+              <div class="code-badges">${codesHtml}</div>
             </div>
-            <div class="tags">${tags}</div>
-            ${item.tabular_note ? `<div class="note">${escapeHtml(item.tabular_note)}</div>` : ""}
+            <div class="meta-tags">${tags}</div>
+            ${item.tabular_note ? `<div class="tabular-note"><strong>Note:</strong> ${escapeHtml(item.tabular_note)}</div>` : ""}
           </article>
         `;
       }).join("");
@@ -362,8 +465,8 @@
       if (visibleCount < totalMatched) {
         const remaining = totalMatched - visibleCount;
         loadMoreWrap.innerHTML = `
-          <button id="loadMoreBtn" class="btn" type="button">
-            แสดงเพิ่มเติมอีก ${Math.min(PAGE_SIZE, remaining)} รายการ (เหลืออีก ${remaining.toLocaleString()} รายการ)
+          <button id="loadMoreBtn" class="load-more-btn" type="button">
+            แสดงเพิ่มอีก ${Math.min(PAGE_SIZE, remaining)} รายการ (เหลืออีก ${remaining.toLocaleString()} รายการ)
           </button>
         `;
         document.getElementById("loadMoreBtn").addEventListener("click", () => {
@@ -398,17 +501,16 @@
         const data = await res.json();
         return Array.isArray(data) ? data : (data.items || []);
       } catch (err) {
-        console.warn("ข้ามไฟล์ที่โหลดหรือแปลง JSON ไม่ได้:", url, err);
         return [];
       }
     }
 
     async function loadDataset() {
-      // 1. โหลดไฟล์ใหม่ icd10_vol3_cleaned.json ก่อนเป็นอันดับแรก
+      // 1. โหลดไฟล์ icd10_vol3_cleaned.json จากโฟลเดอร์ data
       const cleanedItems = await fetchJsonSafe("./data/icd10_vol3_cleaned.json");
       if (cleanedItems.length > 0) return cleanedItems;
 
-      // 2. สำรอง: หากหาในโฟลเดอร์ data ไม่เจอ ให้ลองดึงจากลิงก์ Repo ICD-10- โดยตรง
+      // 2. ดึงจากลิงก์ Repo ICD-10- โดยตรง
       const directItems = await fetchJsonSafe("https://hashhha148-crypto.github.io/ICD-10-/icd10_vol3_cleaned.json");
       if (directItems.length > 0) return directItems;
 
@@ -422,25 +524,25 @@
         ...letters.map((ch) => `./data/index_${ch}.json`),
         "./data/index_other.json"
       ];
-
       const fetchedLists = await Promise.all(urls.map(fetchJsonSafe));
       const merged = fetchedLists.flat();
       if (merged.length > 0) return merged;
 
-      // 5. สำรองกลับไปใช้ sample_index.json
+      // 5. สำรอง sample_index.json
       const fallbackItems = await fetchJsonSafe("./data/sample_index.json");
       if (fallbackItems.length > 0) return fallbackItems;
 
-      throw new Error("ไม่พบไฟล์ข้อมูลที่ใช้งานได้ในโฟลเดอร์ ./data/");
+      throw new Error("ไม่พบไฟล์ข้อมูลที่ใช้งานได้");
     }
+
     async function init() {
       try {
         const rawList = await loadDataset();
         allItems = rawList.map(normalizeItem);
         filterData();
       } catch (err) {
-        statusText.textContent = "โหลดข้อมูลไม่สำเร็จ";
-        resultsEl.innerHTML = `<div class="card">เกิดข้อผิดพลาดในการโหลดข้อมูล: ${escapeHtml(err.message)}</div>`;
+        statusText.textContent = "เกิดข้อผิดพลาด";
+        resultsEl.innerHTML = `<div class="empty-state">ไม่สามารถโหลดไฟล์ข้อมูลได้: ${escapeHtml(err.message)}</div>`;
       }
     }
 
