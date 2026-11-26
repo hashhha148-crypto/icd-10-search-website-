@@ -2828,6 +2828,14 @@
       filterData();
     }
 
+  function escapeHtml(str) {
+    return String(str || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
     function filterData() {
       const q = (document.getElementById('searchInput').value || '').trim().toLowerCase();
       const ch = document.getElementById('chapterFilter').value;
