@@ -404,11 +404,19 @@
     }
 
     async function loadDataset() {
-      // 1. รองรับไฟล์ก้อนเดียว ./data/volume3_index.json
+      // 1. โหลดไฟล์ใหม่ icd10_vol3_cleaned.json ก่อนเป็นอันดับแรก
+      const cleanedItems = await fetchJsonSafe("./data/icd10_vol3_cleaned.json");
+      if (cleanedItems.length > 0) return cleanedItems;
+
+      // 2. สำรอง: หากหาในโฟลเดอร์ data ไม่เจอ ให้ลองดึงจากลิงก์ Repo ICD-10- โดยตรง
+      const directItems = await fetchJsonSafe("https://hashhha148-crypto.github.io/ICD-10-/icd10_vol3_cleaned.json");
+      if (directItems.length > 0) return directItems;
+
+      // 3. รองรับไฟล์ก้อนเดียวเดิม ./data/volume3_index.json
       const singleItems = await fetchJsonSafe("./data/volume3_index.json");
       if (singleItems.length > 0) return singleItems;
 
-      // 2. โหลดไฟล์แยกตามตัวอักษร a-z และ index_other.json (ไฟล์ที่เสียจะถูกข้ามโดยไม่ทำให้ไฟล์อื่นล้ม)
+      // 4. โหลดไฟล์แยกตามตัวอักษร a-z
       const letters = "abcdefghijklmnopqrstuvwxyz".split("");
       const urls = [
         ...letters.map((ch) => `./data/index_${ch}.json`),
@@ -419,13 +427,12 @@
       const merged = fetchedLists.flat();
       if (merged.length > 0) return merged;
 
-      // 3. สำรองกลับไปใช้ sample_index.json
+      // 5. สำรองกลับไปใช้ sample_index.json
       const fallbackItems = await fetchJsonSafe("./data/sample_index.json");
       if (fallbackItems.length > 0) return fallbackItems;
 
       throw new Error("ไม่พบไฟล์ข้อมูลที่ใช้งานได้ในโฟลเดอร์ ./data/");
     }
-
     async function init() {
       try {
         const rawList = await loadDataset();
