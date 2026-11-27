@@ -367,6 +367,26 @@
     let vol3Loaded = false;
 
     const sampleTabular = [
+      // Intestinal infectious diseases (A00-A09)
+  { code: "A00", title: "Cholera", category: "Ch01" },
+  { code: "A00.0", title: "Cholera due to Vibrio cholerae 01, biovar cholerae", sub: "Classical cholera", category: "Ch01" },
+  { code: "A00.1", title: "Cholera due to Vibrio cholerae 01, biovar eltor", sub: "Cholera eltor", category: "Ch01" },
+  { code: "A00.9", title: "Cholera, unspecified", category: "Ch01" },
+
+  { code: "A01", title: "Typhoid and paratyphoid fevers", category: "Ch01" },
+  { code: "A01.0", title: "Typhoid fever", sub: "Infection due to Salmonella typhi", category: "Ch01" },
+  { code: "A01.1", title: "Paratyphoid fever A", category: "Ch01" },
+  { code: "A01.2", title: "Paratyphoid fever B", category: "Ch01" },
+  { code: "A01.3", title: "Paratyphoid fever C", category: "Ch01" },
+  { code: "A01.4", title: "Paratyphoid fever, unspecified", sub: "Infection due to Salmonella paratyphi NOS", category: "Ch01" },
+
+  { code: "A02", title: "Other Salmonella infections", sub: "Incl.: infection or foodborne intoxication due to any Salmonella species other than S. typhi and S. paratyphi", category: "Ch01" },
+  { code: "A02.0", title: "Salmonella enteritis", sub: "Salmonellosis", category: "Ch01" },
+  { code: "A02.1", title: "Salmonella sepsis", category: "Ch01" },
+  { code: "A02.2", title: "Localized Salmonella infections", sub: "Salmonella: arthritis† (M01.3*), meningitis† (G01*), osteomyelitis† (M90.2*), pneumonia† (J17.0*), renal tubulo-interstitial disease† (N16.0*)", category: "Ch01" },
+  { code: "A02.8", title: "Other specified Salmonella infections", category: "Ch01" },
+  { code: "A02.9", title: "Salmonella infection, unspecified", category: "Ch01" },
+
       { code: "A03", title: "Shigellosis", category: "Ch1", isHeader: true },
       { code: "A03.0", title: "Shigellosis due to Shigella dysenteriae", sub: "Group A shigellosis [Shiga-Kruse dysentery]", category: "Ch1" },
       { code: "A03.1", title: "Shigellosis due to Shigella flexneri", sub: "Group B shigellosis", category: "Ch1" },
